@@ -1,6 +1,10 @@
 set nocompatible
 syntax on
+
+filetype off
+call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
+
 compiler ruby
 
 set hlsearch
@@ -20,17 +24,16 @@ set nofoldenable
 set ignorecase
 set smartcase
 
+let g:AckAllFiles = 0
+let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
+
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
 
-let clj_want_gorilla = 1
-let g:clj_highlight_builtins = 1
-let g:clj_highlight_contrib = 1
-let g:clj_paren_rainbow = 1
-
-let g:AckAllFiles = 0
-let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp'
+let vimclojure#WantNailgun = 1
+let vimclojure#HighlightBuiltins = 1
+let vimclojure#ParenRainbow = 1
 
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
@@ -50,6 +53,7 @@ autocmd FileType tex setlocal textwidth=78
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 
 autocmd FileType ruby runtime ruby_mappings.vim
+imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
