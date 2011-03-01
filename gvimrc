@@ -8,5 +8,5 @@ end
 set guioptions-=T  "remove toolbar
 set guioptions-=m  "remove menu
 
-set lines=47
-set columns=161
+set lines=100
+set columns=300
