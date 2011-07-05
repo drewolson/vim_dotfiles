@@ -80,6 +80,8 @@ cnoremap <Tab> <C-L><C-D>
 map <F1> <Esc>
 imap <F1> <Esc>
 
+map Y y$
+
 if version >= 700
     autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
     autocmd FileType tex setlocal spell spelllang=en_us
@@ -134,3 +136,11 @@ function! DivHtml(line1, line2)
   set nonu
 endfunction
 command -range=% DivHtml :call DivHtml(<line1>,<line2>)
+
+function! GitGrepWord()
+  cgetexpr system('git grep -n '.expand("<cword>"))
+  cwin
+  echo 'Number of matches: ' . len(getqflist())
+endfunction
+command! -nargs=0 GitGrepWord :call GitGrepWord()
+nnoremap <silent> <Leader>gw :GitGrepWord<CR>
