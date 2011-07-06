@@ -48,14 +48,16 @@ let g:no_html_toolbar = 'yes'
 
 let coffee_no_trailing_space_error = 1
 
+autocmd QuickFixCmdPost *grep* cwindow
+
 autocmd FileType help setlocal nospell
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-
+autocmd FileType ruby runtime ruby_mappings.vim
 autocmd FileType tex setlocal textwidth=78
+
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 
-autocmd FileType ruby runtime ruby_mappings.vim
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
