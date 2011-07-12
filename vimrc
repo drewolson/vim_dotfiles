@@ -20,6 +20,7 @@ set wrap
 set dir=/tmp//
 set scrolloff=5
 set nofoldenable
+set cursorline
 
 set ignorecase
 set smartcase
@@ -124,20 +125,6 @@ set statusline+=%1*%y%*%*\                " file type
 set statusline+=%10(L(%l/%L)%)\           " line
 set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
-
-" http://techspeak.plainlystated.com/2009/08/vim-tohtml-customization.html
-function! DivHtml(line1, line2)
-  exec a:line1.','.a:line2.'TOhtml'
-  %g/<style/normal $dgg
-  %s/<\/style>\n<\/head>\n//
-  %s/body {/.vim_block {/
-  %s/<body\(.*\)>\n/<div class="vim_block"\1>/
-  %s/<\/body>\n<\/html>/<\/div>
-  "%s/\n/<br \/>\r/g
-
-  set nonu
-endfunction
-command -range=% DivHtml :call DivHtml(<line1>,<line2>)
 
 function! GitGrepWord()
   cgetexpr system('git grep -n '.expand("<cword>"))
