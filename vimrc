@@ -66,6 +66,9 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>ff :FuzzyFinderTextMate<CR>
+map <silent> <LocalLeader>ww :CommandT<CR>
+map <silent> <LocalLeader>wb :CommandTBuffer<CR>
+map <silent> <LocalLeader>wr :CommandTFlush<CR>
 map <silent> <LocalLeader>ft :FuzzyFinderTag<CR>
 map <silent> <LocalLeader>fb :FuzzyFinderBuffer<CR>
 map <silent> <LocalLeader>fr :FuzzyFinderTextMateRefreshFiles<CR>
