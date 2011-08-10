@@ -80,7 +80,7 @@ map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
 vmap <silent> <LocalLeader>al :Align =><CR>
-command Wsudo w !sudo tee %
+command! Wsudo w !sudo tee %
 cnoremap <Tab> <C-L><C-D>
 
 " fat fingers: map f1 to escape instead of help
@@ -137,3 +137,9 @@ function! GitGrepWord()
 endfunction
 command! -nargs=0 GitGrepWord :call GitGrepWord()
 nnoremap <silent> <Leader>gw :GitGrepWord<CR>
+
+function! Trim()
+  %s/\s*$//
+endfunction
+command! -nargs=0 Trim :call Trim()
+nnoremap <silent> <Leader>cw :Trim<CR>
