@@ -45,6 +45,7 @@ let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data"
 let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
+let NERDTreeIgnore=['\~$', '\.pyc']
 let g:no_html_toolbar = 'yes'
 
 let coffee_no_trailing_space_error = 1
