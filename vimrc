@@ -20,7 +20,6 @@ set wrap
 set dir=/tmp//
 set scrolloff=5
 set nofoldenable
-set cursorline
 
 set ignorecase
 set smartcase
