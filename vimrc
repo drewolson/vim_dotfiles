@@ -60,6 +60,7 @@ autocmd FileType tex setlocal textwidth=78
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 
 imap <C-L> <SPACE>=><SPACE>
+imap <C-K> ->
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
