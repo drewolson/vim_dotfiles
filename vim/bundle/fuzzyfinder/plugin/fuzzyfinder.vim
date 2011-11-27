@@ -905,6 +905,7 @@ function! g:FuzzyFinderMode.Base.launch(initial_text, partial_matching)
   endif
   call self.on_mode_enter_pre()
   call s:WindowManager.activate(self.make_complete_func('CompleteFunc'))
+  call s:OptionManager.set('paste', '0')
   call s:OptionManager.set('completeopt', 'menuone')
   call s:OptionManager.set('ignorecase', self.ignore_case)
   " local autocommands
