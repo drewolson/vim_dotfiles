@@ -144,3 +144,7 @@ function! Trim()
 endfunction
 command! -nargs=0 Trim :call Trim()
 nnoremap <silent> <Leader>cw :Trim<CR>
+
+if &shell == "/usr/bin/sudosh"
+  set shell=/bin/bash
+endif
