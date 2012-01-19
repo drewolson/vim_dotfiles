@@ -117,6 +117,7 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
 highlight LineLengthError ctermbg=8 guibg=black
 autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
+map <silent> <LocalLeader>ll :highlight clear LineLengthError<CR>
 
 " Pretty colors for fuzzyfinder menus
 highlight Pmenu ctermfg=black ctermbg=gray
