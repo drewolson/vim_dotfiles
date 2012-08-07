@@ -27,6 +27,8 @@ set scrolloff=5
 set ignorecase
 set smartcase
 
+set wildignore+=*.pyc
+
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
 
