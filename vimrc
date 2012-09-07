@@ -103,7 +103,7 @@ if version >= 700
 endif
 
 if &t_Co == 256
-  colorscheme vibrantink
+  colorscheme Tomorrow-Night-Bright
 endif
 
 au FileType diff colorscheme desert
