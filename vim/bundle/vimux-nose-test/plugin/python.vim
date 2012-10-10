@@ -1,7 +1,7 @@
-if exists("g:loaded_vimux_ruby_test") || &cp
+if exists("g:loaded_vimux_nose_test") || &cp
   finish
 endif
-let g:loaded_vimux_ruby_test = 1
+let g:loaded_vimux_nose_test = 1
 
 if !has("ruby")
   finish
