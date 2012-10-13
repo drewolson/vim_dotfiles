@@ -24,7 +24,6 @@ set dir=/tmp//
 set scrolloff=5
 
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd Filetype go setlocal textwidth=0 nosmartindent tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
 
 set ignorecase
 set smartcase
@@ -63,10 +62,12 @@ let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowAtTop = 1
 let g:CommandTCancelMap='<Esc>'
 
+let g:NoseVirtualenv = ".env/bin/activate"
+
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-
 autocmd FileType tex setlocal textwidth=78
+autocmd Filetype go setlocal textwidth=0 nosmartindent tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 
 imap <C-L> <SPACE>=><SPACE>
