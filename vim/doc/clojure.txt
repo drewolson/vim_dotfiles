@@ -1,1 +1,0 @@
-../bundle/vimclojure/doc/clojure.txt
