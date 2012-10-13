@@ -18,11 +18,13 @@ set incsearch
 set background=dark
 set hidden
 set backspace=indent,eol,start
-set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set ruler
 set wrap
 set dir=/tmp//
 set scrolloff=5
+
+set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype go setlocal textwidth=0 nosmartindent tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
 
 set ignorecase
 set smartcase
@@ -53,6 +55,8 @@ let g:no_html_toolbar = 'yes'
 
 let coffee_no_trailing_space_error = 1
 
+let go_highlight_trailing_whitespace_error = 0
+
 let NERDTreeIgnore=['\.pyc']
 
 let g:CommandTMaxHeight = 15
@@ -65,7 +69,6 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal textwidth=78
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 
-autocmd FileType ruby runtime ruby_mappings.vim
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
