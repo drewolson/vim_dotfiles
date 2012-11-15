@@ -51,6 +51,7 @@ let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
 let g:no_html_toolbar = 'yes'
+let g:paredit_mode = 0
 
 let coffee_no_trailing_space_error = 1
 
