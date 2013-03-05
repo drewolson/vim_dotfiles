@@ -1,1 +1,0 @@
-../bundle/bufexplorer/doc/bufexplorer.txt

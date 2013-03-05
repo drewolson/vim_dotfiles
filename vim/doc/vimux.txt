@@ -1,1 +1,0 @@
-../bundle/vimux/doc/vimux.txt

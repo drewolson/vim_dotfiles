@@ -1,1 +1,0 @@
-../bundle/align/doc/Align.txt

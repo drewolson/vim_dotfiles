@@ -18,11 +18,12 @@ set incsearch
 set background=dark
 set hidden
 set backspace=indent,eol,start
-set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set ruler
 set wrap
 set dir=/tmp//
 set scrolloff=5
+
+set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 set ignorecase
 set smartcase
@@ -50,6 +51,7 @@ let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
 let g:no_html_toolbar = 'yes'
+let g:paredit_mode = 0
 
 let coffee_no_trailing_space_error = 1
 
@@ -60,13 +62,14 @@ let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowAtTop = 1
 let g:CommandTCancelMap='<Esc>'
 
+let g:NoseVirtualenv = ".env/bin/activate"
+
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-
 autocmd FileType tex setlocal textwidth=78
+autocmd Filetype go setlocal textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 
-autocmd FileType ruby runtime ruby_mappings.vim
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
@@ -99,16 +102,13 @@ nnoremap <silent> j gj
 nnoremap <silent> Y y$
 
 if version >= 700
-    autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
-    autocmd FileType tex setlocal spell spelllang=en_us
+  autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
+  autocmd FileType tex setlocal spell spelllang=en_us
 endif
 
 if &t_Co == 256
   colorscheme Tomorrow-Night-Bright
 endif
-
-au FileType diff colorscheme desert
-au FileType git colorscheme desert
 
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
@@ -138,20 +138,6 @@ set statusline+=%10(L(%l/%L)%)\           " line
 set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
 
-" http://techspeak.plainlystated.com/2009/08/vim-tohtml-customization.html
-function! DivHtml(line1, line2)
-  exec a:line1.','.a:line2.'TOhtml'
-  %g/<style/normal $dgg
-  %s/<\/style>\n<\/head>\n//
-  %s/body {/.vim_block {/
-  %s/<body\(.*\)>\n/<div class="vim_block"\1>/
-  %s/<\/body>\n<\/html>/<\/div>
-  "%s/\n/<br \/>\r/g
-
-  set nonu
-endfunction
-command -range=% DivHtml :call DivHtml(<line1>,<line2>)
-
 if version >= 703
   set undodir=~/.vim/undodir
   set undofile
@@ -166,9 +152,3 @@ function! GitGrepWord()
 endfunction
 command! -nargs=0 GitGrepWord :call GitGrepWord()
 nnoremap <silent> <Leader>gw :GitGrepWord<CR>
-
-function! Trim()
-  %s/\s*$//
-endfunction
-command! -nargs=0 Trim :call Trim()
-nnoremap <silent> <Leader>cw :Trim<CR>
