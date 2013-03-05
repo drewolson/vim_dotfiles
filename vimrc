@@ -27,7 +27,7 @@ set scrolloff=5
 set ignorecase
 set smartcase
 
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*.o,*.class
 
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
@@ -53,7 +53,8 @@ let g:no_html_toolbar = 'yes'
 
 let coffee_no_trailing_space_error = 1
 
-let NERDTreeIgnore=['\.pyc']
+let go_highlight_trailing_whitespace_error = 0
+let NERDTreeIgnore=['\.pyc', '\.o', '\.class']
 
 let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowAtTop = 1
