@@ -28,7 +28,7 @@ set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set ignorecase
 set smartcase
 
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*.o,*.class
 
 let g:AckAllFiles = 0
 let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
@@ -56,8 +56,7 @@ let g:paredit_mode = 0
 let coffee_no_trailing_space_error = 1
 
 let go_highlight_trailing_whitespace_error = 0
-
-let NERDTreeIgnore=['\.pyc']
+let NERDTreeIgnore=['\.pyc', '\.o', '\.class']
 
 let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowAtTop = 1
@@ -88,11 +87,11 @@ map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
 
-map <silent> <LocalLeader>rl :wa<CR> :RunLastVimTmuxCommand<CR>
-map <silent> <LocalLeader>ri :wa<CR> :InspectVimTmuxRunner<CR>
-map <silent> <LocalLeader>rx :wa<CR> :CloseVimTmuxPanes<CR>
-map <silent> <LocalLeader>vp :PromptVimTmuxCommand<CR>
-vmap <silent> <LocalLeader>vs "vy :call RunVimTmuxCommand(@v)<CR>
+map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
+map <silent> <LocalLeader>ri :wa<CR> :VimuxInspectRunner<CR>
+map <silent> <LocalLeader>rx :wa<CR> :VimuxClosePanes<CR>
+map <silent> <LocalLeader>vp :VimuxPromptCommand<CR>
+vmap <silent> <LocalLeader>vs "vy :call VimuxRunLastCommand(@v)<CR>
 nmap <silent> <LocalLeader>vs vip<LocalLeader>vs<CR>
 
 command SudoW w !sudo tee %
