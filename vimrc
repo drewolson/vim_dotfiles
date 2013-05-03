@@ -56,7 +56,7 @@ let g:paredit_mode = 0
 let coffee_no_trailing_space_error = 1
 
 let go_highlight_trailing_whitespace_error = 0
-let NERDTreeIgnore=['\.pyc', '\.o', '\.class']
+let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
 
 let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowAtTop = 1
