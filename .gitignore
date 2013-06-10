@@ -2,3 +2,4 @@
 *.swp
 .netrwhist
 tags
+/vim/bundle/Command-T/ruby/command-t/ext.bundle
