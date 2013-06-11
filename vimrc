@@ -66,7 +66,8 @@ autocmd FileType tex setlocal textwidth=78
 autocmd Filetype go setlocal textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 noexpandtab
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 
-au FileType clojure RainbowParenthesesToggle
+autocmd VimEnter * RainbowParenthesesToggle
+autocmd Filetype clojure RainbowParenthesesLoadRound
 
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>cj :!clj %<CR>
