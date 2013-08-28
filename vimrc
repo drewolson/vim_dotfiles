@@ -104,7 +104,7 @@ if version >= 700
 endif
 
 if &t_Co == 256
-  colorscheme Tomorrow-Night-Bright
+  colorscheme ir_black
 endif
 
 " Highlight trailing whitespace
