@@ -104,7 +104,7 @@ if version >= 700
 endif
 
 if &t_Co == 256
-  colorscheme ir_black
+  colorscheme jellybeans
 endif
 
 " Highlight trailing whitespace
