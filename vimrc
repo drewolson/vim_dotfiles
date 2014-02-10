@@ -55,11 +55,9 @@ let coffee_no_trailing_space_error = 1
 let go_highlight_trailing_whitespace_error = 0
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
 
-let g:CommandTMaxHeight = 15
-let g:CommandTMatchWindowAtTop = 1
-let g:CommandTCancelMap='<Esc>'
-
 let g:NoseVirtualenv = ".env/bin/activate"
+
+let g:ctrlp_match_window = "top,order:ttb"
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -74,9 +72,9 @@ map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-map <silent> <leader>ff :CommandT<CR>
-map <silent> <leader>fb :CommandTBuffer<CR>
-map <silent> <leader>fr :CommandTFlush<CR>
+map <silent> <leader>ff :CtrlP<CR>
+map <silent> <leader>fb :CtrpPBuffer<CR>
+map <silent> <leader>fr :CtrlPClearCache<CR>
 map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
