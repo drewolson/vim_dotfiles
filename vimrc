@@ -31,9 +31,6 @@ set smartcase
 
 set wildignore+=*.pyc,*.o,*.class
 
-let g:AckAllFiles = 0
-let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
-
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
@@ -48,7 +45,6 @@ let g:fuzzy_ceiling = 50000
 let g:fuzzy_matching_limit = 10
 
 let g:no_html_toolbar = 'yes'
-let g:paredit_mode = 0
 
 let coffee_no_trailing_space_error = 1
 
@@ -74,7 +70,6 @@ autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 
 imap <C-L> <SPACE>=><SPACE>
-map <silent> <LocalLeader>cj :!clj %<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
@@ -82,10 +77,7 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <leader>ff :CtrlP<CR>
 map <silent> <leader>fb :CtrlPBuffer<CR>
 map <silent> <leader>fr :CtrlPClearCache<CR>
-map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
-map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
-map <LocalLeader>aw :Ack '<C-R><C-W>'
 map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
@@ -116,6 +108,7 @@ endif
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -125,10 +118,6 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
 highlight LineLengthError ctermbg=black guibg=black
 autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
-
-" Pretty colors for fuzzyfinder menus
-highlight Pmenu ctermfg=black ctermbg=gray
-highlight PmenuSel ctermfg=black ctermbg=white
 
 set laststatus=2
 set statusline=
