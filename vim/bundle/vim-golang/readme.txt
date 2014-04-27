@@ -1,14 +1,24 @@
 Vim plugins for Go (http://golang.org)
 ======================================
 
-To use all the Vim plugins, add these lines to your vimrc.
+To use all the Vim plugins, add these lines to your $HOME/.vimrc.
 
-  set rtp+=$GOROOT/misc/vim
+  " Some Linux distributions set filetype in /etc/vimrc.
+  " Clear filetype flags before changing runtimepath to force Vim to reload them.
+  filetype off
+  filetype plugin indent off
+  set runtimepath+=$GOROOT/misc/vim
   filetype plugin indent on
   syntax on
 
 If you want to select fewer plugins, use the instructions in the rest of
 this file.
+
+A popular configuration is to gofmt Go source files when they are saved.
+To do that, add this line to the end of your $HOME/.vimrc.
+
+  autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
 
 Vim syntax highlighting
 -----------------------
@@ -43,9 +53,10 @@ Vim filetype plugins
 To install one of the available filetype plugins:
 
   1. Same as 1 above.
-  2. Copy or link one or more plugins from ftplugin/go/*.vim to the
-     Go-specific ftplugin directory underneath your vim runtime directory
-     (normally $HOME/.vim/ftplugin/go/*.vim).
+  2. Copy or link ftplugin/go.vim to the ftplugin directory underneath your vim
+     runtime directory (normally $HOME/.vim/ftplugin). Copy or link one or more
+     additional plugins from ftplugin/go/*.vim to the Go-specific subdirectory
+     in the same place ($HOME/.vim/ftplugin/go/*.vim).
   3. Add the following line to your .vimrc file (normally $HOME/.vimrc):
 
      filetype plugin on
@@ -64,6 +75,21 @@ To install automatic indentation:
      filetype indent on
 
 
+Vim compiler plugin
+-------------------
+
+To install the compiler plugin:
+
+  1. Same as 1 above.
+  2. Copy or link compiler/go.vim to the compiler directory underneath your vim
+     runtime directory (normally $HOME/.vim/compiler).
+  3. Activate the compiler plugin with ":compiler go". To always enable the
+     compiler plugin in Go source files add an autocommand to your .vimrc file
+     (normally $HOME/.vimrc):
+
+     autocmd FileType go compiler go
+
+
 Godoc plugin
 ------------
 
@@ -72,5 +98,4 @@ To install godoc plugin:
   1. Same as 1 above.
   2. Copy or link plugin/godoc.vim to $HOME/.vim/plugin/godoc,
      syntax/godoc.vim to $HOME/.vim/syntax/godoc.vim,
-     ftplugin/go/godoc.vim to $HOME/.vim/ftplugin/go/godoc.vim.
      and autoload/go/complete.vim to $HOME/.vim/autoload/go/complete.vim.
