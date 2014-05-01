@@ -82,14 +82,11 @@ map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
 
-map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
-map <silent> <LocalLeader>ri :wa<CR> :VimuxInspectRunner<CR>
-map <silent> <LocalLeader>rx :wa<CR> :VimuxClosePanes<CR>
-map <silent> <LocalLeader>vp :VimuxPromptCommand<CR>
-vmap <silent> <LocalLeader>vs "vy :call VimuxRunLastCommand(@v)<CR>
-nmap <silent> <LocalLeader>vs vip<LocalLeader>vs<CR>
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "30"
 
-command SudoW w !sudo tee %
+map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
+
 cnoremap <Tab> <C-L><C-D>
 
 nnoremap <silent> k gk
