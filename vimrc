@@ -40,10 +40,6 @@ let g:gist_detect_filetype = 1
 
 let g:rubycomplete_buffer_loading = 1
 
-let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data,*.class,*.pyc"
-let g:fuzzy_ceiling = 50000
-let g:fuzzy_matching_limit = 10
-
 let g:no_html_toolbar = 'yes'
 
 let coffee_no_trailing_space_error = 1
@@ -72,7 +68,6 @@ autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <leader>ff :CtrlP<CR>
 map <silent> <leader>fb :CtrlPBuffer<CR>
@@ -80,14 +75,11 @@ map <silent> <leader>fr :CtrlPClearCache<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
 map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
-map <silent> <LocalLeader>uc :TComment<CR>
 
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "30"
 
 map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
-
-cnoremap <Tab> <C-L><C-D>
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
@@ -133,11 +125,3 @@ if version >= 703
   set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 endif
 set undolevels=1000 "maximum number of changes that can be undone
-
-function! GitGrepWord()
-  cgetexpr system("git grep -n '" . expand("<cword>") . "'")
-  cwin
-  echo 'Number of matches: ' . len(getqflist())
-endfunction
-command! -nargs=0 GitGrepWord :call GitGrepWord()
-nnoremap <silent> <Leader>gw :GitGrepWord<CR>
