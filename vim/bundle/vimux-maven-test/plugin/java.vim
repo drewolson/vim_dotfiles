@@ -28,9 +28,9 @@ function s:RunAllMavenTests()
 endfunction
 
 function s:RunCurrentMavenTests()
-  call VimuxRunCommand("mvn -Dtest=" . s:ClassName() . " test")
+  call VimuxRunCommand("clear && mvn -Dtest=" . s:ClassName() . " test")
 endfunction
 
 function s:RunFocusedMavenTests()
-  call VimuxRunCommand("mvn -Dtest=" . s:ClassName() . "#" . s:CurrentTestName() . " test")
+  call VimuxRunCommand("clear && mvn -Dtest=" . s:ClassName() . "#" . s:CurrentTestName() . " test")
 endfunction
