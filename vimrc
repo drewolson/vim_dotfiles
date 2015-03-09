@@ -31,6 +31,8 @@ set smartcase
 
 set wildignore+=*.pyc,*.o,*.class
 
+let g:ctrlp_custom_ignore = 'node_modules\|_build'
+
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
