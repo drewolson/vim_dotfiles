@@ -2,7 +2,7 @@
 " Description:  Vim syntax file for Rust
 " Maintainer:   Chris Morgan <me@chrismorgan.info>
 " Maintainer:   Kevin Ballard <kevin@sb.org>
-" Last Change:  May 27, 2014
+" Last Change:  January 29, 2015
 
 if exists("b:did_ftplugin")
 	finish
@@ -31,6 +31,15 @@ setlocal formatoptions-=t formatoptions+=croqnl
 " j was only added in 7.3.541, so stop complaints about its nonexistence
 silent! setlocal formatoptions+=j
 
+" smartindent will be overridden by indentexpr if filetype indent is on, but
+" otherwise it's better than nothing.
+setlocal smartindent nocindent
+
+if !exists("g:rust_recommended_style") || g:rust_recommended_style == 1
+	setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+	setlocal textwidth=99
+endif
+
 " This includeexpr isn't perfect, but it's a good start
 setlocal includeexpr=substitute(v:fname,'::','/','g')
 
@@ -48,6 +57,21 @@ if exists("g:loaded_delimitMate")
 	let b:delimitMate_excluded_regions = delimitMate#Get("excluded_regions") . ',rustLifetimeCandidate,rustGenericLifetimeCandidate'
 endif
 
+if has("folding") && exists('g:rust_fold') && g:rust_fold != 0
+	let b:rust_set_foldmethod=1
+	setlocal foldmethod=syntax
+	if g:rust_fold == 2
+		setlocal foldlevel<
+	else
+		setlocal foldlevel=99
+	endif
+endif
+
+if has('conceal') && exists('g:rust_conceal')
+	let b:rust_set_conceallevel=1
+	setlocal conceallevel=2
+endif
+
 " Motion Commands {{{1
 
 " Bind motion commands to support hanging indents
@@ -58,19 +82,29 @@ xnoremap <silent> <buffer> ]] :call rust#Jump('v', 'Forward')<CR>
 onoremap <silent> <buffer> [[ :call rust#Jump('o', 'Back')<CR>
 onoremap <silent> <buffer> ]] :call rust#Jump('o', 'Forward')<CR>
 
+" %-matching. <:> is handy for generics.
+set matchpairs+=<:>
+" There are two minor issues with it; (a) comparison operators in expressions,
+" where a less-than may match a greater-than later on—this is deemed a trivial
+" issue—and (b) `Fn() -> X` syntax. This latter issue is irremediable from the
+" highlighting perspective (built into Vim), but the actual % functionality
+" can be fixed by this use of matchit.vim.
+let b:match_skip = 's:comment\|string\|rustArrow'
+source $VIMRUNTIME/macros/matchit.vim
+
 " Commands {{{1
 
 " See |:RustRun| for docs
-command! -nargs=* -complete=file -bang -bar -buffer RustRun call rust#Run(<bang>0, [<f-args>])
+command! -nargs=* -complete=file -bang -buffer RustRun call rust#Run(<bang>0, <q-args>)
 
 " See |:RustExpand| for docs
-command! -nargs=* -complete=customlist,rust#CompleteExpand -bang -bar -buffer RustExpand call rust#Expand(<bang>0, [<f-args>])
+command! -nargs=* -complete=customlist,rust#CompleteExpand -bang -buffer RustExpand call rust#Expand(<bang>0, <q-args>)
 
 " See |:RustEmitIr| for docs
-command! -nargs=* -bar -buffer RustEmitIr call rust#Emit("ir", [<f-args>])
+command! -nargs=* -buffer RustEmitIr call rust#Emit("llvm-ir", <q-args>)
 
 " See |:RustEmitAsm| for docs
-command! -nargs=* -bar -buffer RustEmitAsm call rust#Emit("asm", [<f-args>])
+command! -nargs=* -buffer RustEmitAsm call rust#Emit("asm", <q-args>)
 
 " Mappings {{{1
 
@@ -87,12 +121,21 @@ endif
 " Cleanup {{{1
 
 let b:undo_ftplugin = "
-		\setlocal formatoptions< comments< commentstring< includeexpr< suffixesadd<
+		\ setlocal formatoptions< comments< commentstring< includeexpr< suffixesadd<
+		\|setlocal tabstop< shiftwidth< softtabstop< expandtab< textwidth<
 		\|if exists('b:rust_original_delimitMate_excluded_regions')
 		  \|let b:delimitMate_excluded_regions = b:rust_original_delimitMate_excluded_regions
 		  \|unlet b:rust_original_delimitMate_excluded_regions
 		\|else
 		  \|unlet! b:delimitMate_excluded_regions
+		\|endif
+		\|if exists('b:rust_set_foldmethod')
+		  \|setlocal foldmethod< foldlevel<
+		  \|unlet b:rust_set_foldmethod
+		\|endif
+		\|if exists('b:rust_set_conceallevel')
+		  \|setlocal conceallevel<
+		  \|unlet b:rust_set_conceallevel
 		\|endif
 		\|unlet! b:rust_last_rustc_args b:rust_last_args
 		\|delcommand RustRun
@@ -107,6 +150,8 @@ let b:undo_ftplugin = "
 		\|xunmap <buffer> ]]
 		\|ounmap <buffer> [[
 		\|ounmap <buffer> ]]
+		\|set matchpairs-=<:>
+		\|unlet b:match_skip
 		\"
 
 " }}}1

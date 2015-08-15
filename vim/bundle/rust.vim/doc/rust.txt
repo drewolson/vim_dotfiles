@@ -1,7 +1,7 @@
 *rust.txt*      Filetype plugin for Rust
 
 ==============================================================================
-CONTENTS                                                                *rust*
+CONTENTS                                                      *rust* *ft-rust*
 
 1. Introduction                                                   |rust-intro|
 2. Settings                                                    |rust-settings|
@@ -53,6 +53,27 @@ g:rust_conceal_pub~
 	    let g:rust_conceal_pub = 1
 <
 
+                                                     *g:rust_recommended_style*
+g:rust_recommended_style~
+        Set this option to enable vim indentation and textwidth settings to
+        conform to style conventions of the rust standard library (i.e. use 4
+        spaces for indents and sets 'textwidth' to 99). This option is enabled
+	by default. To disable it: >
+	    let g:rust_recommended_style = 0
+<
+
+                                                                 *g:rust_fold*
+g:rust_fold~
+	Set this option to turn on |folding|: >
+	    let g:rust_fold = 1
+<
+	Value		Effect ~
+	0		No folding
+	1		Braced blocks are folded. All folds are open by
+			default.
+	2		Braced blocks are folded. 'foldlevel' is left at the
+			global value (all folds are closed by default).
+
                                                   *g:rust_bang_comment_leader*
 g:rust_bang_comment_leader~
 	Set this option to 1 to preserve the leader on multi-line doc comments
@@ -65,6 +86,13 @@ g:ftplugin_rust_source_path~
 	Set this option to a path that should be prepended to 'path' for Rust
 	source files: >
 	    let g:ftplugin_rust_source_path = $HOME.'/dev/rust'
+<
+
+                                                       *g:cargo_manifest_name*
+g:cargo_manifest_name~
+	Set this option to the name of the manifest file for your projects. If
+	not specified it defaults to 'Cargo.toml' : >
+	    let g:cargo_manifest_name = 'Cargo.toml'
 <
 
 ==============================================================================
