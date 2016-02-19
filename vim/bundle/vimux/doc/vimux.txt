@@ -12,9 +12,10 @@ CONTENTS                                                        *vimux-contents*
       2.2 .............................. |VimuxRunLastCommand|
       2.3 .............................. |VimuxInspectRunner|
       2.4 .............................. |VimuxCloseRunner|
-      2.5 .............................. |VimuxClosePanes|
-      2.6 .............................. |VimuxInterruptRunner|
-      2.7 .............................. |VimuxClearRunnerHistory|
+      2.5 .............................. |VimuxInterruptRunner|
+      2.6 .............................. |VimuxClearRunnerHistory|
+      2.7 .............................. |VimuxZoomRunner|
+      2.8 .............................. |VimuxRunCommandInDir|
     3. Misc ............................ |VimuxMisc|
       3.1 Example Keybinding............ |VimuxExampleKeybinding|
       3.2 Tslime Replacement............ |VimuxTslimeReplacement|
@@ -61,31 +62,19 @@ process finishes and will see the output in the pane when it's finished.
 
 Furthermore there are several handy commands all starting with 'Vimux':
   - |VimuxRunCommand|
-  - |VimuxRunLastCommand| 
+  - |VimuxSendText|
+  - |VimuxSendKeys|
+  - |VimuxOpenPane|
+  - |VimuxRunLastCommand|
   - |VimuxCloseRunner|
-  - |VimuxClosePanes|
-  - |VimuxCloseWindows|
   - |VimuxInspectRunner|
   - |VimuxInterruptRunner|
   - |VimuxPromptCommand|
   - |VimuxClearRunnerHistory|
-
-
-Note:
-Earlier the all commands had different names. There are still aliases for
-convenience. Please chang your configuration according to the new naming
-conventions!
-
-The DEPRECATED commands:
-  - |PromptVimTmuxCommand|
-  - |RunLastVimTmuxCommand|
-  - |InspectVimTmuxRunner|
-  - |CloseVimTmuxRunner|
-  - |CloseVimTmuxPanes|
-  - |InterruptVimTmuxRunner|
+  - |VimuxZoomRunner|
+  - |VimuxRunCommandInDir|
 
 ------------------------------------------------------------------------------
-                                                             *RunVimTmuxCommand*
                                                                *VimuxRunCommand*
 VimuxRunCommand~
 
@@ -100,19 +89,45 @@ vimux from automatically sending a return after the command.
 <
 
 ------------------------------------------------------------------------------
-                                                          *PromptVimTmuxCommand*
+                                                               *VimuxSendText*
+VimuxSendText~
+
+Send raw text to the runner pane. This command will not open a new pane if one
+does not already exist. You will need to use VimuxOpenPane to do this. This
+command can be used to interact with REPLs or other interactive terminal
+programs that are not shells.
+
+
+------------------------------------------------------------------------------
+                                                               *VimuxSendKeys*
+VimuxSendKeys~
+
+Send keys to the runner pane. This command will not open a new pane if one
+does not already exist. You will need to use VimuxOpenPane to do this. You can
+use this command to send keys such as "Enter" or "C-c" to the runner pane.
+
+------------------------------------------------------------------------------
+                                                               *VimuxOpenPane*
+VimuxOpenPane~
+
+This will either open a new pane or use the nearest pane and set it as the
+vimux runner pane for the other vimux commands. You can control if this command
+uses the nearest pane or always creates a new one with g:VimuxUseNearest
+
+------------------------------------------------------------------------------
                                                             *VimuxPromptCommand*
 VimuxPromptCommand~
 
 Prompt for a command and run it in a small horizontal split bellow the current
-pane.
+pane. A parameter can be supplied to predefine a command or a part of the
+command which can be edited in the prompt.
 >
  " Prompt for a command to run map
- <Leader>vp :VimuxPromptCommand<CR>
+ map <Leader>vp :VimuxPromptCommand<CR>
+ map <Leader>vm :VimuxPromptCommand("make ")<CR>
 <
 
 ------------------------------------------------------------------------------
-                                                         *RunLastVimTmuxCommand*
                                                            *VimuxRunLastCommand*
 VimuxRunLastCommand~
 
@@ -123,7 +138,6 @@ Run the last command executed by `VimuxRunCommand`
 <
 
 ------------------------------------------------------------------------------
-                                                          *InspectVimTmuxRunner*
                                                             *VimuxInspectRunner*
 VimuxInspectRunner~
 
@@ -131,11 +145,10 @@ Move into the tmux runner pane created by `VimuxRunCommand` and enter copy
 pmode (scroll mode).
 >
  " Inspect runner pane map
- <Leader>vi :VimuxInspectRunner<CR>
+ map <Leader>vi :VimuxInspectRunner<CR>
 <
 
 ------------------------------------------------------------------------------
-                                                            *CloseVimTmuxRunner*
                                                             *VimuxCloseRunner*
 VimuxCloseRunner~
 
@@ -146,18 +159,6 @@ Close the tmux runner created by `VimuxRunCommand`
 <
 
 ------------------------------------------------------------------------------
-                                                             *CloseVimTmuxPanes*
-                                                               *VimuxClosePanes*
-VimuxClosePanes~
-
-Close all other tmux panes in the current window.
->
- " Close all other tmux panes in current window
- map <Leader>vx :VimuxClosePanes<CR>
->
-
-------------------------------------------------------------------------------
-                                                        *InterruptVimTmuxRunner*
                                                           *VimuxInterruptRunner*
 VimuxInterruptRunner~
 
@@ -165,7 +166,7 @@ Interrupt any command that is running inside the
 runner pane.
 >
  " Interrupt any command running in the runner pane map
- <Leader>vs :VimuxInterruptRunner<CR>
+ map <Leader>vs :VimuxInterruptRunner<CR>
 <
 
 
@@ -174,13 +175,42 @@ runner pane.
                                                           *VimuxClearRunnerHistory*
 VimuxClearRunnerHistory~
 
-Clear ths tmux history of the runner pane for when
+Clear the tmux history of the runner pane for when
 you enter tmux scroll mode inside the runner pane.
 >
  " Clear the tmux history of the runner pane
- <Leader>vc :VimuxClearRunnerHistory<CR>
+ map <Leader>vc :VimuxClearRunnerHistory<CR>
 <
 
+------------------------------------------------------------------------------
+                                                          *VimuxZoomRunner*
+VimuxZoomRunner~
+
+Zoom the runner pane. Once its zoomed, you will need
+to use tmux "<bind-key> z" to restore the runner pane.
+Zoom requires tmux version >= 1.8
+>
+
+ " Zoom the tmux runner page
+ map <Leader>vz :VimuxZoomRunner<CR>
+<
+
+------------------------------------------------------------------------------
+                                                        *VimuxRunCommandInDir*
+VimuxRunCommandInDir~
+
+Runs the specified command inside the directory of
+the currently opened file. Takes two arguments. command and inFile
+
+command: The command to run
+inFile: If 1 the filename will be appended to the command
+>
+
+ " Compile currently opened latex file to pdf
+ autocmd Filetype tex nnoremap <buffer> <Leader>rr :update<Bar>:call VimuxRunCommandInDir('latexmk -pdf', 1)<CR>
+ " Push the repository of the currently opened file
+ nnoremap <leader>gp :call VimuxRunCommandInDir("git push", 0)<CR>
+<
 
 ==============================================================================
 MISC (3)                                                             *VimuxMisc*
@@ -194,22 +224,22 @@ Full Keybind Example~
  map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 
  " Prompt for a command to run
- map <Leader>rp :VimuxPromptCommand<CR>
- 
+ map <Leader>vp :VimuxPromptCommand<CR>
+
  " Run last command executed by VimuxRunCommand
- map <Leader>rl :VimuxRunLastCommand<CR>
- 
+ map <Leader>vl :VimuxRunLastCommand<CR>
+
  " Inspect runner pane
- map <Leader>ri :VimuxInspectRunner<CR>
- 
- " Close all other tmux panes in current window
- map <Leader>rx :VimuxClosePanes<CR>
- 
+ map <Leader>vi :VimuxInspectRunner<CR>
+
  " Close vim tmux runner opened by VimuxRunCommand
- map <Leader>rq :VimuxCloseRunner<CR>
- 
+ map <Leader>vq :VimuxCloseRunner<CR>
+
  " Interrupt any command running in the runner pane
- map <Leader>rs :VimuxInterruptRunner<CR>
+ map <Leader>vx :VimuxInterruptRunner<CR>
+
+ " Zoom the runner pane (use <bind-key> z to restore runner pane)
+ map <Leader>vz :call VimuxZoomRunner()<CR>
 >
 
 ------------------------------------------------------------------------------
@@ -220,11 +250,13 @@ Here is how to use vimux to send code to a REPL. This is similar to tslime.
 First, add some helpful mappings.
 
 >
- " Prompt for a command to run
- map <LocalLeader>vp :VimuxPromptCommand<CR>
+ function! VimuxSlime()
+  call VimuxSendText(@v)
+  call VimuxSendKeys("Enter")
+ endfunction
 
  " If text is selected, save it in the v buffer and send that buffer it to tmux
- vmap <LocalLeader>vs "vy :call VimuxRunCommand(@v . "\n", 0)<CR>
+ vmap <LocalLeader>vs "vy :call VimuxSlime()<CR>
 
  " Select current paragraph and send it to tmux
  nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
@@ -271,14 +303,15 @@ Options:
 Default: "v"
 
 ------------------------------------------------------------------------------
-                                           *VimuxConfiguration_use_nearest_pane*
-2.3 g:VimuxUseNearestPane~
+                                                *VimuxConfiguration_use_nearest*
+2.3 g:VimuxUseNearest
 
-Use exising pane (not used by vim) if found instead of running split-window.
+Use exising pane or window (not used by vim) if found instead of running
+split-window.
 
-  let VimuxUseNearestPane = 1
+  let VimuxUseNearest = 1
 
-Default: 0
+Default: 1
 
 ------------------------------------------------------------------------------
                                              *VimuxConfiguration_reset_sequence*
@@ -302,6 +335,32 @@ the prompt and your input.
   let g:VimuxPromptString = ""
 
 Default: "Command? "
+
+------------------------------------------------------------------------------
+                                                             *VimuxRunnerType*
+2.6 g:VimuxRunnerType~
+
+The type of view object Vimux should use for the runner. For reference, a
+tmux session is a group of windows, and a window is a layout of panes.
+
+  let g:VimuxRunnerType = "window"
+
+Options:
+  "pane": for panes
+  "window": for windows
+
+Default: "pane"
+
+------------------------------------------------------------------------------
+                                                              *VimuxTmuxCommand*
+2.7 g:VimuxTmuxCommand~
+
+The command that Vimux runs when it calls out to tmux. It may be useful to
+redefine this if you're using something like tmate.
+
+  let g:VimuxTmuxCommand = "tmate"
+
+Default: "tmux"
 
 ==============================================================================
 vim:tw=78:ts=2:sw=2:expandtab:ft=help:norl:
