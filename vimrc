@@ -57,6 +57,16 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtHistory(1)':        ['<c-k>'],
 \ }
 
+let test#strategy = "neoterm"
+
+map <silent> <leader>rf :TestNearest<CR>
+map <silent> <leader>rb :TestFile<CR>
+map <silent> <leader>ra :TestSuite<CR>
+map <silent> <leader>rl :TestLast<CR>
+
+let g:neoterm_position = "vertical"
+let g:neoterm_size = "80"
+
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal textwidth=78

@@ -1,0 +1,33 @@
+if !exists('g:test#perl#prove#file_pattern')
+  let g:test#perl#prove#file_pattern = '\v^t/.*\.t$'
+endif
+
+function! test#perl#prove#test_file(file) abort
+  return a:file =~# g:test#perl#prove#file_pattern
+endfunction
+
+function! test#perl#prove#build_position(type, position) abort
+  if a:type == 'file' || a:type == 'nearest'
+    return [a:position['file']]
+  else
+    return []
+  endif
+endfunction
+
+function! test#perl#prove#build_args(args)
+  let args = a:args
+
+  if !empty(filter(copy(args), 'isdirectory(v:val)'))
+    let args = ['--recurse'] + args
+  endif
+
+  if test#base#no_colors()
+    let args = ['--nocolor'] + args
+  endif
+
+  return args
+endfunction
+
+function! test#perl#prove#executable()
+  return 'prove -l'
+endfunction
