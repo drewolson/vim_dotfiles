@@ -65,7 +65,7 @@ nnoremap <silent> <leader>ra :TestSuite<CR>
 nnoremap <silent> <leader>rl :TestLast<CR>
 
 let g:neoterm_position = "vertical"
-let g:neoterm_size = "80"
+let g:neoterm_size = "100"
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
