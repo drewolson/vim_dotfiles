@@ -124,9 +124,6 @@ set statusline+=%10(L(%l/%L)%)\           " line
 set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
 
-if version >= 703
-  set undodir=~/.vim/undodir
-  set undofile
-  set undoreload=10000 "maximum number lines to save for undo on a buffer reload
-endif
-set undolevels=1000 "maximum number of changes that can be undone
+set undodir=~/.vim/undodir
+set undofile
+set undoreload=10000
