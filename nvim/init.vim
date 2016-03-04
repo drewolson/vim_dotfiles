@@ -5,11 +5,35 @@ if &shell == "/usr/bin/sudosh"
   set shell=/bin/bash
 endif
 
-filetype off
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
+call plug#begin('~/.config/nvim/plugged')
 
-compiler ruby
+Plug '~/.config/nvim/bundle/color_schemes'
+Plug '~/.config/nvim/bundle/java-mappings'
+Plug '~/.config/nvim/bundle/ruby-mappings'
+
+Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
+Plug 'bkad/CamelCaseMotion'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'lambdatoast/elm.vim'
+Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
+Plug 'kassio/neoterm' | Plug 'janko-m/vim-test'
+Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
+Plug 'rodjek/vim-puppet'
+Plug 'rust-lang/rust.vim'
+Plug 'tomtom/tcomment_vim', {'tag': '3.08'}
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-endwise'
+Plug 'jtratner/vim-flavored-markdown'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go', {'tag': 'v1.4'}
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'cespare/vim-toml'
+Plug 'vim-erlang/vim-erlang-runtime'
+
+call plug#end()
 
 set hlsearch
 set number

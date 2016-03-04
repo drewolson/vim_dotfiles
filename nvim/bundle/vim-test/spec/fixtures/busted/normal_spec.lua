@@ -1,5 +1,0 @@
-describe("Numbers", function()
-  it("can be added", function()
-    assert.True(1 + 1 == 2)
-  end)
-end)
