@@ -7,31 +7,31 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug '~/.config/nvim/bundle/color_schemes'
-Plug '~/.config/nvim/bundle/java-mappings'
-Plug '~/.config/nvim/bundle/ruby-mappings'
+Plug '~/.config/nvim/local-plugins/color_schemes'
+Plug '~/.config/nvim/local-plugins/java-mappings'
+Plug '~/.config/nvim/local-plugins/ruby-mappings'
 
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
-Plug 'bkad/CamelCaseMotion'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'lambdatoast/elm.vim'
+Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
+Plug 'ctrlpvim/ctrlp.vim', {'commit': '31b3aca71a626cae116b7ecd3e5ceb3f7bddb5a6'}
+Plug 'lambdatoast/elm.vim', {'commit': '916842745a73c73d25437ca17b88f32d8c944e1d'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
-Plug 'kassio/neoterm' | Plug 'janko-m/vim-test'
+Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'janko-m/vim-test', {'commit': 'f82d3b3388b2b462e59b073c6380f9428206e218'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
-Plug 'rodjek/vim-puppet'
-Plug 'rust-lang/rust.vim'
+Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
+Plug 'rust-lang/rust.vim', {'commit': 'e651851c7455286f0ba42c46777e9677c68796ac'}
 Plug 'tomtom/tcomment_vim', {'tag': '3.08'}
-Plug 'elixir-lang/vim-elixir'
-Plug 'tpope/vim-endwise'
-Plug 'jtratner/vim-flavored-markdown'
-Plug 'tpope/vim-fugitive'
+Plug 'elixir-lang/vim-elixir', {'commit': '1cfd5ab992b61bc30041950641eb577066269ee5'}
+Plug 'tpope/vim-endwise', {'commit': '0067ceda37725d01b7bd5bf249d63b1b5d4e2ab4'}
+Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
+Plug 'tpope/vim-fugitive', {'commit': '008b9570860f552534109b4f618cf2ddd145eeb4'}
 Plug 'fatih/vim-go', {'tag': 'v1.4'}
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-ragtag'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-Plug 'cespare/vim-toml'
-Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'pangloss/vim-javascript', {'commit': '1d8c2677d26d6b3950b90dc1636e63334c8efc3b'}
+Plug 'tpope/vim-ragtag', {'commit': '0ef3f6a5778467fbca12b7874a4509593b209228'}
+Plug 'tpope/vim-rails', {'commit': 'abf87ba2ebe07e1a4112a7921c06842070ef2f81'}
+Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
+Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
+Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f83433645f30'}
 
 call plug#end()
 
