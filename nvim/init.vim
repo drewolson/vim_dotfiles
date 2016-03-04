@@ -7,9 +7,8 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug '~/.config/nvim/local-plugins/color_schemes'
-Plug '~/.config/nvim/local-plugins/java-mappings'
-Plug '~/.config/nvim/local-plugins/ruby-mappings'
+Plug '~/.config/nvim/local-plugins/color-schemes'
+Plug '~/.config/nvim/local-plugins/language-mappings'
 
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
