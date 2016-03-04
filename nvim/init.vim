@@ -124,6 +124,6 @@ set statusline+=%10(L(%l/%L)%)\           " line
 set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
 
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set undoreload=10000
