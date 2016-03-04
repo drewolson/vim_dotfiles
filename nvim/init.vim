@@ -86,6 +86,7 @@ let g:neoterm_position = "vertical"
 let g:neoterm_size = "100"
 
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
+nnoremap <silent> <leader>td :call neoterm#close()<CR>
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
