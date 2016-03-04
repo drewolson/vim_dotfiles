@@ -59,10 +59,10 @@ let g:ctrlp_prompt_mappings = {
 
 let test#strategy = "neoterm"
 
-map <silent> <leader>rf :TestNearest<CR>
-map <silent> <leader>rb :TestFile<CR>
-map <silent> <leader>ra :TestSuite<CR>
-map <silent> <leader>rl :TestLast<CR>
+nnoremap <silent> <leader>rf :TestNearest<CR>
+nnoremap <silent> <leader>rb :TestFile<CR>
+nnoremap <silent> <leader>ra :TestSuite<CR>
+nnoremap <silent> <leader>rl :TestLast<CR>
 
 let g:neoterm_position = "vertical"
 let g:neoterm_size = "80"
@@ -85,11 +85,6 @@ map <silent> <leader>fr :CtrlPClearCache<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
 map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
-
-let g:VimuxOrientation = "h"
-let g:VimuxHeight = "30"
-
-map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
