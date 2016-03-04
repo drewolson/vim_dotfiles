@@ -64,12 +64,7 @@ let g:rubycomplete_buffer_loading = 1
 
 let g:no_html_toolbar = 'yes'
 
-let coffee_no_trailing_space_error = 1
-
-let go_highlight_trailing_whitespace_error = 0
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
-
-let g:NoseVirtualenv = ".env/bin/activate"
 
 let g:ctrlp_match_window = "top,order:ttb"
 
@@ -89,6 +84,8 @@ nnoremap <silent> <leader>rl :TestLast<CR>
 
 let g:neoterm_position = "vertical"
 let g:neoterm_size = "100"
+
+nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
