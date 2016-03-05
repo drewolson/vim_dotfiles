@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug '~/.config/nvim/local-plugins/color-schemes'
 Plug '~/.config/nvim/local-plugins/language-mappings'
 
+Plug 'benekastah/neomake', {'commit': '645c433b73f527badaac5e315f1ea16e7d34ef99'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'ctrlpvim/ctrlp.vim', {'commit': '31b3aca71a626cae116b7ecd3e5ceb3f7bddb5a6'}
@@ -87,6 +88,8 @@ let g:neoterm_size = "100"
 
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 nnoremap <silent> <leader>td :call neoterm#close()<CR>
+
+let g:go_highlight_trailing_whitespace_error = 0
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
