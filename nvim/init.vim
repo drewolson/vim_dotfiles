@@ -129,10 +129,12 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 set laststatus=2
+
 set statusline=
 set statusline+=%<\                       " cut at start
 set statusline+=%2*[%n%H%M%R%W]%*\        " buffer number, and flags
 set statusline+=%-40f\                    " relative path
+
 set statusline+=%=                        " seperate between right- and left-aligned
 set statusline+=%1*%y%*%*\                " file type
 set statusline+=%10(L(%l/%L)%)\           " line
