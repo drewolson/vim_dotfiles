@@ -86,6 +86,9 @@ nnoremap <silent> <leader>rl :wa<CR> :TestLast<CR>
 let g:neoterm_position = "vertical"
 let g:neoterm_size = "100"
 
+" ESC exits terminal
+tnoremap <Esc> <C-\><C-n>
+
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 nnoremap <silent> <leader>td :call neoterm#close()<CR>
 
