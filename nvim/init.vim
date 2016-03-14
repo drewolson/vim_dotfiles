@@ -78,6 +78,13 @@ let g:ctrlp_prompt_mappings = {
 
 let test#strategy = "neoterm"
 
+function! ClearTransform(cmd) abort
+    return 'clear;' .a:cmd
+endfunction
+
+let g:test#custom_transformations = {'clear': function('ClearTransform')}
+let g:test#transformation = 'clear'
+
 nnoremap <silent> <leader>rf :wa<CR> :TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR> :TestFile<CR>
 nnoremap <silent> <leader>ra :wa<CR> :TestSuite<CR>
