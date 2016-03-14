@@ -78,13 +78,23 @@ let g:ctrlp_prompt_mappings = {
 
 let test#strategy = "neoterm"
 
-nnoremap <silent> <leader>rf :TestNearest<CR>
-nnoremap <silent> <leader>rb :TestFile<CR>
-nnoremap <silent> <leader>ra :TestSuite<CR>
-nnoremap <silent> <leader>rl :TestLast<CR>
+function! ClearTransform(cmd) abort
+    return 'clear;' .a:cmd
+endfunction
+
+let g:test#custom_transformations = {'clear': function('ClearTransform')}
+let g:test#transformation = 'clear'
+
+nnoremap <silent> <leader>rf :wa<CR> :TestNearest<CR>
+nnoremap <silent> <leader>rb :wa<CR> :TestFile<CR>
+nnoremap <silent> <leader>ra :wa<CR> :TestSuite<CR>
+nnoremap <silent> <leader>rl :wa<CR> :TestLast<CR>
 
 let g:neoterm_position = "vertical"
 let g:neoterm_size = "100"
+
+" ESC exits terminal
+tnoremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 nnoremap <silent> <leader>td :call neoterm#close()<CR>
