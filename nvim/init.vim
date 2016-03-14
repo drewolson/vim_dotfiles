@@ -78,10 +78,10 @@ let g:ctrlp_prompt_mappings = {
 
 let test#strategy = "neoterm"
 
-nnoremap <silent> <leader>rf :TestNearest<CR>
-nnoremap <silent> <leader>rb :TestFile<CR>
-nnoremap <silent> <leader>ra :TestSuite<CR>
-nnoremap <silent> <leader>rl :TestLast<CR>
+nnoremap <silent> <leader>rf :wa<CR> :TestNearest<CR>
+nnoremap <silent> <leader>rb :wa<CR> :TestFile<CR>
+nnoremap <silent> <leader>ra :wa<CR> :TestSuite<CR>
+nnoremap <silent> <leader>rl :wa<CR> :TestLast<CR>
 
 let g:neoterm_position = "vertical"
 let g:neoterm_size = "100"
