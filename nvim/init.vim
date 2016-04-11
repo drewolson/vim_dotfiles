@@ -80,7 +80,7 @@ let g:ctrlp_prompt_mappings = {
 let test#strategy = "neoterm"
 
 function! ClearTransform(cmd) abort
-    return 'clear;' .a:cmd
+    return 'clear; ' . a:cmd
 endfunction
 
 let g:test#custom_transformations = {'clear': function('ClearTransform')}
