@@ -86,6 +86,13 @@ endfunction
 let g:test#custom_transformations = {'clear': function('ClearTransform')}
 let g:test#transformation = 'clear'
 
+function! Trim()
+  %s/\s*$//
+  ''
+endfunction
+command! -nargs=0 Trim :call Trim()
+nnoremap <silent> <Leader>cw :Trim<CR>
+
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
 nnoremap <silent> <leader>ra :wa<CR>:TestSuite<CR>
