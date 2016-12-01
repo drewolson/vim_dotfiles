@@ -20,7 +20,7 @@ Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
 Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'janko-m/vim-test', {'commit': 'f82d3b3388b2b462e59b073c6380f9428206e218'}
 Plug 'lambdatoast/elm.vim', {'commit': '5f8c518cb0c0d3dc9a54a5074b618f897ee34ef9'}
-Plug 'pangloss/vim-javascript', {'commit': '1d8c2677d26d6b3950b90dc1636e63334c8efc3b'}
+Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': 'e651851c7455286f0ba42c46777e9677c68796ac'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
