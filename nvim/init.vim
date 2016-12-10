@@ -134,9 +134,6 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> Y y$
 
-autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
-autocmd FileType tex setlocal spell spelllang=en_us
-
 if &t_Co == 256
   colorscheme jellybeans
 endif
