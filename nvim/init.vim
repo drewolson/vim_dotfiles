@@ -88,13 +88,6 @@ endfunction
 let g:test#custom_transformations = {'clear': function('ClearTransform')}
 let g:test#transformation = 'clear'
 
-function! Trim()
-  %s/\s*$//
-  ''
-endfunction
-command! -nargs=0 Trim :call Trim()
-nnoremap <silent> <Leader>cw :Trim<CR>
-
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
 nnoremap <silent> <leader>ra :wa<CR>:TestSuite<CR>
@@ -103,7 +96,6 @@ nnoremap <silent> <leader>rl :wa<CR>:TestLast<CR>
 let g:neoterm_position = "vertical"
 let g:neoterm_size = "100"
 
-" ESC exits terminal
 tnoremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
@@ -128,7 +120,6 @@ map <silent> <leader>ff :CtrlP<CR>
 map <silent> <leader>fb :CtrlPBuffer<CR>
 map <silent> <leader>fr :CtrlPClearCache<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
-map <silent> <LocalLeader>bd :bufdo :bd<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 
 nnoremap <silent> k gk
@@ -144,7 +135,6 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 set laststatus=2
 
