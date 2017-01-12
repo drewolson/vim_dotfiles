@@ -18,7 +18,7 @@ Plug 'elixir-lang/vim-elixir', {'commit': 'e38d63ce5bf82d7cb807053fe8548fee34b84
 Plug 'fatih/vim-go', {'tag': 'v1.4'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
-Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'janko-m/vim-test', {'commit': 'f82d3b3388b2b462e59b073c6380f9428206e218'}
+Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
 Plug 'lambdatoast/elm.vim', {'commit': '5f8c518cb0c0d3dc9a54a5074b618f897ee34ef9'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
