@@ -18,7 +18,7 @@ Plug 'elixir-lang/vim-elixir', {'commit': 'e9cf7055196db03dabe5f4049c64089e2913f
 Plug 'fatih/vim-go', {'tag': 'v1.4'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
-Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
+Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
 Plug 'lambdatoast/elm.vim', {'commit': '5f8c518cb0c0d3dc9a54a5074b618f897ee34ef9'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
@@ -79,7 +79,7 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtHistory(1)':        ['<c-k>'],
 \ }
 
-let test#strategy = "neoterm"
+let test#strategy = "vimux"
 
 function! ClearTransform(cmd) abort
     return 'clear; ' . a:cmd
@@ -95,6 +95,9 @@ nnoremap <silent> <leader>rl :wa<CR>:TestLast<CR>
 
 let g:neoterm_position = "vertical"
 let g:neoterm_size = "100"
+
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "40"
 
 tnoremap <Esc> <C-\><C-n>
 
