@@ -15,7 +15,7 @@ Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'ctrlpvim/ctrlp.vim', {'commit': '31b3aca71a626cae116b7ecd3e5ceb3f7bddb5a6'}
 Plug 'elixir-lang/vim-elixir', {'commit': 'e130adfd82f65be838a9c8d9eab1dff797527033'} | Plug 'slashmili/alchemist.vim', {'tag': '2.7.0'}
-Plug 'fatih/vim-go', {'tag': 'v1.4'}
+Plug 'fatih/vim-go', {'tag': 'v1.12'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
 Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
