@@ -14,7 +14,7 @@ Plug 'benekastah/neomake', {'commit': '645c433b73f527badaac5e315f1ea16e7d34ef99'
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'ctrlpvim/ctrlp.vim', {'commit': '31b3aca71a626cae116b7ecd3e5ceb3f7bddb5a6'}
-Plug 'elixir-lang/vim-elixir', {'commit': 'e9cf7055196db03dabe5f4049c64089e2913f652'} | Plug 'slashmili/alchemist.vim', {'commit': 'b633fba61cea9a65718d72e10751ebea9306bcf3'}
+Plug 'elixir-lang/vim-elixir', {'commit': 'e130adfd82f65be838a9c8d9eab1dff797527033'} | Plug 'slashmili/alchemist.vim', {'tag': '2.7.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.4'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
@@ -105,6 +105,8 @@ nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 nnoremap <silent> <leader>td :call neoterm#close()<CR>
 
 let g:go_highlight_trailing_whitespace_error = 0
+
+let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
 
 autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
