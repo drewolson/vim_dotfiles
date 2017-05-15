@@ -34,6 +34,7 @@ Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f8
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
 Plug 'wlangstroth/vim-racket', {'commit': '6b62e5f50ea94aa41537fb8691abed8f30f4b107'}
+Plug 'w0rp/ale', {'tag': 'v1.3.0'}
 
 call plug#end()
 
@@ -107,6 +108,9 @@ nnoremap <silent> <leader>td :call neoterm#close()<CR>
 let g:go_highlight_trailing_whitespace_error = 0
 
 let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
+
+let g:ale_lint_on_text_changed = "normal"
+let g:ale_lint_on_insert_leave = 1
 
 autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
