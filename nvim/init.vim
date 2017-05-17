@@ -13,7 +13,6 @@ Plug '~/.config/nvim/local-plugins/language-mappings'
 Plug 'benekastah/neomake', {'commit': '645c433b73f527badaac5e315f1ea16e7d34ef99'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
-Plug 'ctrlpvim/ctrlp.vim', {'commit': '31b3aca71a626cae116b7ecd3e5ceb3f7bddb5a6'}
 Plug 'elixir-lang/vim-elixir', {'commit': 'e130adfd82f65be838a9c8d9eab1dff797527033'} | Plug 'slashmili/alchemist.vim', {'tag': '2.7.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.12'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
@@ -35,6 +34,7 @@ Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
 Plug 'wlangstroth/vim-racket', {'commit': '6b62e5f50ea94aa41537fb8691abed8f30f4b107'}
 Plug 'w0rp/ale', {'tag': 'v1.3.0'}
+Plug 'junegunn/fzf', { 'tag': '0.16.7', 'dir': '~/.fzf', 'do': './install --bin' }
 
 call plug#end()
 
@@ -59,8 +59,6 @@ set smartcase
 
 set wildignore+=*.pyc,*.o,*.class
 
-let g:ctrlp_custom_ignore = 'node_modules\|_build\|deps\|elm-stuff'
-
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
@@ -71,14 +69,9 @@ let g:no_html_toolbar = 'yes'
 
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
 
-let g:ctrlp_match_window = "top,order:ttb"
+let g:fzf_layout = {'up': '~10%'}
 
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
-  \ 'PrtSelectMove("k")':   ['<c-p>','<c-k>', '<up>'],
-  \ 'PrtHistory(-1)':       ['<c-j>'],
-  \ 'PrtHistory(1)':        ['<c-k>'],
-\ }
+let $FZF_DEFAULT_COMMAND = 'find * -type f | grep -v -E "deps|_build|node_modules"'
 
 let test#strategy = "vimux"
 
@@ -99,8 +92,6 @@ let g:neoterm_size = "100"
 
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
-
-tnoremap <Esc> <C-\><C-n>
 
 nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
 nnoremap <silent> <leader>td :call neoterm#close()<CR>
@@ -125,9 +116,7 @@ imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git" --exclude="log" --exclude="tmp" --exclude="db" --exclude="pkg" --exclude="deps" --exclude="_build" --extra=+f .<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-map <silent> <leader>ff :CtrlP<CR>
-map <silent> <leader>fb :CtrlPBuffer<CR>
-map <silent> <leader>fr :CtrlPClearCache<CR>
+map <silent> <leader>ff :FZF --reverse<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 
