@@ -69,14 +69,14 @@ let g:no_html_toolbar = 'yes'
 
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
 
-let g:fzf_layout = {'up': '~10%'}
+let g:fzf_layout = {'up': '~20%'}
 
 let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps|_build|node_modules"'
 
 let test#strategy = "vimux"
 
 function! ClearTransform(cmd) abort
-    return 'clear; ' . a:cmd
+  return 'clear; ' . a:cmd
 endfunction
 
 let g:test#custom_transformations = {'clear': function('ClearTransform')}
