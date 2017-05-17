@@ -71,7 +71,7 @@ let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
 
 let g:fzf_layout = {'up': '~10%'}
 
-let $FZF_DEFAULT_COMMAND = 'find * -type f | grep -v -E "deps|_build|node_modules"'
+let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps|_build|node_modules"'
 
 let test#strategy = "vimux"
 
