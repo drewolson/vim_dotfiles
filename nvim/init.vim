@@ -13,7 +13,7 @@ Plug '~/.config/nvim/local-plugins/language-mappings'
 Plug 'benekastah/neomake', {'commit': '645c433b73f527badaac5e315f1ea16e7d34ef99'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
-Plug 'elixir-lang/vim-elixir', {'commit': 'e130adfd82f65be838a9c8d9eab1dff797527033'} | Plug 'slashmili/alchemist.vim', {'tag': '2.7.0'}
+Plug 'elixir-lang/vim-elixir', {'commit': 'fe7daaaff030e217dffedf53cb5f426099281e3e'} | Plug 'slashmili/alchemist.vim', {'tag': '2.7.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.12'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
