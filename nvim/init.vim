@@ -103,6 +103,8 @@ let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
 let g:ale_lint_on_text_changed = "normal"
 let g:ale_lint_on_insert_leave = 1
 
+let g:ale_linters = {'java': []}
+
 autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
