@@ -10,14 +10,13 @@ call plug#begin('~/.config/nvim/plugged')
 Plug '~/.config/nvim/local-plugins/color-schemes'
 Plug '~/.config/nvim/local-plugins/language-mappings'
 
-Plug 'benekastah/neomake', {'commit': '645c433b73f527badaac5e315f1ea16e7d34ef99'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'elixir-lang/vim-elixir', {'commit': 'fe7daaaff030e217dffedf53cb5f426099281e3e'} | Plug 'slashmili/alchemist.vim', {'tag': '2.7.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.12'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
-Plug 'kassio/neoterm', {'commit': '8da66224b714c442f3f4a7ddfc59507f04555ad3'} | Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
+Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
 Plug 'lambdatoast/elm.vim', {'commit': '5f8c518cb0c0d3dc9a54a5074b618f897ee34ef9'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
@@ -87,14 +86,8 @@ nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
 nnoremap <silent> <leader>ra :wa<CR>:TestSuite<CR>
 nnoremap <silent> <leader>rl :wa<CR>:TestLast<CR>
 
-let g:neoterm_position = "vertical"
-let g:neoterm_size = "100"
-
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
-
-nnoremap <silent> <leader>tc :call neoterm#clear()<CR>
-nnoremap <silent> <leader>td :call neoterm#close()<CR>
 
 let g:go_highlight_trailing_whitespace_error = 0
 
