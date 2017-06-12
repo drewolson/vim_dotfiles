@@ -14,6 +14,7 @@ Plug 'fatih/vim-go', {'tag': 'v1.12'}
 Plug 'jlanzarotta/bufexplorer', {'tag': 'v7.4.6'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
 Plug 'junegunn/fzf', { 'tag': '0.16.8', 'dir': '~/.fzf', 'do': './install --bin' } | Plug 'junegunn/fzf.vim', {'commit': '990834ab6cb86961e61c55a8e012eb542ceff10e'}
+Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'lambdatoast/elm.vim', {'commit': '5f8c518cb0c0d3dc9a54a5074b618f897ee34ef9'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
@@ -55,10 +56,10 @@ autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType tex setlocal textwidth=78
+autocmd FileType tex setlocal textwidth=80 spell
 autocmd Filetype go setlocal noexpandtab
-autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
-autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
+autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown spell
 
 let html_use_css=1
 let html_number_lines=0
