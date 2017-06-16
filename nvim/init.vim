@@ -59,7 +59,7 @@ autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal textwidth=80 spell
 autocmd Filetype go setlocal noexpandtab
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
-autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown spell
+autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 filetype=ghmarkdown spell
 
 let html_use_css=1
 let html_number_lines=0
