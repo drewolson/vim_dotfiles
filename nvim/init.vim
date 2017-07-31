@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug '~/.config/nvim/local-plugins/color-schemes'
 Plug '~/.config/nvim/local-plugins/language-mappings'
 
+Plug 'ElmCast/elm-vim', {'commit': 'ae5315396cd0f3958750f10a5f3ad9d34d33f40d'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
@@ -14,7 +15,6 @@ Plug 'fatih/vim-go', {'tag': 'v1.12'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
 Plug 'junegunn/fzf', { 'tag': '0.16.8', 'dir': '~/.fzf', 'do': './install --bin' } | Plug 'junegunn/fzf.vim', {'commit': '990834ab6cb86961e61c55a8e012eb542ceff10e'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
-Plug 'lambdatoast/elm.vim', {'commit': '5f8c518cb0c0d3dc9a54a5074b618f897ee34ef9'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': '732b5fcb3652f81726d5f0f5b97c9027c01f057a'}
