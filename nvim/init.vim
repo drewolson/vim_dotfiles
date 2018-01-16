@@ -88,6 +88,7 @@ let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
 
 let g:go_highlight_trailing_whitespace_error = 0
+let g:go_template_autocreate = 0
 
 let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
 
