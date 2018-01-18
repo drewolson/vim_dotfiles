@@ -2,6 +2,6 @@
 *.swp
 .netrwhist
 tags
-/nvim/plugged
-/nvim/undodir
+/vim/plugged
+/vim/undodir
 /elm-package.json

@@ -1,10 +1,10 @@
 set nocompatible
 syntax on
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
-Plug '~/.config/nvim/local-plugins/color-schemes'
-Plug '~/.config/nvim/local-plugins/language-mappings'
+Plug '~/.vim/local-plugins/color-schemes'
+Plug '~/.vim/local-plugins/language-mappings'
 
 Plug 'ElmCast/elm-vim', {'commit': 'ae5315396cd0f3958750f10a5f3ad9d34d33f40d'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
@@ -14,7 +14,7 @@ Plug 'elixir-editors/vim-elixir', {'commit': '384e84f1bd75ae4a2bd10fef41c8401c49
 Plug 'mhinz/vim-mix-format', {'commit': '027ccd81417e719d77a56df4c97aedbbab83fb56'}
 Plug 'fatih/vim-go', {'tag': 'v1.15', 'do': ':GoInstallBinaries'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
-Plug 'junegunn/fzf', { 'tag': '0.16.8', 'dir': '~/.fzf', 'do': './install --bin' } | Plug 'junegunn/fzf.vim', {'commit': '990834ab6cb86961e61c55a8e012eb542ceff10e'}
+Plug 'junegunn/fzf', { 'tag': '0.17.3', 'dir': '~/.fzf', 'do': './install --bin' } | Plug 'junegunn/fzf.vim', {'commit': 'c0a5fee7071ed89602b9b59fb67e83d6cd23addc'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
@@ -143,6 +143,6 @@ set statusline+=%10(L(%l/%L)%)\           " line
 set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
 
-set undodir=~/.config/nvim/undodir
+set undodir=~/.vim/undodir
 set undofile
 set undoreload=10000
