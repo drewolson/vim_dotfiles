@@ -11,7 +11,7 @@ Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | 
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'elixir-editors/vim-elixir', {'commit': '384e84f1bd75ae4a2bd10fef41c8401c493efc8d'} | Plug 'slashmili/alchemist.vim', {'tag': '3.0.0'}
-Plug 'mhinz/vim-mix-format', {'commit': '027ccd81417e719d77a56df4c97aedbbab83fb56'}
+Plug 'mhinz/vim-mix-format', {'commit': 'b9493e87badd532584e26581bd7f1ddd78b2ac64'}
 Plug 'fatih/vim-go', {'tag': 'v1.16', 'do': ':GoInstallBinaries'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
 Plug 'junegunn/fzf', {'tag': '0.17.3', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'c0a5fee7071ed89602b9b59fb67e83d6cd23addc'}
@@ -94,6 +94,7 @@ let g:go_template_autocreate = 0
 let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
 
 let g:mix_format_on_save = 1
+let g:mix_format_silent_errors = 1
 
 let g:ale_lint_on_text_changed = "normal"
 let g:ale_lint_on_insert_leave = 1
