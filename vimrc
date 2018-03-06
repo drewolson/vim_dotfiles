@@ -11,11 +11,12 @@ Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | 
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'elixir-editors/vim-elixir', {'commit': '384e84f1bd75ae4a2bd10fef41c8401c493efc8d'} | Plug 'slashmili/alchemist.vim', {'tag': '3.0.0'}
-Plug 'mhinz/vim-mix-format', {'commit': 'b9493e87badd532584e26581bd7f1ddd78b2ac64'}
 Plug 'fatih/vim-go', {'tag': 'v1.16', 'do': ':GoInstallBinaries'}
+Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
 Plug 'junegunn/fzf', {'tag': '0.17.3', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'c0a5fee7071ed89602b9b59fb67e83d6cd23addc'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
+Plug 'mhinz/vim-mix-format', {'commit': 'b9493e87badd532584e26581bd7f1ddd78b2ac64'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': '732b5fcb3652f81726d5f0f5b97c9027c01f057a'}
@@ -30,7 +31,7 @@ Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f8
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
 Plug 'w0rp/ale', {'tag': 'v1.7.0'}
-Plug 'wlangstroth/vim-racket', {'commit': '6b62e5f50ea94aa41537fb8691abed8f30f4b107'}
+Plug 'wlangstroth/vim-racket', {'commit': 'f76fde9afbc008b7468c9ea026cbe3840af5f5ef'}
 
 call plug#end()
 
