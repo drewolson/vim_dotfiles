@@ -100,7 +100,7 @@ let g:mix_format_silent_errors = 1
 let g:ale_lint_on_text_changed = "normal"
 let g:ale_lint_on_insert_leave = 1
 
-let g:ale_linters = {'java': []}
+let g:ale_linters = {'java': [], 'go': []}
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
