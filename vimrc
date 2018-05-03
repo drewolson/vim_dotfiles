@@ -30,7 +30,6 @@ Plug 'udalov/kotlin-vim', {'commit': '0b0f27133319aaa83776855aeb32ac620eb99b3f'}
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f83433645f30'}
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
-Plug 'w0rp/ale', {'tag': 'v1.7.0'}
 Plug 'wlangstroth/vim-racket', {'commit': 'f76fde9afbc008b7468c9ea026cbe3840af5f5ef'}
 
 call plug#end()
@@ -96,11 +95,6 @@ let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
 
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
-
-let g:ale_lint_on_text_changed = "normal"
-let g:ale_lint_on_insert_leave = 1
-
-let g:ale_linters = {'java': [], 'go': []}
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
