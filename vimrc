@@ -85,6 +85,9 @@ endfunction
 let g:test#custom_transformations = {'clear': function('ClearTransform')}
 let g:test#transformation = 'clear'
 
+let test#python#nose#file_pattern = '_test\.py\|test_.*\.py'
+let test#python#runner = 'nose'
+
 let g:VimuxOrientation = "h"
 let g:VimuxHeight = "40"
 
