@@ -14,7 +14,7 @@ Plug 'elixir-editors/vim-elixir', {'commit': '384e84f1bd75ae4a2bd10fef41c8401c49
 Plug 'fatih/vim-go', {'tag': 'v1.16', 'do': ':GoInstallBinaries'}
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
-Plug 'junegunn/fzf', {'tag': '0.17.3', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'c0a5fee7071ed89602b9b59fb67e83d6cd23addc'}
+Plug 'junegunn/fzf', {'tag': '0.17.3', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'c0a5fee7071ed89602b9b59fb67e83d6cd23addc'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'mhinz/vim-mix-format', {'commit': 'b9493e87badd532584e26581bd7f1ddd78b2ac64'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
