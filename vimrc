@@ -11,7 +11,7 @@ Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | 
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'elixir-editors/vim-elixir', {'commit': '384e84f1bd75ae4a2bd10fef41c8401c493efc8d'} | Plug 'slashmili/alchemist.vim', {'tag': '3.0.0'}
-Plug 'fatih/vim-go', {'tag': 'v1.16', 'do': ':GoInstallBinaries'}
+Plug 'fatih/vim-go', {'tag': 'v1.17', 'do': ':GoInstallBinaries'}
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'jtratner/vim-flavored-markdown', {'commit': '4a70aa2e0b98d20940a65ac38b6e9acc69c6b7a0'}
 Plug 'junegunn/fzf', {'tag': '0.17.3', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'c0a5fee7071ed89602b9b59fb67e83d6cd23addc'}
@@ -19,7 +19,7 @@ Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'mhinz/vim-mix-format', {'commit': '4c9256e28a34c3bba64f645293d05e9457d6927b'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
-Plug 'rust-lang/rust.vim', {'commit': '732b5fcb3652f81726d5f0f5b97c9027c01f057a'}
+Plug 'rust-lang/rust.vim', {'commit': '8e75da9834abb22f8d7ece3f4ca4324a14fa18a6'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
 Plug 'tomtom/tcomment_vim', {'tag': '3.08'}
 Plug 'tpope/vim-endwise', {'commit': '0067ceda37725d01b7bd5bf249d63b1b5d4e2ab4', 'for': ['ruby']}
@@ -30,6 +30,7 @@ Plug 'udalov/kotlin-vim', {'commit': '0b0f27133319aaa83776855aeb32ac620eb99b3f'}
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f83433645f30'}
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
+Plug 'w0rp/ale', {'tag': 'v1.9.0'}
 Plug 'wlangstroth/vim-racket', {'commit': 'f76fde9afbc008b7468c9ea026cbe3840af5f5ef'}
 
 call plug#end()
@@ -100,6 +101,15 @@ let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
 
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
+
+let g:rustfmt_autosave = 1
+
+let g:ale_linters = {
+\   'rust': ['rustc', 'rustfmt', 'cargo'],
+\}
+
+let g:ale_linters_explicit = 1
+let g:ale_lint_on_text_changed = 'never'
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
