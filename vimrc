@@ -105,7 +105,7 @@ let g:mix_format_silent_errors = 1
 let g:rustfmt_autosave = 1
 
 let g:ale_linters = {
-\   'rust': ['rustc', 'rustfmt', 'cargo'],
+\   'rust': ['rustc', 'cargo'],
 \}
 
 let g:ale_linters_explicit = 1
