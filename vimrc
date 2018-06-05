@@ -77,7 +77,7 @@ let $FZF_DEFAULT_OPTS = '--reverse'
 let g:fzf_layout = {'up': '~20%'}
 let g:fzf_tags_command = 'ctags -R --exclude=".git" --exclude="node_modules" --exclude="vendor" --exclude="log" --exclude="tmp" --exclude="db" --exclude="pkg" --exclude="deps" --exclude="_build" --extra=+f .'
 
-let test#strategy = "vimux"
+let test#strategy = 'vimux'
 
 function! ClearTransform(cmd) abort
   return 'clear; ' . a:cmd
@@ -91,13 +91,13 @@ let test#python#runner = 'nose'
 
 let test#go#gotest#executable = 'vgo test -v'
 
-let g:VimuxOrientation = "h"
-let g:VimuxHeight = "40"
+let g:VimuxOrientation = 'h'
+let g:VimuxHeight = '40'
 
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_template_autocreate = 0
 
-let g:alchemist#elixir_erlang_src = "~/code/alchemist_sources"
+let g:alchemist#elixir_erlang_src = '~/code/alchemist_sources'
 
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
