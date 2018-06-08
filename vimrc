@@ -7,7 +7,7 @@ Plug '~/.vim/local-plugins/color-schemes'
 Plug '~/.vim/local-plugins/language-mappings'
 
 Plug 'ElmCast/elm-vim', {'commit': 'ae5315396cd0f3958750f10a5f3ad9d34d33f40d'}
-Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': 'v2.1.0'}
+Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '062c489781c995f7e81103fec8a3c07bd2ff1f4b'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'elixir-editors/vim-elixir', {'commit': '384e84f1bd75ae4a2bd10fef41c8401c493efc8d'} | Plug 'slashmili/alchemist.vim', {'tag': '3.0.0'}
