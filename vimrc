@@ -74,7 +74,6 @@ let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
 
 let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps\/|_build\/|node_modules\/|vendor\/|build_intellij\/"'
 let $FZF_DEFAULT_OPTS = '--reverse'
-let g:fzf_layout = {'up': '~20%'}
 let g:fzf_tags_command = 'ctags -R --exclude=".git" --exclude="node_modules" --exclude="vendor" --exclude="log" --exclude="tmp" --exclude="db" --exclude="pkg" --exclude="deps" --exclude="_build" --extra=+f .'
 
 let test#strategy = 'vimux'
