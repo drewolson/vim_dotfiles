@@ -62,6 +62,14 @@ autocmd Filetype go setlocal noexpandtab
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 filetype=ghmarkdown spell
 
+function! GitGrepWord()
+  cgetexpr system("git grep -n '" . expand("<cword>") . "'")
+  cwin
+  echo 'Number of matches: ' . len(getqflist())
+endfunction
+command! -nargs=0 GitGrepWord :call GitGrepWord()
+nnoremap <silent> <Leader>gw :GitGrepWord<CR>
+
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
