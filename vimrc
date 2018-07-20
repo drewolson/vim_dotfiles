@@ -96,8 +96,6 @@ let g:test#transformation = 'clear'
 let test#python#nose#file_pattern = '_test\.py\|test_.*\.py'
 let test#python#runner = 'nose'
 
-let test#go#gotest#executable = 'vgo test -v'
-
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
 
