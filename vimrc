@@ -111,6 +111,7 @@ let g:rustfmt_autosave = 1
 
 let g:ale_linters = {
 \   'rust': ['rustc', 'cargo'],
+\   'go': ['go build', 'goimports'],
 \}
 
 let g:ale_linters_explicit = 1
