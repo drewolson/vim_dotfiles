@@ -146,6 +146,8 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
+autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
+
 set laststatus=2
 
 set statusline=
