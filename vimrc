@@ -98,8 +98,14 @@ let test#python#runner = 'nose'
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
 
-let g:go_highlight_trailing_whitespace_error = 0
 let g:go_template_autocreate = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 let g:alchemist#elixir_erlang_src = '~/code/alchemist_sources'
 
