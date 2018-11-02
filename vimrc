@@ -7,7 +7,7 @@ Plug '~/.vim/local-plugins/color-schemes'
 Plug '~/.vim/local-plugins/language-mappings'
 
 Plug 'ElmCast/elm-vim', {'commit': 'ae5315396cd0f3958750f10a5f3ad9d34d33f40d'}
-Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '062c489781c995f7e81103fec8a3c07bd2ff1f4b'}
+Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'elixir-editors/vim-elixir', {'commit': '384e84f1bd75ae4a2bd10fef41c8401c493efc8d'} | Plug 'slashmili/alchemist.vim', {'tag': '3.0.0'}
@@ -83,17 +83,10 @@ let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps\/|_bui
 let $FZF_DEFAULT_OPTS = '--reverse'
 let g:fzf_tags_command = 'ctags -R --exclude=".git" --exclude="node_modules" --exclude="vendor" --exclude="log" --exclude="tmp" --exclude="db" --exclude="pkg" --exclude="deps" --exclude="_build" --extra=+f .'
 
-let test#strategy = 'vimux'
-
-function! ClearTransform(cmd) abort
-  return 'clear; ' . a:cmd
-endfunction
-
-let g:test#custom_transformations = {'clear': function('ClearTransform')}
-let g:test#transformation = 'clear'
-
-let test#python#nose#file_pattern = '_test\.py\|test_.*\.py'
-let test#python#runner = 'nose'
+let g:test#strategy = 'vimux'
+let g:test#preserve_screen = 0
+let g:test#python#nose#file_pattern = '_test\.py\|test_.*\.py'
+let g:test#python#runner = 'nose'
 
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
