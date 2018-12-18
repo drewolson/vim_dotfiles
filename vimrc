@@ -112,6 +112,7 @@ let g:ale_linters = {
 \   'rust': ['rustc', 'cargo'],
 \   'go': ['go build', 'goimports'],
 \   'ruby': ['ruby'],
+\   'haskell': ['ghc', 'stack-ghc'],
 \}
 
 let g:ale_linters_explicit = 1
