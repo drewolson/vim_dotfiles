@@ -31,7 +31,8 @@ Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f8
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
 Plug 'w0rp/ale', {'tag': 'v2.2.0'}
-Plug 'wlangstroth/vim-racket', {'commit': 'f76fde9afbc008b7468c9ea026cbe3840af5f5ef'}
+Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
+Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 
 call plug#end()
 
