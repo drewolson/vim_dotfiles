@@ -16,7 +16,7 @@ Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
-Plug 'mhinz/vim-mix-format', {'commit': '4c9256e28a34c3bba64f645293d05e9457d6927b'}
+Plug 'mhinz/vim-mix-format', {'commit': '8e586b2b72b2a932706929dd59eba4edae0601e3'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': '8e75da9834abb22f8d7ece3f4ca4324a14fa18a6'}
@@ -104,7 +104,6 @@ let g:go_highlight_build_constraints = 1
 let g:alchemist#elixir_erlang_src = '~/code/alchemist_sources'
 
 let g:mix_format_on_save = 1
-let g:mix_format_silent_errors = 1
 
 let g:rustfmt_autosave = 1
 
