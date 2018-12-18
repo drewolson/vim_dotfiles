@@ -33,6 +33,7 @@ Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
 Plug 'w0rp/ale', {'tag': 'v2.2.0'}
 Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
+Plug 'itchyny/vim-haskell-indent', {'commit': '32113104e9b548e9015f296dbe5b3803652ae1fc'}
 
 call plug#end()
 
@@ -115,6 +116,8 @@ let g:ale_linters = {
 
 let g:ale_linters_explicit = 1
 let g:ale_lint_on_text_changed = 'never'
+
+let g:haskell_indent_disable = 1
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
