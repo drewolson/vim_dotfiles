@@ -62,6 +62,7 @@ autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal textwidth=80 spell
 autocmd Filetype go setlocal noexpandtab
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
+autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
@@ -149,8 +150,6 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-
-autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 
 set laststatus=2
 
