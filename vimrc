@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug '~/.vim/local-plugins/language-mappings'
 
-Plug 'ElmCast/elm-vim', {'commit': 'ae5315396cd0f3958750f10a5f3ad9d34d33f40d'}
+Plug 'ElmCast/elm-vim', {'commit': 'd22c0ba13afb554257a8c176962e2216cc18edd1'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
@@ -35,6 +35,7 @@ Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
 Plug 'w0rp/ale', {'tag': 'v2.2.0'}
 Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
+Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
 
 call plug#end()
 
@@ -81,7 +82,7 @@ let g:rubycomplete_buffer_loading = 1
 
 let g:no_html_toolbar = 'yes'
 
-let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$']
+let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc']
 
 let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps\/|_build\/|node_modules\/|vendor\/|build_intellij\/"'
 let $FZF_DEFAULT_OPTS = '--reverse'
@@ -115,6 +116,7 @@ let g:ale_linters = {
 \   'go': ['go build', 'goimports'],
 \   'ruby': ['ruby'],
 \   'haskell': ['ghc', 'stack-ghc'],
+\   'idris': ['idris'],
 \}
 
 let g:ale_linters_explicit = 1
