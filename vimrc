@@ -13,6 +13,7 @@ Plug 'drewolson/pie-highlight.vim', {'commit': 'b8c66eb711a2df2286029d94ea0e0b33
 Plug 'elixir-editors/vim-elixir', {'commit': '7e65a353ea332c79c348ac0d4487cb19529759cd'} | Plug 'slashmili/alchemist.vim', {'tag': '3.1.1'}
 Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
+Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
 Plug 'itchyny/vim-haskell-indent', {'commit': '32113104e9b548e9015f296dbe5b3803652ae1fc'}
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
@@ -35,7 +36,6 @@ Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
 Plug 'w0rp/ale', {'tag': 'v2.2.0'}
 Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
-Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
 
 call plug#end()
 
