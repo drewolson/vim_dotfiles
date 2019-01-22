@@ -108,7 +108,7 @@ let g:go_highlight_build_constraints = 1
 
 let g:ale_linters = {
 \   'rust': ['rustc', 'cargo'],
-\   'go': ['gobuild', 'bingo'],
+\   'go': ['gobuild'],
 \   'ruby': ['ruby'],
 \   'haskell': ['ghc', 'stack-ghc'],
 \   'idris': ['idris'],
