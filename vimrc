@@ -18,10 +18,12 @@ Plug 'itchyny/vim-haskell-indent', {'commit': '32113104e9b548e9015f296dbe5b38036
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
+Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
 Plug 'mhinz/vim-mix-format', {'commit': '8e586b2b72b2a932706929dd59eba4edae0601e3'}
 Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
+Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': '8e75da9834abb22f8d7ece3f4ca4324a14fa18a6'}
 Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
@@ -117,6 +119,7 @@ let g:ale_linters = {
 \   'ruby': ['ruby'],
 \   'haskell': ['ghc', 'stack-ghc'],
 \   'idris': ['idris'],
+\   'typescript': ['tsserver'],
 \}
 
 let g:ale_linters_explicit = 1
