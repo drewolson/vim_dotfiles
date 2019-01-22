@@ -10,7 +10,7 @@ Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | 
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'drewolson/pie-highlight.vim', {'commit': 'b8c66eb711a2df2286029d94ea0e0b33239372ca'}
-Plug 'elixir-editors/vim-elixir', {'commit': '7e65a353ea332c79c348ac0d4487cb19529759cd'} | Plug 'slashmili/alchemist.vim', {'tag': '3.1.1'}
+Plug 'elixir-editors/vim-elixir', {'commit': '7e65a353ea332c79c348ac0d4487cb19529759cd'}
 Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
 Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
@@ -19,7 +19,6 @@ Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
-Plug 'mhinz/vim-mix-format', {'commit': '8e586b2b72b2a932706929dd59eba4edae0601e3'}
 Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
@@ -36,7 +35,7 @@ Plug 'udalov/kotlin-vim', {'commit': '0b0f27133319aaa83776855aeb32ac620eb99b3f'}
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f83433645f30'}
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
-Plug 'w0rp/ale', {'tag': 'v2.2.0'}
+Plug 'w0rp/ale', {'tag': 'v2.3.0'}
 Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
 
 call plug#end()
@@ -107,23 +106,29 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-let g:alchemist#elixir_erlang_src = '~/code/alchemist_sources'
-
-let g:mix_format_on_save = 1
-
-let g:rustfmt_autosave = 1
-
 let g:ale_linters = {
 \   'rust': ['rustc', 'cargo'],
-\   'go': ['go build', 'goimports'],
+\   'go': ['gobuild'],
 \   'ruby': ['ruby'],
 \   'haskell': ['ghc', 'stack-ghc'],
 \   'idris': ['idris'],
 \   'typescript': ['tsserver'],
+\   'elixir': ['elixir-ls'],
+\}
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'elixir': ['mix_format'],
+\   'rust': ['rustfmt'],
+\   'go': ['gofmt', 'goimports'],
 \}
 
 let g:ale_linters_explicit = 1
 let g:ale_lint_on_text_changed = 'never'
+let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
+let g:ale_elixir_elixir_ls_release = '/Users/andolson/code/elixir-ls/rel'
+let g:ale_history_log_output = 1
 
 let g:haskell_indent_disable = 1
 
