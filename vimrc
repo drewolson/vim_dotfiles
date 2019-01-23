@@ -42,6 +42,7 @@ call plug#end()
 
 set background=dark
 set backspace=indent,eol,start
+set completeopt-=preview
 set dir=/tmp//
 set hidden
 set hlsearch
@@ -57,7 +58,6 @@ set smartcase
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set wildignore+=*.pyc,*.o,*.class
 set wrap
-set completeopt-=preview
 
 autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -128,8 +128,10 @@ let g:ale_elixir_elixir_ls_release = $HOME . '/code/elixir-ls'
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters_explicit = 1
-autocmd Filetype elixir,typescript imap <C-X><C-O> <Plug>(ale_complete)
-autocmd Filetype elixir,typescript nmap <C-]> <Plug>(ale_go_to_definition)
+
+let ls_langs = 'elixir,typescript'
+execute 'autocmd Filetype ' . ls_langs . ' imap <C-X><C-O> <Plug>(ale_complete)'
+execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(ale_go_to_definition)'
 
 let g:haskell_indent_disable = 1
 
