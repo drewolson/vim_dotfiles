@@ -9,7 +9,7 @@ Plug 'ElmCast/elm-vim', {'commit': 'd22c0ba13afb554257a8c176962e2216cc18edd1'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
-Plug 'drewolson/pie-highlight.vim', {'commit': 'b8c66eb711a2df2286029d94ea0e0b33239372ca'}
+Plug 'drewolson/pie-highlight.vim', {'commit': 'e289202abdd84a97fd2b59ee372a808a8cbd86aa'}
 Plug 'elixir-editors/vim-elixir', {'commit': '7e65a353ea332c79c348ac0d4487cb19529759cd'}
 Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
@@ -127,7 +127,7 @@ let g:ale_linters_explicit = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
-let g:ale_elixir_elixir_ls_release = $HOME . '/code/elixir-ls/rel'
+let g:ale_elixir_elixir_ls_release = $HOME . '/code/elixir-ls'
 let g:ale_history_log_output = 1
 
 let g:haskell_indent_disable = 1
