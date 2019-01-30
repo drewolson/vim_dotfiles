@@ -114,7 +114,7 @@ let g:ale_linters = {
 \   'haskell': ['ghc', 'stack-ghc'],
 \   'idris': ['idris'],
 \   'typescript': ['tsserver'],
-\   'elixir': ['elixir-ls'],
+\   'elixir': ['mix'],
 \}
 
 let g:ale_fixers = {
@@ -129,7 +129,7 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters_explicit = 1
 
-let ls_langs = 'elixir,typescript'
+let ls_langs = 'typescript'
 execute 'autocmd Filetype ' . ls_langs . ' imap <C-X><C-O> <Plug>(ale_complete)'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(ale_go_to_definition)'
 
