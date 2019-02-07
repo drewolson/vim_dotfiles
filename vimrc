@@ -135,6 +135,9 @@ execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(ale_go_to_definitio
 
 let g:haskell_indent_disable = 1
 
+let purescript_indent_case = 2
+let purescript_indent_where = 2
+
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
 nnoremap <silent> <leader>ra :wa<CR>:TestSuite<CR>
