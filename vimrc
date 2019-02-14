@@ -3,8 +3,6 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
-Plug '~/.vim/local-plugins/language-mappings'
-
 Plug 'ElmCast/elm-vim', {'commit': 'd22c0ba13afb554257a8c176962e2216cc18edd1'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
@@ -49,6 +47,7 @@ set hidden
 set hlsearch
 set ignorecase
 set incsearch
+set isk+=?
 set mouse=
 set nofoldenable
 set number
@@ -60,14 +59,14 @@ set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set wildignore+=*.pyc,*.o,*.class
 set wrap
 
+autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
+autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
+autocmd FileType go setlocal noexpandtab
 autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal textwidth=80 spell
-autocmd Filetype go setlocal noexpandtab
-autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
-autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
