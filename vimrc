@@ -137,6 +137,7 @@ let g:haskell_indent_disable = 1
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2
+let purescript_indent_do = 2
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
