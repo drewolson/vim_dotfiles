@@ -8,9 +8,10 @@ Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | 
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
 Plug 'drewolson/pie-highlight.vim', {'commit': 'e289202abdd84a97fd2b59ee372a808a8cbd86aa'}
-Plug 'elixir-editors/vim-elixir', {'commit': '7e65a353ea332c79c348ac0d4487cb19529759cd'}
+Plug 'elixir-editors/vim-elixir', {'commit': 'd51d5f7eb5c46992ac718ac648e02e38322e073e'}
 Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
+Plug 'gleam-lang/gleam.vim', {'commit': 'fd4363c0363b856f74a1d6ad33e36b726091f8c6'}
 Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
 Plug 'itchyny/vim-haskell-indent', {'commit': '32113104e9b548e9015f296dbe5b3803652ae1fc'}
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
