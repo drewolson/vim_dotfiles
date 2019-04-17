@@ -60,6 +60,8 @@ set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set wildignore+=*.pyc,*.o,*.class
 set wrap
 
+colorscheme jellybeans
+
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
 autocmd FileType go setlocal noexpandtab
@@ -159,10 +161,6 @@ map <silent> <LocalLeader>cc :TComment<CR>
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> Y y$
-
-if &t_Co == 256
-  colorscheme jellybeans
-endif
 
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
