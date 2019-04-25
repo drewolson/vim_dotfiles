@@ -13,7 +13,6 @@ Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
 Plug 'gleam-lang/gleam.vim', {'commit': 'fd4363c0363b856f74a1d6ad33e36b726091f8c6'}
 Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
-Plug 'itchyny/vim-haskell-indent', {'commit': '32113104e9b548e9015f296dbe5b3803652ae1fc'}
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
@@ -114,7 +113,7 @@ let g:ale_linters = {
 \   'rust': ['rustc', 'cargo'],
 \   'go': ['gobuild'],
 \   'ruby': ['ruby'],
-\   'haskell': ['ghc', 'stack-ghc'],
+\   'haskell': ['ghc', 'stack_ghc'],
 \   'idris': ['idris'],
 \   'typescript': ['tsserver'],
 \   'elixir': ['mix'],
@@ -135,8 +134,6 @@ let g:ale_linters_explicit = 1
 let ls_langs = 'typescript'
 execute 'autocmd Filetype ' . ls_langs . ' imap <C-X><C-O> <Plug>(ale_complete)'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(ale_go_to_definition)'
-
-let g:haskell_indent_disable = 1
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2
