@@ -4,7 +4,7 @@ syntax on
 call plug#begin('~/.vim/plugged')
 
 Plug 'ElmCast/elm-vim', {'commit': 'd22c0ba13afb554257a8c176962e2216cc18edd1'}
-Plug 'FrigoEU/psc-ide-vim', {'commit': '6d4a3cc27e9782b703f6dd61ef5fdf27054bac0f'}
+Plug 'danieljharvey/psc-ide-vim', {'commit': 'd71ead64e332fba9e4d358fd37158f1c026d73b1'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
