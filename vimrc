@@ -7,7 +7,7 @@ Plug 'ElmCast/elm-vim', {'commit': 'd22c0ba13afb554257a8c176962e2216cc18edd1'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
-Plug 'drewolson/ale', {'commit': '4244ac5ff5ff3b01c8b9bde75666d303f2a7878f'}
+Plug 'drewolson/ale', {'commit': '861948ea6c79c002f36e6763f00042052b826a88'}
 Plug 'drewolson/pie-highlight.vim', {'commit': 'e289202abdd84a97fd2b59ee372a808a8cbd86aa'}
 Plug 'elixir-editors/vim-elixir', {'commit': 'd51d5f7eb5c46992ac718ac648e02e38322e073e'}
 Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
@@ -117,7 +117,7 @@ let g:ale_linters = {
 \   'idris': ['idris'],
 \   'typescript': ['tsserver'],
 \   'elixir': ['mix'],
-\   'purescript': ['purels'],
+\   'purescript': ['purescript-language-server'],
 \}
 
 let g:ale_fixers = {
@@ -133,7 +133,7 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
-let g:ale_purescript_purels_config = {
+let g:ale_purescript_ls_config = {
 \  'purescript': {
 \    'addSpagoSources': v:true,
 \    'addNpmPath': v:true,
