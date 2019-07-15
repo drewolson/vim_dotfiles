@@ -142,8 +142,8 @@ let g:ale_purescript_ls_config = {
 \}
 
 let ls_langs = 'typescript,purescript'
-execute 'autocmd Filetype ' . ls_langs . ' imap <C-X><C-O> <Plug>(ale_complete)'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(ale_go_to_definition)'
+execute 'autocmd Filetype ' . ls_langs . ' set omnifunc=ale#completion#OmniFunc'
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2
