@@ -136,6 +136,7 @@ let g:ale_linters_explicit = 1
 let ls_langs = 'purescript'
 execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(coc-definition)'
+execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocAction(''doHover'')<CR>'
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2

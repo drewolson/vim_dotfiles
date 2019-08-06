@@ -1,7 +1,9 @@
 {
   "coc": {
     "preferences": {
-      "extensionUpdateCheck": "never"
+      "extensionUpdateCheck": "never",
+      "hoverTarget": "preview",
+      "previewAutoClose": false
     }
   },
   "suggest": {
