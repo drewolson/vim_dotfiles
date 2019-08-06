@@ -7,6 +7,7 @@ Plug 'ElmCast/elm-vim', {'commit': 'd22c0ba13afb554257a8c176962e2216cc18edd1'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
+Plug 'dense-analysis/ale', {'commit': 'dd1e1025b8a9b13cb7966bf2baa3e6b42a862857'}
 Plug 'elixir-editors/vim-elixir', {'commit': 'd51d5f7eb5c46992ac718ac648e02e38322e073e'}
 Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
@@ -18,6 +19,7 @@ Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
 Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
+Plug 'neoclide/coc.nvim', {'commit': 'v0.0.73', 'for': ['purescript']}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
@@ -34,11 +36,11 @@ Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f8
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
-Plug 'w0rp/ale', {'commit': '1c71da5624fc46107cda4852add08fe34385dfd9'}
 Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
 
 call plug#end()
 
+set updatetime=300
 set background=dark
 set backspace=indent,eol,start
 set completeopt-=preview
@@ -115,9 +117,7 @@ let g:ale_linters = {
 \   'ruby': ['ruby'],
 \   'haskell': ['ghc', 'stack_ghc'],
 \   'idris': ['idris'],
-\   'typescript': ['tsserver'],
 \   'elixir': ['mix'],
-\   'purescript': ['purescript-language-server'],
 \}
 
 let g:ale_fixers = {
@@ -128,22 +128,14 @@ let g:ale_fixers = {
 \   'rust': ['rustfmt'],
 \}
 
-let g:ale_elixir_elixir_ls_release = $HOME . '/code/elixir-ls'
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
-let g:ale_purescript_ls_config = {
-\  'purescript': {
-\    'addSpagoSources': v:true,
-\    'addNpmPath': v:true,
-\    'buildCommand': 'spago build -- --json-errors'
-\  }
-\}
 
-let ls_langs = 'typescript,purescript'
-execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(ale_go_to_definition)'
-execute 'autocmd Filetype ' . ls_langs . ' set omnifunc=ale#completion#OmniFunc'
+let ls_langs = 'purescript'
+execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
+execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(coc-definition)'
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2
