@@ -143,16 +143,7 @@ if executable('./node_modules/.bin/purescript-language-server')
   \})
 endif
 
-if executable('./node_modules/.bin/typescript-language-server')
-  au User lsp_setup call lsp#register_server({
-  \  'name': 'typescript-language-server',
-  \  'cmd': {server_info->[&shell, &shellcmdflag, './node_modules/.bin/typescript-language-server --stdio']},
-  \  'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
-  \  'whitelist': ['typescript', 'typescript.tsx'],
-  \})
-endif
-
-let ls_langs = 'purescript,typescript'
+let ls_langs = 'purescript'
 execute 'autocmd FileType ' . ls_langs . ' setlocal omnifunc=lsp#complete'
 execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :LspHover<CR>'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> :LspDefinition<CR>'
