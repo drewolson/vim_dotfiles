@@ -7,7 +7,7 @@
     }
   },
   "suggest": {
-    "autoTrigger": "trigger"
+    "autoTrigger": "none"
   },
   "diagnostic": {
     "messageTarget": "echo"
@@ -25,6 +25,12 @@
           "buildCommand": "spago build -- --json-errors"
         }
       }
+    },
+    "typescript": {
+      "command": "./node_modules/.bin/typescript-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["typescript"],
+      "rootPatterns": ["tsconfig.json", "package.json"]
     }
   }
 }
