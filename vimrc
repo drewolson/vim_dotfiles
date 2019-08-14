@@ -19,9 +19,9 @@ Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
 Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
-Plug 'neoclide/coc.nvim', {'commit': 'v0.0.73', 'for': ['purescript']}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
+Plug 'prabirshrestha/async.vim', {'commit': '627a8c4092df24260d3dc2104bc1d944c78f91ca'} | Plug 'prabirshrestha/vim-lsp', {'commit': 'e829ca02c2aee08c3b87cc80f79b252ea5a9ae7a'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': '8e75da9834abb22f8d7ece3f4ca4324a14fa18a6'}
@@ -112,20 +112,20 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 let g:ale_linters = {
-\   'rust': ['rustc', 'cargo'],
-\   'go': ['gobuild'],
-\   'ruby': ['ruby'],
-\   'haskell': ['ghc', 'stack_ghc'],
-\   'idris': ['idris'],
-\   'elixir': ['mix'],
+\  'rust': ['rustc', 'cargo'],
+\  'go': ['gobuild'],
+\  'ruby': ['ruby'],
+\  'haskell': ['ghc', 'stack_ghc'],
+\  'idris': ['idris'],
+\  'elixir': ['mix'],
 \}
 
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'elixir': ['mix_format'],
-\   'go': ['gofmt', 'goimports'],
-\   'haskell': ['stylish-haskell'],
-\   'rust': ['rustfmt'],
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'elixir': ['mix_format'],
+\  'go': ['gofmt', 'goimports'],
+\  'haskell': ['stylish-haskell'],
+\  'rust': ['rustfmt'],
 \}
 
 let g:ale_fix_on_save = 1
@@ -133,10 +133,20 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
 
+let g:lsp_diagnostics_echo_cursor = 1
+if executable('./node_modules/.bin/purescript-language-server')
+  au User lsp_setup call lsp#register_server({
+  \  'name': 'purescript',
+  \  'cmd': {server_info->[&shell, &shellcmdflag, './node_modules/.bin/purescript-language-server --stdio']},
+  \  'workspace_config': {"purescript": {"addSpagoSources": v:true, "addNpmPath": v:true, "buildCommand": "spago build -- --json-errors"}},
+  \  'whitelist': ['purescript'],
+  \})
+endif
+
 let ls_langs = 'purescript'
-execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
-execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(coc-definition)'
-execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocAction(''doHover'')<CR>'
+execute 'autocmd FileType ' . ls_langs . ' setlocal omnifunc=lsp#complete'
+execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :LspHover<CR>'
+execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> :LspDefinition<CR>'
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2
