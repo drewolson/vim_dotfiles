@@ -3,10 +3,7 @@
     "preferences": {
       "extensionUpdateCheck": "never",
       "hoverTarget": "preview",
-      "previewAutoClose": false,
-      "snippets": {
-        "enable": false
-      }
+      "previewAutoClose": false
     }
   },
   "suggest": {
