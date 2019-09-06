@@ -12,9 +12,6 @@
   "suggest": {
     "autoTrigger": "none"
   },
-  "diagnostic": {
-    "messageTarget": "echo"
-  },
   "languageserver": {
     "purescript": {
       "command": "./node_modules/.bin/purescript-language-server",
