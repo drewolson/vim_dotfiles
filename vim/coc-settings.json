@@ -22,7 +22,7 @@
         "purescript": {
           "addSpagoSources": true,
           "addNpmPath": true,
-          "buildCommand": "spago build -- --json-errors"
+          "buildCommand": "spago build --purs-args --json-errors"
         }
       }
     },
