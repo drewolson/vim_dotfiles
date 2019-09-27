@@ -25,7 +25,7 @@ Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': '8e75da9834abb22f8d7ece3f4ca4324a14fa18a6'}
-Plug 'scrooloose/nerdtree', {'tag': '5.0.0'}
+Plug 'scrooloose/nerdtree', {'tag': '5.3.3'}
 Plug 'tomtom/tcomment_vim', {'tag': '3.08'}
 Plug 'tpope/vim-endwise', {'commit': '0067ceda37725d01b7bd5bf249d63b1b5d4e2ab4', 'for': ['ruby']}
 Plug 'tpope/vim-fugitive', {'commit': '008b9570860f552534109b4f618cf2ddd145eeb4'}
@@ -41,10 +41,10 @@ Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2
 
 call plug#end()
 
-set updatetime=300
 set background=dark
 set backspace=indent,eol,start
 set completeopt-=preview
+set digraph
 set dir=/tmp//
 set hidden
 set hlsearch
@@ -59,6 +59,7 @@ set scrolloff=5
 set showmatch
 set smartcase
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+set updatetime=300
 set wildignore+=*.pyc,*.o,*.class
 set wrap
 
