@@ -14,7 +14,7 @@
   },
   "languageserver": {
     "purescript": {
-      "command": "purescript-language-server",
+      "command": "./node_modules/.bin/purescript-language-server",
       "args": ["--stdio"],
       "filetypes": ["purescript"],
       "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"],
