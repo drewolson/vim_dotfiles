@@ -44,7 +44,6 @@ call plug#end()
 set background=dark
 set backspace=indent,eol,start
 set completeopt-=preview
-set digraph
 set dir=/tmp//
 set hidden
 set hlsearch
