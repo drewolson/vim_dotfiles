@@ -118,7 +118,6 @@ let g:ale_linters = {
 \   'ruby': ['ruby'],
 \   'haskell': ['ghc', 'stack_ghc'],
 \   'idris': ['idris'],
-\   'elixir': ['mix'],
 \}
 
 let g:ale_fixers = {
