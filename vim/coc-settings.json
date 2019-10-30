@@ -50,5 +50,15 @@
       "filetypes": ["typescript"],
       "rootPatterns": ["tsconfig.json", "package.json"]
     }
+  },
+  "list": {
+    "insertMappings": {
+      "<C-n>": "normal:j",
+      "<C-p>": "normal:k"
+    },
+    "normalMappings": {
+      "<C-n>": "normal:j",
+      "<C-p>": "normal:k"
+    }
   }
 }
