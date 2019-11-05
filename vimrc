@@ -37,6 +37,7 @@ Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f8
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
+Plug 'vmchale/dhall-vim', {'commit': '20d2fa23dddc11d694d62c957e4aa7287dba63d3'}
 Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
 
 call plug#end()
