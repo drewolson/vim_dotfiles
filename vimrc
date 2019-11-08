@@ -14,6 +14,7 @@ Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655a
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
 Plug 'gleam-lang/gleam.vim', {'commit': 'fd4363c0363b856f74a1d6ad33e36b726091f8c6'}
 Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
+Plug 'jlanzarotta/bufexplorer', {'commit': '162f6031ada3b2d1ad171e02e93f417ee1689176'}
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
