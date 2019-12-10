@@ -49,6 +49,12 @@
       "args": ["--stdio"],
       "filetypes": ["typescript"],
       "rootPatterns": ["tsconfig.json", "package.json"]
+    },
+    "rust": {
+      "command": "rls",
+      "args": [],
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
     }
   },
   "list": {
