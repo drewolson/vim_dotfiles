@@ -57,7 +57,7 @@
       "rootPatterns": ["Cargo.toml"]
     },
     "elixir": {
-      "command": "~/elixir-ls/language_server.sh",
+      "command": "~/code/elixir-ls/language_server.sh",
       "filetypes": ["elixir", "eelixir"],
       "rootPatterns": ["mix.exs"]
     }
