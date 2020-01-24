@@ -18,6 +18,7 @@ Plug 'jlanzarotta/bufexplorer', {'commit': '162f6031ada3b2d1ad171e02e93f417ee168
 Plug 'jparise/vim-graphql', {'tag': '1.1'}
 Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
+Plug 'kchmck/vim-coffee-script', {'commit': '9e3b4de2a476caeb6ff21b5da20966d7c67a98bb'}
 Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
 Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
 Plug 'neoclide/coc.nvim', {'commit': 'v0.0.74', 'for': ['elixir', 'haskell', 'purescript', 'rust', 'typescript']}
