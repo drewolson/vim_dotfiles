@@ -3,7 +3,7 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'ElmCast/elm-vim', {'commit': 'd22c0ba13afb554257a8c176962e2216cc18edd1'}
+Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
 Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
 Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
 Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
@@ -20,7 +20,7 @@ Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
 Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
-Plug 'neoclide/coc.nvim', {'commit': 'v0.0.74', 'for': ['elixir', 'haskell', 'purescript', 'rust', 'typescript']}
+Plug 'neoclide/coc.nvim', {'commit': 'v0.0.74', 'for': ['elixir', 'elm', 'haskell', 'purescript', 'rust', 'typescript']}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
@@ -68,6 +68,7 @@ colorscheme jellybeans
 
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
+autocmd FileType elm setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType go setlocal noexpandtab
 autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -115,15 +116,16 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 let g:ale_linters = {
-\   'rust': ['rustc', 'cargo'],
 \   'go': ['gobuild'],
-\   'ruby': ['ruby'],
 \   'idris': ['idris'],
+\   'ruby': ['ruby'],
+\   'rust': ['rustc', 'cargo'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'elixir': ['mix_format'],
+\   'elm': ['elm-format'],
 \   'go': ['gofmt', 'goimports'],
 \   'rust': ['rustfmt'],
 \}
@@ -133,10 +135,11 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
 
-let ls_langs = 'elixir,haskell,purescript,rust,typescript'
+let ls_langs = 'elixir,elm,haskell,purescript,rust,typescript'
 execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(coc-definition)'
 execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocAction(''doHover'')<CR>'
+execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> <leader>fa :call CocAction(''format'')<CR>'
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2

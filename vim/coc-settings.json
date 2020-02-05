@@ -60,6 +60,14 @@
       "command": "~/code/elixir-ls/language_server.sh",
       "filetypes": ["elixir", "eelixir"],
       "rootPatterns": ["mix.exs"]
+    },
+    "elm": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "elmAnalyseTrigger": "change"
+      }
     }
   },
   "list": {
