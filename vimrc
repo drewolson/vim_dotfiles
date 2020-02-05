@@ -68,12 +68,8 @@ colorscheme jellybeans
 
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
-autocmd FileType elm setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType go setlocal noexpandtab
-autocmd FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType elm,kotlin,php,python,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal textwidth=80 spell
 
 function! GitGrepWord()
