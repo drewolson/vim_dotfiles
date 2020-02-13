@@ -68,6 +68,10 @@
       "initializationOptions": {
         "elmAnalyseTrigger": "change"
       }
+    },
+    "dhall": {
+      "command": "dhall-lsp-server",
+      "filetypes": ["dhall"]
     }
   },
   "list": {

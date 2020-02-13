@@ -20,7 +20,7 @@ Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
 Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
 Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
-Plug 'neoclide/coc.nvim', {'commit': 'v0.0.74', 'for': ['elixir', 'elm', 'haskell', 'purescript', 'rust', 'typescript']}
+Plug 'neoclide/coc.nvim', {'commit': 'v0.0.74', 'for': ['dhall', 'elixir', 'elm', 'haskell', 'purescript', 'rust', 'typescript']}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
@@ -38,7 +38,7 @@ Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f8
 Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
-Plug 'vmchale/dhall-vim', {'commit': '20d2fa23dddc11d694d62c957e4aa7287dba63d3'}
+Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
 Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
 
 call plug#end()
@@ -131,7 +131,7 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
 
-let ls_langs = 'elixir,elm,haskell,purescript,rust,typescript'
+let ls_langs = 'dhall,elixir,elm,haskell,purescript,rust,typescript'
 execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> <Plug>(coc-definition)'
 execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocAction(''doHover'')<CR>'
