@@ -4,6 +4,9 @@
       "extensionUpdateCheck": "never",
       "hoverTarget": "preview",
       "previewAutoClose": false,
+      "formatOnSaveFiletypes": [
+        "haskell"
+      ],
       "snippets": {
         "enable": false
       }
@@ -42,7 +45,9 @@
       "initializationOptions": {
         "languageServerHaskell": {
           "hlintOn": true,
-          "useHieWrapper": true
+          "useHieWrapper": true,
+          "useCustomHieWrapper": true,
+          "useCustomHieWrapperPath": "~/.local/bin/hie-wrapper"
         }
       }
     },
