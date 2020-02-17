@@ -4,42 +4,39 @@ syntax on
 call plug#begin('~/.vim/plugged')
 
 Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
-Plug 'benmills/vimux', {'commit': '2285cefee9dfb2139ebc8299d11a6c8c0f21309e'} | Plug 'janko-m/vim-test', {'commit': '3d909e0190a35844aee4eb9684bf9eeecf70888f'}
-Plug 'bkad/CamelCaseMotion', {'commit': '3ae9bf93cce28ddc1f2776999ad516e153769ea4'}
-Plug 'cespare/vim-toml', {'commit': 'f6f79f3cc6740dfacca73a195857cbc45e778912'}
-Plug 'dense-analysis/ale', {'commit': 'dd1e1025b8a9b13cb7966bf2baa3e6b42a862857'}
-Plug 'elixir-editors/vim-elixir', {'commit': 'd51d5f7eb5c46992ac718ac648e02e38322e073e'}
-Plug 'fatih/vim-go', {'tag': 'v1.18', 'do': ':GoUpdateBinaries'}
+Plug 'benmills/vimux', {'commit': '37f41195e6369ac602a08ec61364906600b771f1'} | Plug 'janko-m/vim-test', {'commit': '330b0911f13bcb48a3e28dedcf71e19de5bd4864'}
+Plug 'bkad/CamelCaseMotion', {'commit': 'de439d7c06cffd0839a29045a103fe4b44b15cdc'}
+Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
+Plug 'dense-analysis/ale', {'commit': 'd6d2a0c77010db6a75a8942e2af9606971738c23'}
+Plug 'elixir-editors/vim-elixir', {'commit': '95a0e08e9bc3ebb3d2606c83b06cef3db4092337'}
+Plug 'fatih/vim-go', {'commit': '13c943aaad7ad98ddf0c35f6b758318f53e144fb', 'do': ':GoUpdateBinaries'}
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
-Plug 'gleam-lang/gleam.vim', {'commit': 'fd4363c0363b856f74a1d6ad33e36b726091f8c6'}
 Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
-Plug 'jlanzarotta/bufexplorer', {'commit': '162f6031ada3b2d1ad171e02e93f417ee1689176'}
-Plug 'jparise/vim-graphql', {'tag': '1.1'}
-Plug 'junegunn/fzf', {'tag': '0.17.4', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'ce82e10630830bc37a50f706cc3b7216d24e5009'}
-Plug 'junegunn/goyo.vim', {'tag': '1.6.0'}
-Plug 'leafgarland/typescript-vim', {'commit': '0e9d92eead2df21abe342c4341c55536dd36b0af'}
-Plug 'nanotech/jellybeans.vim', {'commit': '36f4f82bd7749928ba4e61a58b2e76effb6ecd66'}
+Plug 'jlanzarotta/bufexplorer', {'commit': '8014787603fff635dfae6afd4dbe9297673a0b39'}
+Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364'}
+Plug 'junegunn/fzf', {'tag': '0.20.0', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': '467c3277884240f7b5430f8f4d600e3415c38f3b'}
+Plug 'junegunn/goyo.vim', {'commit': '6b6ed2734084fdbb6315357ddcaecf9c8e6f143d'}
+Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e10b732fd'}
+Plug 'nanotech/jellybeans.vim', {'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa'}
 Plug 'neoclide/coc.nvim', {'commit': 'v0.0.74', 'for': ['dhall', 'elixir', 'elm', 'haskell', 'purescript', 'rust', 'typescript']}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
-Plug 'rust-lang/rust.vim', {'commit': '8e75da9834abb22f8d7ece3f4ca4324a14fa18a6'}
-Plug 'scrooloose/nerdtree', {'tag': '5.3.3'}
-Plug 'tomtom/tcomment_vim', {'tag': '3.08'}
-Plug 'tpope/vim-endwise', {'commit': '0067ceda37725d01b7bd5bf249d63b1b5d4e2ab4', 'for': ['ruby']}
-Plug 'tpope/vim-fugitive', {'commit': '008b9570860f552534109b4f618cf2ddd145eeb4'}
-Plug 'tpope/vim-ragtag', {'commit': '0ef3f6a5778467fbca12b7874a4509593b209228'}
-Plug 'tpope/vim-rails', {'commit': 'abf87ba2ebe07e1a4112a7921c06842070ef2f81'}
-Plug 'udalov/kotlin-vim', {'commit': '0b0f27133319aaa83776855aeb32ac620eb99b3f'}
-Plug 'unisonweb/unison', {'commit': '5ca8523dacb79014364b5df67e3c148745d8fd56', 'rtp': 'editor-support/vim'}
-Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bafee7c69b23cc2923fda9ac16d6f83433645f30'}
-Plug 'vim-ruby/vim-ruby', {'commit': '666adb5bcdfb2d21572a58fcdf7545a26bac32a0'}
+Plug 'rust-lang/rust.vim', {'commit': 'db0137dfad4690621e01dbae780fb4a2dd7dbf27'}
+Plug 'scrooloose/nerdtree', {'tag': '6.6.1'}
+Plug 'tomtom/tcomment_vim', {'commit': '239c0c08d3e691a2c447278b88de91b602fa50bd'}
+Plug 'tpope/vim-endwise', {'commit': 'bf90d8be447de667f4532b934d1a70881be56dd8', 'for': ['ruby']}
+Plug 'tpope/vim-fugitive', {'commit': '98f67310aa3ae324d725a3b6b68a63e5a48372f4'}
+Plug 'tpope/vim-ragtag', {'commit': '6f1af76cd669c4fb07f0c4e20fdee3077620e3d8'}
+Plug 'tpope/vim-rails', {'commit': '64befc6187678893082bebb8be79c1d17fdd07ba'}
+Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bba638c6ff658201fd6cd3cacc96cd4c7f63258c'}
+Plug 'vim-ruby/vim-ruby', {'commit': 'fbf85d106a2c3979ed43d6332b8c26a72542754d'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
-Plug 'vim-scripts/matchit.zip', {'tag': '1.9'}
+Plug 'vim-scripts/matchit.zip', {'tag': '1.13.2'}
 Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
-Plug 'wlangstroth/vim-racket', {'commit': '164d93736d5cee79c77d4a8a3f722ef31d8d2f4c'}
+Plug 'wlangstroth/vim-racket', {'commit': '55aba05bcaa1f8efa977e92ebfcef98ab84ed616'}
 
 call plug#end()
 
