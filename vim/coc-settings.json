@@ -33,7 +33,7 @@
       "command": "hie-wrapper",
       "args": ["--lsp"],
       "rootPatterns": [
-        ".stack.yaml",
+        "stack.yaml",
         "cabal.config",
         "package.yaml"
       ],
