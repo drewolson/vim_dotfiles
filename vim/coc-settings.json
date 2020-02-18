@@ -50,7 +50,7 @@
       }
     },
     "typescript": {
-      "command": "./node_modules/.bin/typescript-language-server",
+      "command": "typescript-language-server",
       "args": ["--stdio"],
       "filetypes": ["typescript"],
       "rootPatterns": ["tsconfig.json", "package.json"]
