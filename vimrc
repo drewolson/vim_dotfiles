@@ -112,7 +112,6 @@ let g:ale_linters = {
 \   'go': ['gobuild'],
 \   'idris': ['idris'],
 \   'ruby': ['ruby'],
-\   'rust': ['rustc', 'cargo'],
 \}
 
 let g:ale_fixers = {
