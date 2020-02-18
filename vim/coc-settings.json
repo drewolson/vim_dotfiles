@@ -12,6 +12,9 @@
       }
     }
   },
+  "signature": {
+    "enable": false
+  },
   "suggest": {
     "autoTrigger": "none"
   },
@@ -38,8 +41,6 @@
         "package.yaml"
       ],
       "filetypes": [
-        "hs",
-        "lhs",
         "haskell"
       ],
       "initializationOptions": {
