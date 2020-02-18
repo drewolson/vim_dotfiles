@@ -4,9 +4,6 @@
       "extensionUpdateCheck": "never",
       "hoverTarget": "preview",
       "previewAutoClose": false,
-      "formatOnSaveFiletypes": [
-        "haskell"
-      ],
       "snippets": {
         "enable": false
       }
