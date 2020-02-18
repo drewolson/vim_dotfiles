@@ -121,6 +121,7 @@ let g:ale_fixers = {
 \   'elm': ['elm-format'],
 \   'go': ['gofmt', 'goimports'],
 \   'rust': ['rustfmt'],
+\   'typescript': ['prettier'],
 \}
 
 let g:ale_fix_on_save = 1
