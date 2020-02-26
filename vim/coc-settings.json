@@ -29,6 +29,11 @@
         }
       }
     },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    },
     "haskell": {
       "command": "hie-wrapper",
       "args": ["--lsp"],
