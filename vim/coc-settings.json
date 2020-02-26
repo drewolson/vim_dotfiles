@@ -32,7 +32,11 @@
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
-      "filetypes": ["go"]
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true,
+        "completeUnimported": true
+      }
     },
     "haskell": {
       "command": "hie-wrapper",
