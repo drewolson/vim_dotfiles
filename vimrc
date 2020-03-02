@@ -9,7 +9,6 @@ Plug 'bkad/CamelCaseMotion', {'commit': 'de439d7c06cffd0839a29045a103fe4b44b15cd
 Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
 Plug 'dense-analysis/ale', {'commit': 'd6d2a0c77010db6a75a8942e2af9606971738c23'}
 Plug 'elixir-editors/vim-elixir', {'commit': '95a0e08e9bc3ebb3d2606c83b06cef3db4092337'}
-Plug 'fatih/vim-go', {'commit': '13c943aaad7ad98ddf0c35f6b758318f53e144fb', 'do': ':GoUpdateBinaries'}
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
 Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
@@ -98,15 +97,6 @@ let g:test#python#runner = 'nose'
 
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
-
-let g:go_template_autocreate = 0
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
 
 let g:ale_linters = {
 \   'idris': ['idris'],
