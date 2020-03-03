@@ -99,6 +99,7 @@ let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
 
 let g:ale_linters = {
+\   'idris': ['idris'],
 \   'ruby': ['ruby'],
 \}
 
