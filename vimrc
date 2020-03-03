@@ -99,16 +99,11 @@ let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
 
 let g:ale_linters = {
-\   'idris': ['idris'],
 \   'ruby': ['ruby'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'elixir': ['mix_format'],
-\   'elm': ['elm-format'],
-\   'go': ['gofmt', 'goimports'],
-\   'rust': ['rustfmt'],
 \   'typescript': ['prettier'],
 \}
 

@@ -3,7 +3,11 @@
     "preferences": {
       "extensionUpdateCheck": "never",
       "formatOnSaveFiletypes": [
-        "dhall"
+        "dhall",
+        "elixir",
+        "elm",
+        "go",
+        "rust"
       ],
       "hoverTarget": "preview",
       "previewAutoClose": false,
