@@ -2,6 +2,9 @@
   "coc": {
     "preferences": {
       "extensionUpdateCheck": "never",
+      "formatOnSaveFiletypes": [
+        "dhall"
+      ],
       "hoverTarget": "preview",
       "previewAutoClose": false,
       "snippets": {
