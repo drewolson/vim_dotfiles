@@ -92,7 +92,12 @@
     },
     "dhall": {
       "command": "dhall-lsp-server",
-      "filetypes": ["dhall"]
+      "filetypes": ["dhall"],
+      "initializationOptions": {
+        "vscode-dhall-lsp-server": {
+          "asciiOnly": true
+        }
+      }
     }
   },
   "list": {
