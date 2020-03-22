@@ -36,7 +36,7 @@ Plug 'vim-ruby/vim-ruby', {'commit': 'fbf85d106a2c3979ed43d6332b8c26a72542754d'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vim-scripts/matchit.zip', {'tag': '1.13.2'}
 Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
-Plug 'wlangstroth/vim-racket', {'commit': '55aba05bcaa1f8efa977e92ebfcef98ab84ed616'}
+Plug 'wlangstroth/vim-racket', {'commit': '65e6e61e4492fefdddd992158d784cc751401590'}
 
 call plug#end()
 
@@ -101,6 +101,7 @@ let g:VimuxHeight = '40'
 
 let g:ale_linters = {
 \   'idris': ['idris'],
+\   'racket': ['raco'],
 \   'ruby': ['ruby'],
 \}
 
