@@ -7,6 +7,7 @@
         "elixir",
         "elm",
         "go",
+        "python",
         "rust"
       ],
       "hoverTarget": "preview",
@@ -23,6 +24,18 @@
     "autoTrigger": "none"
   },
   "languageserver": {
+    "python": {
+      "command": ".venv/bin/python",
+      "args": ["-mpyls"],
+      "filetypes": [
+        "python"
+      ],
+      "settings": {
+        "pyls": {
+          "enable": true
+        }
+      }
+    },
     "purescript": {
       "command": "purescript-language-server",
       "args": ["--stdio"],
