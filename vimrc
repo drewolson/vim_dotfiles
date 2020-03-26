@@ -85,7 +85,7 @@ let g:rubycomplete_buffer_loading = 1
 
 let g:no_html_toolbar = 'yes'
 
-let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc$', '\.idr\~$']
+let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc$', '\.idr\~$', '^__pycache__$']
 
 let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps\/|_build\/|node_modules\/|vendor\/|build_intellij\/|output\/"'
 let $FZF_DEFAULT_OPTS = '--reverse'
