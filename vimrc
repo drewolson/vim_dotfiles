@@ -11,7 +11,7 @@ Plug 'dense-analysis/ale', {'commit': 'd6d2a0c77010db6a75a8942e2af9606971738c23'
 Plug 'elixir-editors/vim-elixir', {'commit': '95a0e08e9bc3ebb3d2606c83b06cef3db4092337'}
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
-Plug 'idris-hackers/idris-vim', {'commit': '091ed6b267749927777423160eeab520109dd9c1'}
+Plug 'edwinb/idris2-vim', {'commit': '0fd4094cc3a26588cb57c666b8eadb6bf14348f5'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '8014787603fff635dfae6afd4dbe9297673a0b39'}
 Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364'}
 Plug 'junegunn/fzf', {'tag': '0.20.0', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': '467c3277884240f7b5430f8f4d600e3415c38f3b'}
@@ -30,7 +30,7 @@ Plug 'tpope/vim-endwise', {'commit': 'bf90d8be447de667f4532b934d1a70881be56dd8',
 Plug 'tpope/vim-fugitive', {'commit': '98f67310aa3ae324d725a3b6b68a63e5a48372f4'}
 Plug 'tpope/vim-ragtag', {'commit': '6f1af76cd669c4fb07f0c4e20fdee3077620e3d8'}
 Plug 'tpope/vim-rails', {'commit': '64befc6187678893082bebb8be79c1d17fdd07ba'}
-Plug 'unisonweb/unison', {'commit': 'bf59f60076c203ff7950a2b5ab75aa752678b53a', 'rtp': 'editor-support/vim'}
+Plug 'unisonweb/unison', {'commit': '050d309d2baac4b2b5f7a4e047cfd7b4299f33db', 'rtp': 'editor-support/vim'}
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bba638c6ff658201fd6cd3cacc96cd4c7f63258c'}
 Plug 'vim-ruby/vim-ruby', {'commit': 'fbf85d106a2c3979ed43d6332b8c26a72542754d'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
