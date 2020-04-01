@@ -25,7 +25,7 @@ Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bff
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': 'db0137dfad4690621e01dbae780fb4a2dd7dbf27'}
 Plug 'scrooloose/nerdtree', {'tag': '6.6.1'}
-Plug 'tomtom/tcomment_vim', {'commit': '239c0c08d3e691a2c447278b88de91b602fa50bd'}
+Plug 'tomtom/tcomment_vim', {'commit': 'b9a075e36e9d8817b15e2edcdb8b6bf51a8d479c'}
 Plug 'tpope/vim-endwise', {'commit': 'bf90d8be447de667f4532b934d1a70881be56dd8', 'for': ['ruby']}
 Plug 'tpope/vim-fugitive', {'commit': '98f67310aa3ae324d725a3b6b68a63e5a48372f4'}
 Plug 'tpope/vim-ragtag', {'commit': '6f1af76cd669c4fb07f0c4e20fdee3077620e3d8'}
@@ -80,6 +80,8 @@ nnoremap <silent> <Leader>gw :GitGrepWord<CR>
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
+
+call tcomment#type#Define('unison', '-- %s')
 
 let g:rubycomplete_buffer_loading = 1
 
