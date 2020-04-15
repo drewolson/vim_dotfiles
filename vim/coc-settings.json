@@ -17,6 +17,9 @@
       }
     }
   },
+  "diagnostic": {
+    "checkCurrentLine": true
+  },
   "signature": {
     "enable": false
   },
