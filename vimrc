@@ -83,12 +83,13 @@ nnoremap <silent> <Leader>gw :GitGrepWord<CR>
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
+let g:no_html_toolbar = 'yes'
 
 call tcomment#type#Define('unison', '-- %s')
 
 let g:rubycomplete_buffer_loading = 1
 
-let g:no_html_toolbar = 'yes'
+let g:go_highlight_trailing_whitespace_error = 0
 
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc$', '\.idr\~$', '^__pycache__$']
 
