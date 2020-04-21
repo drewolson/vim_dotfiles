@@ -18,7 +18,7 @@ Plug 'junegunn/fzf', {'tag': '0.20.0', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'commit': '6b6ed2734084fdbb6315357ddcaecf9c8e6f143d'}
 Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e10b732fd'}
 Plug 'nanotech/jellybeans.vim', {'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa'}
-Plug 'neoclide/coc.nvim', {'commit': 'v0.0.78', 'for': ['dhall', 'elixir', 'elm', 'go', 'haskell', 'purescript', 'python', 'rust', 'typescript']}
+Plug 'neoclide/coc.nvim', {'commit': 'v0.0.78'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
@@ -63,6 +63,8 @@ set wildignore+=*.pyc,*.o,*.class
 set wrap
 
 colorscheme jellybeans
+
+hi CocFloating ctermfg=black
 
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
