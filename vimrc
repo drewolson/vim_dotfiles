@@ -17,7 +17,7 @@ Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364
 Plug 'junegunn/fzf', {'tag': '0.21.1', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': '467c3277884240f7b5430f8f4d600e3415c38f3b'}
 Plug 'junegunn/goyo.vim', {'commit': '6b6ed2734084fdbb6315357ddcaecf9c8e6f143d'}
 Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e10b732fd'}
-Plug 'nanotech/jellybeans.vim', {'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa'}
+Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
 Plug 'neoclide/coc.nvim', {'commit': 'v0.0.78'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
@@ -63,8 +63,6 @@ set wildignore+=*.pyc,*.o,*.class
 set wrap
 
 colorscheme jellybeans
-
-hi CocFloating ctermfg=black
 
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell

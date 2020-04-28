@@ -1,6 +1,7 @@
 {
   "coc": {
     "preferences": {
+      "enableFloatHighlight": false,
       "extensionUpdateCheck": "never",
       "formatOnSaveFiletypes": [
         "dhall",
@@ -12,6 +13,9 @@
       ],
       "hoverTarget": "preview",
       "previewAutoClose": false,
+      "diagnostic": {
+        "checkCurrentLine": true
+      },
       "snippets": {
         "enable": false
       }
