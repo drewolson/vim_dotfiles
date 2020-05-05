@@ -1,6 +1,7 @@
 {
   "coc": {
     "preferences": {
+      "bracketEnterImprove": false,
       "enableFloatHighlight": false,
       "extensionUpdateCheck": "never",
       "formatOnSaveFiletypes": [
