@@ -8,10 +8,10 @@ Plug 'benmills/vimux', {'commit': '37f41195e6369ac602a08ec61364906600b771f1'} | 
 Plug 'bkad/CamelCaseMotion', {'commit': 'de439d7c06cffd0839a29045a103fe4b44b15cdc'}
 Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
 Plug 'dense-analysis/ale', {'commit': 'd6d2a0c77010db6a75a8942e2af9606971738c23'}
+Plug 'edwinb/idris2-vim', {'commit': '0fd4094cc3a26588cb57c666b8eadb6bf14348f5'}
 Plug 'elixir-editors/vim-elixir', {'commit': '95a0e08e9bc3ebb3d2606c83b06cef3db4092337'}
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
-Plug 'gabrielelana/vim-markdown', {'commit': 'd18363153771bdd9c932a217611326c5ce4fd812'}
-Plug 'edwinb/idris2-vim', {'commit': '0fd4094cc3a26588cb57c666b8eadb6bf14348f5'}
+Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': 'da5a7ac96f517e0fd6f886bc3fbe27156ca1f946'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '8014787603fff635dfae6afd4dbe9297673a0b39'}
 Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364'}
 Plug 'junegunn/fzf', {'tag': '0.21.1', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': '467c3277884240f7b5430f8f4d600e3415c38f3b'}
@@ -82,6 +82,9 @@ let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
 let g:no_html_toolbar = 'yes'
+
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 2
 
 call tcomment#type#Define('unison', '-- %s')
 
