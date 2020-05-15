@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
 Plug 'benmills/vimux', {'commit': '37f41195e6369ac602a08ec61364906600b771f1'} | Plug 'janko-m/vim-test', {'commit': '330b0911f13bcb48a3e28dedcf71e19de5bd4864'}
-Plug 'bkad/CamelCaseMotion', {'commit': 'de439d7c06cffd0839a29045a103fe4b44b15cdc'}
 Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
 Plug 'dense-analysis/ale', {'commit': 'd6d2a0c77010db6a75a8942e2af9606971738c23'}
 Plug 'edwinb/idris2-vim', {'commit': '0fd4094cc3a26588cb57c666b8eadb6bf14348f5'}
@@ -26,15 +25,13 @@ Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
 Plug 'rust-lang/rust.vim', {'commit': 'db0137dfad4690621e01dbae780fb4a2dd7dbf27'}
 Plug 'scrooloose/nerdtree', {'tag': '6.7.7'}
 Plug 'tomtom/tcomment_vim', {'commit': 'b9a075e36e9d8817b15e2edcdb8b6bf51a8d479c'}
-Plug 'tpope/vim-endwise', {'commit': 'bf90d8be447de667f4532b934d1a70881be56dd8', 'for': ['ruby']}
 Plug 'tpope/vim-fugitive', {'commit': '98f67310aa3ae324d725a3b6b68a63e5a48372f4'}
 Plug 'tpope/vim-ragtag', {'commit': '6f1af76cd669c4fb07f0c4e20fdee3077620e3d8'}
-Plug 'tpope/vim-rails', {'commit': '64befc6187678893082bebb8be79c1d17fdd07ba'}
+Plug 'tpope/vim-rails', {'commit': '184d12e85a17c85c548aeecc5b5c8c3182bd22e9'}
 Plug 'unisonweb/unison', {'commit': '050d309d2baac4b2b5f7a4e047cfd7b4299f33db', 'rtp': 'editor-support/vim'}
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bba638c6ff658201fd6cd3cacc96cd4c7f63258c'}
-Plug 'vim-ruby/vim-ruby', {'commit': 'fbf85d106a2c3979ed43d6332b8c26a72542754d'}
+Plug 'vim-ruby/vim-ruby', {'commit': 'fd49b25e08618b58db678c3f8ce6e443b1ad04e7'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
-Plug 'vim-scripts/matchit.zip', {'tag': '1.13.2'}
 Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
 Plug 'wlangstroth/vim-racket', {'commit': '65e6e61e4492fefdddd992158d784cc751401590'}
 
