@@ -28,6 +28,16 @@
   "suggest": {
     "autoTrigger": "none"
   },
+  "list": {
+    "insertMappings": {
+      "<C-n>": "normal:j",
+      "<C-p>": "normal:k"
+    },
+    "normalMappings": {
+      "<C-n>": "normal:j",
+      "<C-p>": "normal:k"
+    }
+  },
   "languageserver": {
     "python": {
       "command": ".venv/bin/python",
@@ -117,16 +127,6 @@
           "asciiOnly": true
         }
       }
-    }
-  },
-  "list": {
-    "insertMappings": {
-      "<C-n>": "normal:j",
-      "<C-p>": "normal:k"
-    },
-    "normalMappings": {
-      "<C-n>": "normal:j",
-      "<C-p>": "normal:k"
     }
   }
 }
