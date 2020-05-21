@@ -91,7 +91,7 @@
       "rootPatterns": ["tsconfig.json", "package.json"]
     },
     "rust": {
-      "command": "rls",
+      "command": "rust-analyzer",
       "args": [],
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
