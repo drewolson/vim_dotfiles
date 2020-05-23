@@ -75,7 +75,7 @@
       }
     },
     "haskell": {
-      "command": "hie-wrapper",
+      "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
       "rootPatterns": [
         "stack.yaml",
@@ -87,10 +87,7 @@
       ],
       "initializationOptions": {
         "languageServerHaskell": {
-          "hlintOn": true,
-          "useHieWrapper": true,
-          "useCustomHieWrapper": true,
-          "useCustomHieWrapperPath": "~/.local/bin/hie-wrapper"
+          "hlintOn": true
         }
       }
     },
