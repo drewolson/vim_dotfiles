@@ -106,7 +106,12 @@
     "elixir": {
       "command": "~/code/elixir-ls/language_server.sh",
       "filetypes": ["elixir", "eelixir"],
-      "rootPatterns": ["mix.exs"]
+      "rootPatterns": ["mix.exs"],
+      "initializationOptions": {
+        "elixirLS": {
+          "dialyzerEnabled": false
+        }
+      }
     },
     "elm": {
       "command": "elm-language-server",
