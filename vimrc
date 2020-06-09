@@ -105,12 +105,14 @@ let g:VimuxHeight = '40'
 
 let g:ale_linters = {
 \   'idris': ['idris'],
+\   'javascript': ['eslint'],
 \   'racket': ['raco'],
 \   'ruby': ['ruby'],
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
 \   'purescript': ['purty'],
 \   'typescript': ['prettier'],
 \}
