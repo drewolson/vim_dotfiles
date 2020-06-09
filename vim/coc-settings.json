@@ -91,10 +91,10 @@
         }
       }
     },
-    "typescript": {
-      "command": "typescript-language-server",
-      "args": ["--stdio"],
-      "filetypes": ["typescript"],
+    "javascript": {
+      "command": "javascript-typescript-stdio",
+      "args": [],
+      "filetypes": ["javascript", "typescript"],
       "rootPatterns": ["tsconfig.json", "package.json"]
     },
     "rust": {
