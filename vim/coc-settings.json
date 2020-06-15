@@ -107,7 +107,7 @@
       "command": "~/code/elixir-ls/language_server.sh",
       "filetypes": ["elixir", "eelixir"],
       "rootPatterns": ["mix.exs"],
-      "initializationOptions": {
+      "settings": {
         "elixirLS": {
           "dialyzerEnabled": false
         }
