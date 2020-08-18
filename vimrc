@@ -93,7 +93,7 @@ let g:go_highlight_trailing_whitespace_error = 0
 
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc$', '\.idr\~$', '^__pycache__$']
 
-let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps\/|_build\/|node_modules\/|vendor\/|build_intellij\/|output\/"'
+let $FZF_DEFAULT_COMMAND = 'find * -type f 2>/dev/null | grep -v -E "deps\/|_build\/|node_modules\/|vendor\/|build_intellij\/|output\/|.elixir_ls\/"'
 let $FZF_DEFAULT_OPTS = '--reverse'
 let g:fzf_tags_command = 'ctags -R --exclude=".git" --exclude="node_modules" --exclude="vendor" --exclude="log" --exclude="tmp" --exclude="db" --exclude="pkg" --exclude="deps" --exclude="_build" --exclude="output" --extra=+f .'
 
@@ -106,6 +106,7 @@ let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
 
 let g:ale_linters = {
+\   'elixir': ['credo'],
 \   'idris': ['idris'],
 \   'javascript': ['eslint'],
 \   'racket': ['raco'],
@@ -123,6 +124,7 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
+let g:ale_elixir_credo_strict = 1
 
 let ls_langs = 'dhall,elixir,elm,go,haskell,javascript,purescript,python,rust,typescript'
 execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
