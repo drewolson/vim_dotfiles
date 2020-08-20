@@ -68,6 +68,7 @@ autocmd BufNewFile,BufRead *.go2 setlocal ft=go
 autocmd FileType go setlocal noexpandtab
 autocmd FileType elm,kotlin,php,python,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal textwidth=80 spell
+autocmd FileType gitcommit setlocal spell
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
