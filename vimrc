@@ -64,13 +64,14 @@ set wrap
 
 colorscheme jellybeans
 
+autocmd BufNewFile,BufRead *.go2 setlocal ft=go
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
-autocmd BufNewFile,BufRead *.go2 setlocal ft=go
-autocmd FileType go setlocal noexpandtab
 autocmd FileType elm,kotlin,php,python,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType tex setlocal textwidth=80 spell
 autocmd FileType gitcommit setlocal spell
+autocmd FileType go setlocal noexpandtab
+autocmd FileType tex setlocal textwidth=80 spell
+autocmd Filetype elixir :command! A ElixirAlternateFile()
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
@@ -137,8 +138,6 @@ execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocActionAs
 let purescript_indent_case = 2
 let purescript_indent_where = 2
 let purescript_indent_do = 2
-
-autocmd Filetype elixir :command! A ElixirAlternateFile()
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
