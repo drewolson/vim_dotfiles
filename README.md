@@ -1,3 +1,3 @@
-Symlink `vimrc` to `~/.vimrc` and `vim` to `~/.vim`.
+Symlink this directory to `~/.vim`.
 
 Open vim and run `:PlugInstall`.
