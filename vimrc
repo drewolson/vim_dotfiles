@@ -9,7 +9,7 @@ Plug 'benmills/vimux', {'commit': '37f41195e6369ac602a08ec61364906600b771f1'} | 
 Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
 Plug 'dense-analysis/ale', {'commit': 'd6d2a0c77010db6a75a8942e2af9606971738c23'}
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
-Plug 'edwinb/idris2-vim', {'commit': '0fd4094cc3a26588cb57c666b8eadb6bf14348f5'}
+Plug 'edwinb/idris2-vim', {'commit': '099129e08c89d9526ad092b7980afa355ddaa24c'}
 Plug 'elixir-editors/vim-elixir', {'commit': '95a0e08e9bc3ebb3d2606c83b06cef3db4092337'}
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
