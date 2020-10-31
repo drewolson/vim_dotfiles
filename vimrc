@@ -22,6 +22,7 @@ Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e1
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
 Plug 'neoclide/coc.nvim', {'commit': 'e539054f57234b485a3fc418857b8741426ddb14'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
+Plug 'ocaml/vim-ocaml', {'commit': '023a2a464e7a096779d3e541ee7d1dbe61148f6a'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '67ca4dc4a0291e5d8c8da48bffc0f3d2c9739e7f'}
 Plug 'rodjek/vim-puppet', {'commit': 'd881b93dc4a8ed1374ad44439aeeb47808a6b91a'}
@@ -130,7 +131,7 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
 let g:ale_elixir_credo_strict = 1
 
-let ls_langs = 'dhall,elixir,elm,go,haskell,javascript,purescript,python,rust,typescript'
+let ls_langs = 'dhall,elixir,elm,go,haskell,javascript,ocaml,purescript,python,rust,typescript'
 execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> :call CocActionAsync(''jumpDefinition'')<CR>'
 execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocActionAsync(''doHover'')<CR>'

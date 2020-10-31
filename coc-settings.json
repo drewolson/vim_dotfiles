@@ -9,6 +9,7 @@
         "elixir",
         "elm",
         "go",
+        "ocaml",
         "python",
         "rust"
       ],
@@ -124,6 +125,11 @@
           "asciiOnly": true
         }
       }
+    },
+    "ocaml": {
+      "command": "ocamllsp",
+      "filetypes": ["ocaml"],
+      "rootPatterns": ["dune"]
     }
   }
 }
