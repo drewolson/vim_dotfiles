@@ -52,7 +52,9 @@ set ignorecase
 set incsearch
 set isk+=?
 set mouse=
+set nobackup
 set nofoldenable
+set nowritebackup
 set number
 set ruler
 set scrolloff=5
@@ -112,18 +114,18 @@ let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
 
 let g:ale_linters = {
-\   'elixir': ['credo'],
-\   'idris': ['idris'],
-\   'javascript': ['eslint'],
-\   'racket': ['raco'],
-\   'ruby': ['ruby'],
+\  'elixir': ['credo'],
+\  'idris': ['idris'],
+\  'javascript': ['eslint'],
+\  'racket': ['raco'],
+\  'ruby': ['ruby'],
 \}
 
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['prettier'],
-\   'purescript': ['purty'],
-\   'typescript': ['prettier'],
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'javascript': ['prettier'],
+\  'purescript': ['purty'],
+\  'typescript': ['prettier'],
 \}
 
 let g:ale_fix_on_save = 1
