@@ -123,6 +123,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'gleam': [{buffer, lines -> {'command': 'gleam format %t', 'read_temporary_file': 1}}],
 \  'javascript': ['prettier'],
 \  'purescript': ['purty'],
 \  'typescript': ['prettier'],
