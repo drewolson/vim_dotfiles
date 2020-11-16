@@ -9,6 +9,7 @@
         "elixir",
         "elm",
         "go",
+        "haskell",
         "ocaml",
         "python",
         "rust"
