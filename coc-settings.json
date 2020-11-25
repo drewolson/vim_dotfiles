@@ -11,6 +11,7 @@
         "go",
         "haskell",
         "ocaml",
+        "purescript",
         "python",
         "rust"
       ],
