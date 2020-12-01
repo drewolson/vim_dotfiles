@@ -19,6 +19,7 @@ Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364
 Plug 'junegunn/fzf', {'tag': '0.24.0', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': '7d45724fdd323d5eb7d39c8caa2e38e63c5e84a7'}
 Plug 'junegunn/goyo.vim', {'commit': '6b6ed2734084fdbb6315357ddcaecf9c8e6f143d'}
 Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e10b732fd'}
+Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.2.1'}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
 Plug 'neoclide/coc.nvim', {'commit': 'e539054f57234b485a3fc418857b8741426ddb14'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
@@ -112,6 +113,8 @@ let g:test#python#pytest#executable = '.venv/bin/python -m pytest'
 
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
+
+let g:hoogle_path = 'stack exec -- hoogle'
 
 let g:ale_linters = {
 \  'elixir': ['credo'],
