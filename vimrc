@@ -21,7 +21,7 @@ Plug 'junegunn/goyo.vim', {'commit': '6b6ed2734084fdbb6315357ddcaecf9c8e6f143d'}
 Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e10b732fd'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.2.1'}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neoclide/coc.nvim', {'commit': 'e539054f57234b485a3fc418857b8741426ddb14'}
+Plug 'neoclide/coc.nvim', {'commit': '86e80aea782382a0e6d3828b39f5da662cda5222'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'b1ac46807835423c4a4dd063df6d5b613d89c731'}
 Plug 'ocaml/vim-ocaml', {'commit': '023a2a464e7a096779d3e541ee7d1dbe61148f6a'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
