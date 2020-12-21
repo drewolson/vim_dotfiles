@@ -86,6 +86,8 @@ endfunction
 command! -nargs=0 GitGrepWord :call GitGrepWord()
 nnoremap <silent> <Leader>gw :GitGrepWord<CR>
 
+command! -nargs=0 CocOutputChannel :CocCommand workspace.showOutput
+
 let html_use_css=1
 let html_number_lines=0
 let html_no_pre=1
