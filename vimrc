@@ -172,6 +172,8 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
+highlight! CocFloating ctermbg=black
+
 set laststatus=2
 
 set statusline=
