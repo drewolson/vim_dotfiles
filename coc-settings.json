@@ -63,8 +63,7 @@
         "purescript": {
           "addSpagoSources": true,
           "addNpmPath": true,
-          "buildCommand": "spago build --purs-args --json-errors",
-          "editorMode": true
+          "buildCommand": "spago build --purs-args --json-errors"
         }
       }
     },
