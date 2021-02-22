@@ -43,7 +43,7 @@
   },
   "languageserver": {
     "python": {
-      "command": ".venv/bin/python",
+      "command": "pipenv run python",
       "args": ["-mpyls"],
       "filetypes": [
         "python"
