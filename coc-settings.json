@@ -43,8 +43,8 @@
   },
   "languageserver": {
     "python": {
-      "command": "pyls",
-      "args": [],
+      "command": "pipenv",
+      "args": ["run", "pyls"],
       "filetypes": [
         "python"
       ],
