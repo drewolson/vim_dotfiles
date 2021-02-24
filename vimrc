@@ -19,6 +19,7 @@ Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364
 Plug 'junegunn/fzf', {'tag': '0.25.1', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': '02a192ea0bed22a015e005b281e55e0da2a8e496'}
 Plug 'junegunn/goyo.vim', {'commit': '6b6ed2734084fdbb6315357ddcaecf9c8e6f143d'}
 Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e10b732fd'}
+Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.2.1'}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
 Plug 'neoclide/coc.nvim', {'commit': '86e80aea782382a0e6d3828b39f5da662cda5222'}
