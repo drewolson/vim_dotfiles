@@ -88,6 +88,7 @@ command! -nargs=0 GitGrepWord :call GitGrepWord()
 nnoremap <silent> <Leader>gw :GitGrepWord<CR>
 
 command! -nargs=0 CocOutputChannel :CocCommand workspace.showOutput
+command! -nargs=0 CocImports :call CocAction('runCommand', 'editor.action.organizeImport')
 
 let html_use_css=1
 let html_number_lines=0
