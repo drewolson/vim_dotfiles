@@ -131,6 +131,14 @@
       "command": "ocamllsp",
       "filetypes": ["ocaml"],
       "rootPatterns": ["dune"]
+    },
+    "php": {
+      "command": "intelephense",
+      "args": ["--stdio"],
+      "filetypes": ["php"],
+      "initializationOptions": {
+        "storagePath": "/tmp/intelephense"
+      }
     }
   }
 }
