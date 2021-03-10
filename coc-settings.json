@@ -137,7 +137,7 @@
       "args": ["--stdio"],
       "filetypes": ["php"],
       "initializationOptions": {
-        "storagePath": "/tmp/intelephense"
+        "globalStoragePath": "~/.intelephense"
       }
     }
   }
