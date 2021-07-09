@@ -22,7 +22,7 @@ Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e1
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.2.1', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neoclide/coc.nvim', {'commit': '9d3c40bcb2304cda1697a0d898ce4d8b00e6e170'}
+Plug 'neoclide/coc.nvim', {'commit': 'acc2b95be6652d79f86d586e52c7566557608476'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'ocaml/vim-ocaml', {'commit': '023a2a464e7a096779d3e541ee7d1dbe61148f6a'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
