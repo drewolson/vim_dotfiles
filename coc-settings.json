@@ -43,7 +43,7 @@
   },
   "languageserver": {
     "python": {
-      "command": "pipenv",
+      "command": "poetry",
       "args": ["run", "pyls"],
       "filetypes": [
         "python"
