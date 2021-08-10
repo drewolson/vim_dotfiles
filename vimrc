@@ -9,7 +9,7 @@ Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c
 Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
 Plug 'benmills/vimux', {'commit': '37f41195e6369ac602a08ec61364906600b771f1'} | Plug 'janko-m/vim-test', {'commit': '58dde91c0477fa58d18d5c0fde10b2a60a526b0f'}
 Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
-Plug 'dense-analysis/ale', {'commit': 'v3.1.0'}
+Plug 'dense-analysis/ale', {'commit': 'a099fe24b2e898c93c0aa4391e5a5631932684a6'}
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
 Plug 'edwinb/idris2-vim', {'commit': '099129e08c89d9526ad092b7980afa355ddaa24c'}
 Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad057c08b4'}
@@ -133,7 +133,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'gleam': [{buffer, lines -> {'command': 'gleam format %t', 'read_temporary_file': 1}}],
-\  'purescript': [{buffer, lines -> {'command': 'purs-tidy format'}}],
+\  'purescript': ['purs-tidy'],
 \  'javascript': ['prettier'],
 \  'typescript': ['prettier'],
 \}
