@@ -101,7 +101,7 @@
     "javascript": {
       "command": "javascript-typescript-stdio",
       "args": [],
-      "filetypes": ["javascript", "typescript"],
+      "filetypes": ["javascript", "typescript", "typescriptreact"],
       "rootPatterns": ["tsconfig.json", "package.json"]
     },
     "rust": {

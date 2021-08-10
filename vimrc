@@ -144,7 +144,7 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
 let g:ale_elixir_credo_strict = 1
 
-let ls_langs = 'dhall,elixir,elm,go,haskell,javascript,ocaml,php,purescript,python,rust,typescript'
+let ls_langs = 'dhall,elixir,elm,go,haskell,javascript,ocaml,php,purescript,python,rust,typescript,typescriptreact'
 execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> :call CocActionAsync(''jumpDefinition'')<CR>'
 execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocActionAsync(''doHover'')<CR>'
