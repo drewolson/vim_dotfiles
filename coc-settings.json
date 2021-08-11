@@ -11,6 +11,7 @@
         "go",
         "haskell",
         "ocaml",
+        "purescript",
         "python",
         "rust"
       ],
@@ -68,7 +69,8 @@
         "purescript": {
           "addSpagoSources": true,
           "addNpmPath": true,
-          "buildCommand": "spago build --purs-args --json-errors"
+          "buildCommand": "spago build --purs-args --json-errors",
+          "formatter": "purs-tidy"
         }
       }
     },
