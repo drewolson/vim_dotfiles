@@ -7,7 +7,7 @@ Plug 'aklt/plantuml-syntax', {'commit': '8dddc45f3f7ba4f0319a14e6f0167d97a703ac5
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
 Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c4f'}
 Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
-Plug 'benmills/vimux', {'commit': '37f41195e6369ac602a08ec61364906600b771f1'} | Plug 'janko-m/vim-test', {'commit': '58dde91c0477fa58d18d5c0fde10b2a60a526b0f'}
+Plug 'benmills/vimux', {'commit': '89604a4464c3069dbe31f7bc8dd16a5fbc88a303'} | Plug 'janko-m/vim-test', {'commit': 'b980e646e5f91d6e65659737b584e484ef918984'}
 Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
 Plug 'dense-analysis/ale', {'commit': 'a099fe24b2e898c93c0aa4391e5a5631932684a6'}
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
@@ -115,7 +115,6 @@ let g:fzf_tags_command = 'ctags -R --exclude=".git" --exclude="node_modules" --e
 let g:test#strategy = 'vimux'
 let g:test#preserve_screen = 0
 let g:test#python#runner = 'pytest'
-let g:test#python#pytest#executable = 'pipenv run python -m pytest'
 
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
