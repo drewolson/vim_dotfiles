@@ -11,7 +11,7 @@ Plug 'benmills/vimux', {'commit': '89604a4464c3069dbe31f7bc8dd16a5fbc88a303'} | 
 Plug 'cespare/vim-toml', {'commit': 'a4ec206052aa347d7df90dc4b6697b7f2b7929bc'}
 Plug 'dense-analysis/ale', {'commit': 'a099fe24b2e898c93c0aa4391e5a5631932684a6'}
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
-Plug 'edwinb/idris2-vim', {'commit': '099129e08c89d9526ad092b7980afa355ddaa24c'}
+Plug 'edwinb/idris2-vim', {'commit': '964cebee493c85f75796e4f4e6bbb4ac54e2da9e'}
 Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad057c08b4'}
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
@@ -24,7 +24,7 @@ Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e1
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.2.1', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neoclide/coc.nvim', {'commit': '479b4ac1d09cec838a232e49ad54b79f2217ad4c'}
+Plug 'neoclide/coc.nvim', {'commit': '595e60210f7d0c9e5a21672428bae8c3f518a3b9'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'ocaml/vim-ocaml', {'commit': '023a2a464e7a096779d3e541ee7d1dbe61148f6a'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
