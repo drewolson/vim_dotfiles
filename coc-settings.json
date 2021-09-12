@@ -25,6 +25,9 @@
       }
     }
   },
+  "codeLens": {
+    "enable": true
+  },
   "signature": {
     "enable": false
   },

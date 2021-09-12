@@ -24,7 +24,7 @@ Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e1
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.2.1', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neoclide/coc.nvim', {'commit': '595e60210f7d0c9e5a21672428bae8c3f518a3b9'}
+Plug 'neoclide/coc.nvim', {'commit': '287c743c9f227fdf0e1db452bbb8ae3c5caffc36'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'ocaml/vim-ocaml', {'commit': '023a2a464e7a096779d3e541ee7d1dbe61148f6a'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
@@ -63,6 +63,7 @@ set number
 set ruler
 set scrolloff=5
 set showmatch
+set signcolumn=number
 set smartcase
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set updatetime=300
@@ -146,6 +147,8 @@ let ls_langs = 'dhall,elixir,elm,go,haskell,javascript,ocaml,php,purescript,pyth
 execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
 execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> :call CocActionAsync(''jumpDefinition'')<CR>'
 execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocActionAsync(''doHover'')<CR>'
+execute 'autocmd Filetype ' . ls_langs . ' nmap <silent> <LocalLeader>ca <plug>(coc-codeaction-cursor)'
+execute 'autocmd Filetype ' . ls_langs . ' nmap <LocalLeader>cl <plug>(coc-codelens-action)'
 
 let purescript_indent_case = 2
 let purescript_indent_where = 2
