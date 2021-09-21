@@ -97,9 +97,15 @@
       "filetypes": [
         "haskell"
       ],
-      "initializationOptions": {
-        "languageServerHaskell": {
-          "hlintOn": true
+      "settings": {
+        "haskell": {
+          "plugin": {
+            "ghcide-completions": {
+              "config": {
+                "snippetsOn": false
+              }
+            }
+          }
         }
       }
     },
