@@ -3,6 +3,7 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'Twinside/vim-haskellConceal', {'commit': '802f82a5afee56e9e1251e6f756104a3bd114234'}
 Plug 'aklt/plantuml-syntax', {'commit': '8dddc45f3f7ba4f0319a14e6f0167d97a703ac55'}
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
 Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c4f'}
