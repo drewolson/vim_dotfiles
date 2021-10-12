@@ -1,7 +1,7 @@
 set nocompatible
 syntax on
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'aklt/plantuml-syntax', {'commit': '8dddc45f3f7ba4f0319a14e6f0167d97a703ac55'}
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
@@ -24,7 +24,7 @@ Plug 'leafgarland/typescript-vim', {'commit': '17d85d8051ba21283e62a9101734981e1
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.2.1', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neoclide/coc.nvim', {'commit': '287c743c9f227fdf0e1db452bbb8ae3c5caffc36'}
+Plug 'neovim/nvim-lspconfig', {'commit': 'e609a702eaf2d6bfb1e0fe8c44a5bf84436fb5a6'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'ocaml/vim-ocaml', {'commit': '023a2a464e7a096779d3e541ee7d1dbe61148f6a'}
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
@@ -42,14 +42,17 @@ Plug 'vim-ruby/vim-ruby', {'commit': 'fd49b25e08618b58db678c3f8ce6e443b1ad04e7'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
 Plug 'wlangstroth/vim-racket', {'commit': '32ad23165c96d05da7f3b9931d2889b7e39dcb86'}
+Plug 'hrsh7th/nvim-cmp', {'commit': '49acc848531b8cbe051c598dddd0cc46ec64f4b4'}
+Plug 'hrsh7th/cmp-nvim-lsp', {'commit': 'f93a6cf9761b096ff2c28a4f0defe941a6ffffb5'}
 
 call plug#end()
 
 set background=dark
 set backspace=indent,eol,start
 set backupcopy=yes
-set completeopt-=preview
+set completeopt=menu,menuone,noselect
 set dir=/tmp//
+set exrc
 set hidden
 set hlsearch
 set ignorecase
@@ -89,9 +92,6 @@ function! GitGrepWord()
 endfunction
 command! -nargs=0 GitGrepWord :call GitGrepWord()
 nnoremap <silent> <Leader>gw :GitGrepWord<CR>
-
-command! -nargs=0 CocOutputChannel :CocCommand workspace.showOutput
-command! -nargs=0 CocImports :call CocAction('runCommand', 'editor.action.organizeImport')
 
 let html_use_css=1
 let html_number_lines=0
@@ -143,13 +143,6 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
 let g:ale_elixir_credo_strict = 1
 
-let ls_langs = 'dhall,elixir,elm,go,haskell,javascript,ocaml,php,purescript,python,rust,typescript,typescriptreact'
-execute 'autocmd Filetype ' . ls_langs . ' inoremap <silent><expr> <C-X><C-O> coc#refresh()'
-execute 'autocmd Filetype ' . ls_langs . ' nmap <C-]> :call CocActionAsync(''jumpDefinition'')<CR>'
-execute 'autocmd Filetype ' . ls_langs . ' nnoremap <silent> K :call CocActionAsync(''doHover'')<CR>'
-execute 'autocmd Filetype ' . ls_langs . ' nmap <silent> <LocalLeader>ca <plug>(coc-codeaction-cursor)'
-execute 'autocmd Filetype ' . ls_langs . ' nmap <LocalLeader>cl <plug>(coc-codelens-action)'
-
 let purescript_indent_case = 2
 let purescript_indent_where = 2
 let purescript_indent_do = 2
@@ -180,8 +173,6 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
-highlight! CocFloating ctermbg=black
-
 set laststatus=2
 
 set statusline=
@@ -195,6 +186,142 @@ set statusline+=%10(L(%l/%L)%)\           " line
 set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
 
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set undoreload=10000
+
+lua << EOF
+local nvim_lsp = require('lspconfig')
+
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  local opts = { noremap=true, silent=true }
+
+  buf_set_keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', '<LocalLeader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', '<LocalLeader>cl', '<cmd>lua vim.lsp.codelens.refresh()<CR>', opts)
+  buf_set_keymap('n', '<LocalLeader>cr', '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
+
+  vim.api.nvim_command[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+
+  local cmp = require 'cmp'
+
+  cmp.setup {
+    mapping = {
+      ['<C-p>'] = cmp.mapping.select_prev_item(),
+      ['<C-n>'] = cmp.mapping.select_next_item(),
+      ['<C-y>'] = cmp.mapping.confirm {
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = true,
+      },
+      ['<C-X><C-O>'] = cmp.mapping.complete(),
+    },
+    sources = {
+      { name = 'nvim_lsp' },
+    },
+    completion = {
+      autocomplete = false,
+    },
+  }
+end
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+local servers = { 'elmls', 'dhall_lsp_server', 'ocamllsp', 'intelephense' }
+
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    }
+  }
+end
+
+nvim_lsp['purescriptls'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  settings = {
+    purescript = {
+      addSpagoSources = true,
+      addNpmPath = true,
+      formatter = 'purs-tidy'
+    }
+  }
+}
+
+nvim_lsp['pylsp'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  cmd = {'poetry', 'run', 'pyls'},
+  settings = {
+    pyls = {
+      enable = true,
+      plugins = {
+        pyls_mypy = {
+          enabled = true,
+          live_mode = false
+        }
+      }
+    }
+  }
+}
+
+nvim_lsp['gopls'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  initializationOptions = {
+    usePlaceholders = true,
+    completeUnimported = true
+  }
+}
+
+nvim_lsp['hls'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  settings = {
+    haskell = {
+      plugin = {
+        ['ghcide-completions'] = {
+          config = {
+            snippetsOn = false
+          }
+        }
+      }
+    }
+  }
+}
+
+nvim_lsp['elixirls'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  cmd = { vim.env.HOME .. '/code/elixir-ls/language_server.sh' },
+  settings = {
+    elixirLS = {
+      dialyzerEnabled = false
+    }
+  }
+}
+EOF
