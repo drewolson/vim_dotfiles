@@ -18,6 +18,7 @@ Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': 'da5a7ac96f517e0fd6f886bc3fbe27156ca1f946'}
 Plug 'hrsh7th/cmp-nvim-lsp', {'commit': 'f93a6cf9761b096ff2c28a4f0defe941a6ffffb5'}
 Plug 'hrsh7th/nvim-cmp', {'commit': '49acc848531b8cbe051c598dddd0cc46ec64f4b4'}
+Plug 'hrsh7th/vim-vsnip', {'commit': '9ac8044206d32bea4dba34e77b6a3b7b87f65df6'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '8014787603fff635dfae6afd4dbe9297673a0b39'}
 Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364'}
 Plug 'junegunn/fzf', {'tag': '0.27.2', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'e34f6c129d39b90db44df1107c8b7dfacfd18946'}
@@ -218,8 +219,14 @@ local on_attach = function(client, bufnr)
       },
       ['<C-X><C-O>'] = cmp.mapping.complete(),
     },
+    snippet = {
+      expand = function(args)
+        vim.fn['vsnip#anonymous'](args.body)
+      end,
+    },
     sources = {
       { name = 'nvim_lsp' },
+      { name = 'buffer' },
     },
     completion = {
       autocomplete = false,
@@ -230,7 +237,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { 'elmls', 'dhall_lsp_server', 'ocamllsp', 'intelephense' }
+local servers = { 'elmls', 'dhall_lsp_server', 'gopls', 'intelephense', 'ocamllsp' }
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -263,7 +270,7 @@ nvim_lsp['pylsp'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = {'poetry', 'run', 'pyls'},
+  cmd = { 'poetry', 'run', 'pyls' },
   settings = {
     pyls = {
       enable = true,
@@ -274,18 +281,6 @@ nvim_lsp['pylsp'].setup {
         }
       }
     }
-  }
-}
-
-nvim_lsp['gopls'].setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  initializationOptions = {
-    usePlaceholders = true,
-    completeUnimported = true
   }
 }
 
@@ -314,7 +309,7 @@ nvim_lsp['elixirls'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = {vim.env.HOME .. '/code/elixir-ls/language_server.sh'},
+  cmd = { vim.env.HOME .. '/code/elixir-ls/language_server.sh' },
   settings = {
     elixirLS = {
       dialyzerEnabled = false
