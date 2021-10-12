@@ -3,7 +3,7 @@ syntax on
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'aklt/plantuml-syntax', {'commit': '8dddc45f3f7ba4f0319a14e6f0167d97a703ac55'}
+Plug 'aklt/plantuml-syntax', {'commit': '405186847a44c16dd039bb644541b4c8fbdab095'}
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
 Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c4f'}
 Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
@@ -37,10 +37,10 @@ Plug 'rust-lang/rust.vim', {'commit': '87c745d8d506fc1eecc1d81df15d5bde1658a2fc'
 Plug 'scrooloose/nerdtree', {'tag': '6.10.9'}
 Plug 'tomtom/tcomment_vim', {'commit': 'b9a075e36e9d8817b15e2edcdb8b6bf51a8d479c'}
 Plug 'tpope/vim-fugitive', {'commit': '1c2663f516c32f8453f542be10192a49ee844a93'}
-Plug 'tpope/vim-ragtag', {'commit': '6f1af76cd669c4fb07f0c4e20fdee3077620e3d8'}
+Plug 'tpope/vim-ragtag', {'commit': 'b8966c4f6503a8baaec39e17bd0bf38b2aadc9b2'}
 Plug 'tpope/vim-rails', {'commit': '184d12e85a17c85c548aeecc5b5c8c3182bd22e9', 'for': ['ruby', 'rails']}
 Plug 'unisonweb/unison', {'commit': '050d309d2baac4b2b5f7a4e047cfd7b4299f33db', 'rtp': 'editor-support/vim'}
-Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'bba638c6ff658201fd6cd3cacc96cd4c7f63258c'}
+Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'f62fa7eb5c17e8fbf93d7dcc5ff593dc534fd44b'}
 Plug 'vim-ruby/vim-ruby', {'commit': 'fd49b25e08618b58db678c3f8ce6e443b1ad04e7'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
