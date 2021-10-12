@@ -75,7 +75,6 @@ set wrap
 
 colorscheme jellybeans
 
-autocmd BufNewFile,BufRead *.go2 setlocal ft=go
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
 autocmd FileType dune setlocal tabstop=2 shiftwidth=2 softtabstop=2
@@ -207,7 +206,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<LocalLeader>cl', '<cmd>lua vim.lsp.codelens.refresh()<CR>', opts)
   buf_set_keymap('n', '<LocalLeader>cr', '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
 
-  vim.api.nvim_command[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])
 
   local cmp = require 'cmp'
 
@@ -317,7 +316,7 @@ nvim_lsp['elixirls'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { vim.env.HOME .. '/code/elixir-ls/language_server.sh' },
+  cmd = {vim.env.HOME .. '/code/elixir-ls/language_server.sh'},
   settings = {
     elixirLS = {
       dialyzerEnabled = false
