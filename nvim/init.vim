@@ -16,6 +16,8 @@ Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad05
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': 'da5a7ac96f517e0fd6f886bc3fbe27156ca1f946'}
+Plug 'hrsh7th/cmp-nvim-lsp', {'commit': 'f93a6cf9761b096ff2c28a4f0defe941a6ffffb5'}
+Plug 'hrsh7th/nvim-cmp', {'commit': '49acc848531b8cbe051c598dddd0cc46ec64f4b4'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '8014787603fff635dfae6afd4dbe9297673a0b39'}
 Plug 'jparise/vim-graphql', {'commit': '0858a26d7b3bd263f40b1844829651ea5a577364'}
 Plug 'junegunn/fzf', {'tag': '0.27.2', 'dir': '~/.fzf', 'do': './install --bin'} | Plug 'junegunn/fzf.vim', {'commit': 'e34f6c129d39b90db44df1107c8b7dfacfd18946'}
@@ -42,8 +44,6 @@ Plug 'vim-ruby/vim-ruby', {'commit': 'fd49b25e08618b58db678c3f8ce6e443b1ad04e7'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
 Plug 'wlangstroth/vim-racket', {'commit': '32ad23165c96d05da7f3b9931d2889b7e39dcb86'}
-Plug 'hrsh7th/nvim-cmp', {'commit': '49acc848531b8cbe051c598dddd0cc46ec64f4b4'}
-Plug 'hrsh7th/cmp-nvim-lsp', {'commit': 'f93a6cf9761b096ff2c28a4f0defe941a6ffffb5'}
 
 call plug#end()
 
