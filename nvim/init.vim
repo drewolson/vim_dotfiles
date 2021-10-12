@@ -238,12 +238,13 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local vanilla_servers = {
-  'elmls',
   'dhall_lsp_server',
+  'elmls',
   'gopls',
   'intelephense',
   'ocamllsp',
-  'rust_analyzer'
+  'rust_analyzer',
+  'tsserver',
 }
 
 for _, lsp in ipairs(vanilla_servers) do
