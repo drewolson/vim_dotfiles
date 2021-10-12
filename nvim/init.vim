@@ -237,9 +237,16 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { 'elmls', 'dhall_lsp_server', 'gopls', 'intelephense', 'ocamllsp' }
+local vanilla_servers = {
+  'elmls',
+  'dhall_lsp_server',
+  'gopls',
+  'intelephense',
+  'ocamllsp',
+  'rust_analyzer'
+}
 
-for _, lsp in ipairs(servers) do
+for _, lsp in ipairs(vanilla_servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
     capabilities = capabilities,
