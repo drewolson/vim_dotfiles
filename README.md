@@ -1,3 +1,3 @@
-Symlink this directory to `~/.vim`.
+Symlink `nvim` to `~/.config/nvim`.
 
 Open vim and run `:PlugInstall`.
