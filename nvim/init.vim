@@ -128,7 +128,6 @@ let g:hoogle_path = 'stack exec -- hoogle'
 let g:ale_linters = {
 \  'elixir': ['credo'],
 \  'idris': ['idris'],
-\  'javascript': ['eslint'],
 \  'racket': ['raco'],
 \  'ruby': ['ruby'],
 \}
