@@ -108,8 +108,8 @@ let g:rubycomplete_buffer_loading = 1
 
 let g:go_highlight_trailing_whitespace_error = 0
 
+let g:python3_host_prog  = '~/.asdf/shims/python3'
 let g:loaded_python_provider = 0
-" let g:loaded_python3_provider = 0
 
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc$', '\.idr\~$', '^__pycache__$']
 
