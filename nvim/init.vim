@@ -44,6 +44,7 @@ Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'f62fa7eb5c17e8fbf93d7dcc5ff593
 Plug 'vim-ruby/vim-ruby', {'commit': 'fd49b25e08618b58db678c3f8ce6e443b1ad04e7'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vmchale/dhall-vim', {'commit': '607958520f8bd4308fe52937e211f6db4ad84cf3'}
+Plug 'whonore/Coqtail', {'commit': 'ca2ca0d874670ae78192b465501e9a061f9f8f06'}
 Plug 'wlangstroth/vim-racket', {'commit': '32ad23165c96d05da7f3b9931d2889b7e39dcb86'}
 
 call plug#end()
@@ -108,7 +109,7 @@ let g:rubycomplete_buffer_loading = 1
 let g:go_highlight_trailing_whitespace_error = 0
 
 let g:loaded_python_provider = 0
-let g:loaded_python3_provider = 0
+" let g:loaded_python3_provider = 0
 
 let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc$', '\.idr\~$', '^__pycache__$']
 
@@ -168,6 +169,8 @@ map <silent> <LocalLeader>cc :TComment<CR>
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> Y y$
+
+let g:coqtail_nomap = 1
 
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
