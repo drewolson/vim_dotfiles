@@ -63,6 +63,7 @@ set isk+=?
 set mouse=
 set nobackup
 set nofoldenable
+set noshowcmd
 set nowritebackup
 set number
 set ruler
@@ -166,11 +167,12 @@ map <silent> <leader>ft :Tags<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 
+map <leader>ci <Plug>CoqInterrupt
+map <leader>cb <Plug>CoqStart
+
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> Y y$
-
-let g:coqtail_nomap = 1
 
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
