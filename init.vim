@@ -160,15 +160,15 @@ imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git" --exclude="node_modules" --exclude="vendor" --exclude="log" --exclude="tmp" --exclude="db" --exclude="pkg" --exclude="deps" --exclude="_build" --extra=+f .<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-map <silent> <leader>ff :Files<CR>
-map <silent> <leader>fg :GFiles<CR>
-map <silent> <leader>fb :Buffers<CR>
-map <silent> <leader>ft :Tags<CR>
+map <silent> <LocalLeader>ff :Files<CR>
+map <silent> <LocalLeader>fg :GFiles<CR>
+map <silent> <LocalLeader>fb :Buffers<CR>
+map <silent> <LocalLeader>ft :Tags<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 
-map <leader>ci <Plug>CoqInterrupt
-map <leader>cb <Plug>CoqStart
+map <silent> <LocalLeader>ci <Plug>CoqInterrupt
+map <silent> <LocalLeader>cb <Plug>CoqStart
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
