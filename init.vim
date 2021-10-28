@@ -198,9 +198,9 @@ set undofile
 set undoreload=10000
 
 lua << EOF
-local nvim_lsp = require('lspconfig')
+_G.nvim_lsp = require('lspconfig')
 
-local on_attach = function(client, bufnr)
+function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -241,8 +241,8 @@ local on_attach = function(client, bufnr)
   }
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+_G.lsp_capabilities = vim.lsp.protocol.make_client_capabilities()
+_G.lsp_capabilities = require('cmp_nvim_lsp').update_capabilities(_G.lsp_capabilities)
 
 local vanilla_servers = {
   'dhall_lsp_server',
@@ -255,18 +255,18 @@ local vanilla_servers = {
 }
 
 for _, lsp in ipairs(vanilla_servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
+  _G.nvim_lsp[lsp].setup {
+    on_attach = _G.lsp_on_attach,
+    capabilities = _G.lsp_capabilities,
     flags = {
       debounce_text_changes = 150,
     }
   }
 end
 
-nvim_lsp['purescriptls'].setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
+_G.nvim_lsp['purescriptls'].setup {
+  on_attach = _G.lsp_on_attach,
+  capabilities = _G.lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
   },
@@ -279,9 +279,9 @@ nvim_lsp['purescriptls'].setup {
   }
 }
 
-nvim_lsp['pylsp'].setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
+_G.nvim_lsp['pylsp'].setup {
+  on_attach = _G.lsp_on_attach,
+  capabilities = _G.lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
   },
@@ -299,9 +299,9 @@ nvim_lsp['pylsp'].setup {
   }
 }
 
-nvim_lsp['hls'].setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
+_G.nvim_lsp['hls'].setup {
+  on_attach = _G.lsp_on_attach,
+  capabilities = _G.lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
   },
@@ -318,9 +318,9 @@ nvim_lsp['hls'].setup {
   }
 }
 
-nvim_lsp['elixirls'].setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
+_G.nvim_lsp['elixirls'].setup {
+  on_attach = _G.lsp_on_attach,
+  capabilities = _G.lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
   },
