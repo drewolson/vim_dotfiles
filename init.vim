@@ -173,9 +173,6 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> Y y$
 
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
-
 highlight DiagnosticError ctermfg=Red guifg=Red
 highlight DiagnosticWarn ctermfg=Yellow guifg=Yellow
 highlight DiagnosticInfo ctermfg=LightBlue guifg=LightBlue
@@ -187,6 +184,9 @@ highlight DiagnosticFloatingInfo ctermfg=White guifg=White
 highlight DiagnosticFloatingHint ctermfg=White guifg=White
 
 highlight ExtraWhitespace ctermbg=red guibg=red
+
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 
 set laststatus=2
