@@ -15,8 +15,8 @@ Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad05
 Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': '8e5d86f7b85234d3d1b4207dceebc43a768ed5d4'}
-Plug 'hrsh7th/cmp-nvim-lsp', {'commit': 'f93a6cf9761b096ff2c28a4f0defe941a6ffffb5'}
-Plug 'hrsh7th/nvim-cmp', {'commit': 'c2a9e0ccaa5c441821f320675c559d723df70f3d'}
+Plug 'hrsh7th/cmp-nvim-lsp', {'commit': 'affe808a5c56b71630f17aa7c38e15c59fd648a8'}
+Plug 'hrsh7th/nvim-cmp', {'commit': '714ccb7483d0ab90de1b93914f3afad1de8da24a'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '9ac8044206d32bea4dba34e77b6a3b7b87f65df6'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '99557c451ff6ed3bbb9b9f6215ad57e919740635'}
 Plug 'jparise/vim-graphql', {'commit': '9a9fe186a73fce636398ee7f851466ef60c9fde5'}
@@ -26,7 +26,7 @@ Plug 'leafgarland/typescript-vim', {'commit': '67e81e4292186889a1a519e1bf3a600d6
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.3.0', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neovim/nvim-lspconfig', {'commit': '06e54cdfa38c2129bc555b6ee77d4086c3a74e5c'}
+Plug 'neovim/nvim-lspconfig', {'commit': '2b4ab0208413856247899616acb45a62cc2f2ad6'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'ocaml/vim-ocaml', {'commit': '2ebddd0ef575193e2aac31172f8f3a5f543f530f'}
 Plug 'pangloss/vim-javascript', {'tag': 'd6e137563c47fb59f26ed25d044c0c7532304f18'}
@@ -130,13 +130,11 @@ let g:hoogle_path = 'stack exec -- hoogle'
 let g:ale_linters = {
 \  'elixir': ['credo'],
 \  'idris': ['idris'],
-\  'racket': ['raco'],
 \  'ruby': ['ruby'],
 \}
 
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
-\  'gleam': [{buffer, lines -> {'command': 'gleam format %t', 'read_temporary_file': 1}}],
 \  'javascript': ['prettier'],
 \  'typescript': ['prettier'],
 \}
@@ -210,6 +208,17 @@ set undoreload=10000
 lua << EOF
 _G.nvim_lsp = require('lspconfig')
 
+local configs = require('lspconfig.configs')
+
+configs.gleam = {
+  default_config = {
+    cmd = {'gleam', 'lsp'};
+    filetypes = {'gleam'};
+    root_dir = nvim_lsp.util.root_pattern('gleam.toml');
+    settings = {};
+  }
+}
+
 function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -258,9 +267,11 @@ _G.lsp_capabilities = require('cmp_nvim_lsp').update_capabilities(_G.lsp_capabil
 local vanilla_servers = {
   'dhall_lsp_server',
   'elmls',
+  'gleam',
   'gopls',
   'intelephense',
   'ocamllsp',
+  'racket_langserver',
   'rust_analyzer',
   'tsserver',
 }
