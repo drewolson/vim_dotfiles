@@ -30,7 +30,7 @@ Plug 'neovim/nvim-lspconfig', {'commit': '2b4ab0208413856247899616acb45a62cc2f2a
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'ocaml/vim-ocaml', {'commit': '2ebddd0ef575193e2aac31172f8f3a5f543f530f'}
 Plug 'pangloss/vim-javascript', {'tag': 'd6e137563c47fb59f26ed25d044c0c7532304f18'}
-Plug 'preservim/nerdtree', {'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424'}
+Plug 'preservim/nerdtree', {'commit': 'fc85a6f07c2cd694be93496ffad75be126240068'}
 Plug 'preservim/vimux', {'commit': '89604a4464c3069dbe31f7bc8dd16a5fbc88a303'} | Plug 'vim-test/vim-test', {'commit': '1efc3def36eff8ac12ddb1f25837ef6101531047'}
 Plug 'purescript-contrib/purescript-vim', {'commit': 'd493b57406d2742f6f6c6545de5a3492f2e5b888'}
 Plug 'rodjek/vim-puppet', {'commit': '980147f64d708652aad1e67d8b39c17b2dd07702'}
