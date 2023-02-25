@@ -258,7 +258,6 @@ local vanilla_servers = {
   'dhall_lsp_server',
   'elmls',
   'gleam',
-  'gopls',
   'intelephense',
   'ocamllsp',
   'racket_langserver',
@@ -275,6 +274,21 @@ for _, lsp in ipairs(vanilla_servers) do
     }
   }
 end
+
+_G.nvim_lsp['gopls'].setup {
+  on_attach = _G.lsp_on_attach,
+  capabilities = _G.lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  settings = {
+    gopls = {
+      buildFlags = {
+        '-tags=wireinject,tools',
+      }
+    }
+  }
+}
 
 _G.nvim_lsp['purescriptls'].setup {
   on_attach = _G.lsp_on_attach,
