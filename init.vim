@@ -136,7 +136,7 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
 
 let purescript_indent_case = 2
-let purescript_indent_where = 2
+let purescript_indent_where = 0
 let purescript_indent_do = 2
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
