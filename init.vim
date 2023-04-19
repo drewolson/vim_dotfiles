@@ -11,12 +11,12 @@ Plug 'cespare/vim-toml', {'commit': '717bd87ef928293e0cc6cfc12ebf2e007cb25311'}
 Plug 'dense-analysis/ale', {'commit': '31dc6a61a07839ea906f6f0b80be713fb8cad1c7'}
 Plug 'derekelkins/agda-vim', {'commit': '4a0f475aaef756702222bdd5b01e25f814f5691f', 'for': ['agda']}
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
+Plug 'edwinb/idris2-vim', {'commit': '964cebee493c85f75796e4f4e6bbb4ac54e2da9e'}
 Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad057c08b4'}
-Plug 'felipesere/pie-highlight.vim', {'commit': 'b20999e9df5cbdbd00b506aae35655aa97f604db'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': '8e5d86f7b85234d3d1b4207dceebc43a768ed5d4'}
-Plug 'hrsh7th/cmp-nvim-lsp', {'commit': 'affe808a5c56b71630f17aa7c38e15c59fd648a8'}
-Plug 'hrsh7th/nvim-cmp', {'commit': '714ccb7483d0ab90de1b93914f3afad1de8da24a'}
+Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '0e6b2ed705ddcff9738ec4ea838141654f12eeef'}
+Plug 'hrsh7th/nvim-cmp', {'commit': '777450fd0ae289463a14481673e26246b5e38bf2'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '9ac8044206d32bea4dba34e77b6a3b7b87f65df6'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '99557c451ff6ed3bbb9b9f6215ad57e919740635'}
 Plug 'jparise/vim-graphql', {'commit': '9a9fe186a73fce636398ee7f851466ef60c9fde5'}
@@ -26,19 +26,20 @@ Plug 'leafgarland/typescript-vim', {'commit': '67e81e4292186889a1a519e1bf3a600d6
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.3.0', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neovim/nvim-lspconfig', {'commit': '2b4ab0208413856247899616acb45a62cc2f2ad6'}
+Plug 'neovim/nvim-lspconfig', {'commit': 'eddaef928c1e1dd79a96f5db45f2fd7f2efe7ea0'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'ocaml/vim-ocaml', {'commit': '2ebddd0ef575193e2aac31172f8f3a5f543f530f'}
 Plug 'pangloss/vim-javascript', {'tag': 'd6e137563c47fb59f26ed25d044c0c7532304f18'}
-Plug 'santiagovrancovich/nerdtree', {'commit': '1b8b61c12a0b91b6f354afe151634600b49b4cca'}
 Plug 'preservim/vimux', {'commit': '89604a4464c3069dbe31f7bc8dd16a5fbc88a303'} | Plug 'vim-test/vim-test', {'commit': 'ab7feab8cb139e5b4955cb4c6ddf52e968cb24be'}
 Plug 'purescript-contrib/purescript-vim', {'commit': 'd493b57406d2742f6f6c6545de5a3492f2e5b888'}
 Plug 'rodjek/vim-puppet', {'commit': '980147f64d708652aad1e67d8b39c17b2dd07702'}
 Plug 'rust-lang/rust.vim', {'commit': '4aa69b84c8a58fcec6b6dad6fe244b916b1cf830'}
+Plug 'santiagovrancovich/nerdtree', {'commit': '1b8b61c12a0b91b6f354afe151634600b49b4cca'}
 Plug 'tomtom/tcomment_vim', {'commit': '5c5c31121ec607011c1e382163c0bce207ac2966'}
 Plug 'tpope/vim-fugitive', {'commit': 'cd67d087df560a2cbf02cf74fbb937797d4ae797'}
 Plug 'tpope/vim-ragtag', {'commit': 'b8966c4f6503a8baaec39e17bd0bf38b2aadc9b2'}
 Plug 'tpope/vim-rails', {'commit': 'a4595b48a83824e36c1ebe48b574aa8624632695', 'for': ['ruby', 'rails']}
+Plug 'unisonweb/unison', { 'tag': 'release/M4i', 'rtp': 'editor-support/vim' }
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'f62fa7eb5c17e8fbf93d7dcc5ff593dc534fd44b'}
 Plug 'vim-ruby/vim-ruby', {'commit': 'ee99a4cdb6931a5409b17c8f0f397a5c5dd6a035'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
@@ -85,6 +86,8 @@ autocmd FileType gitcommit setlocal spell
 autocmd FileType go setlocal noexpandtab
 autocmd FileType tex setlocal textwidth=80 spell
 autocmd Filetype elixir :command! A ElixirAlternateFile()
+autocmd BufNewFile,BufRead *.p8 setlocal ft=lua tabstop=1 shiftwidth=1 softtabstop=1
+autocmd BufNewFile,BufRead *.pie setlocal ft=racket
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
@@ -251,8 +254,7 @@ function _G.lsp_on_attach(client, bufnr)
   }
 end
 
-_G.lsp_capabilities = vim.lsp.protocol.make_client_capabilities()
-_G.lsp_capabilities = require('cmp_nvim_lsp').update_capabilities(_G.lsp_capabilities)
+_G.lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local vanilla_servers = {
   'dhall_lsp_server',
@@ -263,6 +265,7 @@ local vanilla_servers = {
   'racket_langserver',
   'rust_analyzer',
   'tsserver',
+  'unison',
 }
 
 for _, lsp in ipairs(vanilla_servers) do
