@@ -225,7 +225,9 @@ function _G.lsp_on_attach(client, bufnr)
   buf_set_keymap('n', '<LocalLeader>cr', '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
   buf_set_keymap('n', '<LocalLeader>cd', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
-  vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
+  if client.name ~= 'unison' then
+    vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
+  end
 
   local cmp = require 'cmp'
 
