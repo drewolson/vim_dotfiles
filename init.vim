@@ -215,6 +215,15 @@ configs.gleam = {
 function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+  local function in_array(needle, haystack)
+    for k, v in pairs(haystack) do
+      if v == needle then
+        return true
+      end
+    end
+
+    return false
+  end
 
   local opts = { noremap=true, silent=true }
 
@@ -225,7 +234,11 @@ function _G.lsp_on_attach(client, bufnr)
   buf_set_keymap('n', '<LocalLeader>cr', '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
   buf_set_keymap('n', '<LocalLeader>cd', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
-  if client.name ~= 'unison' then
+  local no_format = {
+    'unison',
+  }
+
+  if not in_array(client.name, no_format) then
     vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
   end
 
