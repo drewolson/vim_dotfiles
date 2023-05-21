@@ -8,12 +8,14 @@ Plug 'aklt/plantuml-syntax', {'commit': '405186847a44c16dd039bb644541b4c8fbdab09
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
 Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c4f'}
 Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
+Plug 'benknoble/vim-racket', {'commit': 'c21569c65fe690c7ad6e88313df8a642fc6531ec'}
 Plug 'cespare/vim-toml', {'commit': '717bd87ef928293e0cc6cfc12ebf2e007cb25311'}
 Plug 'dense-analysis/ale', {'commit': '31dc6a61a07839ea906f6f0b80be713fb8cad1c7'}
 Plug 'derekelkins/agda-vim', {'commit': '4a0f475aaef756702222bdd5b01e25f814f5691f', 'for': ['agda']}
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
 Plug 'edwinb/idris2-vim', {'commit': '964cebee493c85f75796e4f4e6bbb4ac54e2da9e'}
 Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad057c08b4'}
+Plug 'github/copilot.vim', {'commit': '1358e8e45ecedc53daf971924a0541ddf6224faf'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': '8e5d86f7b85234d3d1b4207dceebc43a768ed5d4'}
 Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '0e6b2ed705ddcff9738ec4ea838141654f12eeef'}
@@ -27,7 +29,7 @@ Plug 'leafgarland/typescript-vim', {'commit': '67e81e4292186889a1a519e1bf3a600d6
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.3.0', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
-Plug 'neovim/nvim-lspconfig', {'commit': 'eddaef928c1e1dd79a96f5db45f2fd7f2efe7ea0'}
+Plug 'neovim/nvim-lspconfig', {'commit': '32a5543fe3a7f108c1488c265052572abbf6f588'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'nickel-lang/vim-nickel', {'commit': 'b9c3d1fcc26f1d44cbe8c0b6c64beeac0b8c7760'}
 Plug 'ocaml/vim-ocaml', {'commit': '2ebddd0ef575193e2aac31172f8f3a5f543f530f'}
@@ -47,7 +49,6 @@ Plug 'vim-ruby/vim-ruby', {'commit': 'ee99a4cdb6931a5409b17c8f0f397a5c5dd6a035'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vmchale/dhall-vim', {'commit': '68500ef46ff3706f46c99db3be7a0c8abcf6a3ae'}
 Plug 'whonore/Coqtail', {'commit': 'c8ffb3d358e85211b17dd18df6007e3be1bd2569'}
-Plug 'wlangstroth/vim-racket', {'commit': '32ad23165c96d05da7f3b9931d2889b7e39dcb86'}
 
 call plug#end()
 
