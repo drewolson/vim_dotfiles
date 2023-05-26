@@ -15,7 +15,7 @@ Plug 'derekelkins/agda-vim', {'commit': '4a0f475aaef756702222bdd5b01e25f814f5691
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
 Plug 'edwinb/idris2-vim', {'commit': '964cebee493c85f75796e4f4e6bbb4ac54e2da9e'}
 Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad057c08b4'}
-Plug 'github/copilot.vim', {'commit': '1358e8e45ecedc53daf971924a0541ddf6224faf'}
+" Plug 'github/copilot.vim', {'commit': '1358e8e45ecedc53daf971924a0541ddf6224faf'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': '8e5d86f7b85234d3d1b4207dceebc43a768ed5d4'}
 Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '0e6b2ed705ddcff9738ec4ea838141654f12eeef'}
