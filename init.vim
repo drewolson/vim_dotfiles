@@ -27,13 +27,13 @@ Plug 'junegunn/fzf', {'tag': '0.28.0', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'commit': 'a865dec7ca7616dbbd69315ad1417b84d0c411f8'}
 Plug 'leafgarland/typescript-vim', {'commit': '67e81e4292186889a1a519e1bf3a600d671237eb'}
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
-Plug 'monkoose/fzf-hoogle.vim', {'commit': 'v2.3.0', 'for': ['haskell']}
-Plug 'nanotech/jellybeans.vim', {'commit': 'v1.7'}
+Plug 'monkoose/fzf-hoogle.vim', {'commit': '16c08d1534aea2cd1cea1a1e20783bd22f634c77', 'for': ['haskell']}
+Plug 'nanotech/jellybeans.vim', {'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa'}
 Plug 'neovim/nvim-lspconfig', {'commit': '32a5543fe3a7f108c1488c265052572abbf6f588'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'nickel-lang/vim-nickel', {'commit': 'b9c3d1fcc26f1d44cbe8c0b6c64beeac0b8c7760'}
 Plug 'ocaml/vim-ocaml', {'commit': '2ebddd0ef575193e2aac31172f8f3a5f543f530f'}
-Plug 'pangloss/vim-javascript', {'tag': 'd6e137563c47fb59f26ed25d044c0c7532304f18'}
+Plug 'pangloss/vim-javascript', {'commit': 'c470ce1399a544fe587eab950f571c83cccfbbdc'}
 Plug 'preservim/vimux', {'commit': '89604a4464c3069dbe31f7bc8dd16a5fbc88a303'} | Plug 'vim-test/vim-test', {'commit': 'ab7feab8cb139e5b4955cb4c6ddf52e968cb24be'}
 Plug 'purescript-contrib/purescript-vim', {'commit': 'd493b57406d2742f6f6c6545de5a3492f2e5b888'}
 Plug 'rodjek/vim-puppet', {'commit': '980147f64d708652aad1e67d8b39c17b2dd07702'}
