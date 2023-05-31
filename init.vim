@@ -361,6 +361,9 @@ _G.nvim_lsp['hls'].setup {
           config = {
             snippetsOn = false
           }
+        },
+        hlint = {
+          globalOn = false
         }
       }
     }
