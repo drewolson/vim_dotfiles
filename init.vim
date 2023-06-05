@@ -45,7 +45,7 @@ Plug 'tpope/vim-ragtag', {'commit': 'b8966c4f6503a8baaec39e17bd0bf38b2aadc9b2'}
 Plug 'tpope/vim-rails', {'commit': 'a4595b48a83824e36c1ebe48b574aa8624632695', 'for': ['ruby', 'rails']}
 Plug 'unisonweb/unison', { 'tag': 'release/M4i', 'rtp': 'editor-support/vim' }
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'f62fa7eb5c17e8fbf93d7dcc5ff593dc534fd44b'}
-Plug 'vim-ruby/vim-ruby', {'commit': 'ee99a4cdb6931a5409b17c8f0f397a5c5dd6a035'}
+Plug 'vim-ruby/vim-ruby', {'commit': '0960d0f59ce2bb576177a3cfed2bb55c53552a71'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
 Plug 'vmchale/dhall-vim', {'commit': '68500ef46ff3706f46c99db3be7a0c8abcf6a3ae'}
 Plug 'whonore/Coqtail', {'commit': 'c8ffb3d358e85211b17dd18df6007e3be1bd2569'}
