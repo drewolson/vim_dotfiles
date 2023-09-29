@@ -4,6 +4,7 @@ syntax on
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ChrisWellsWood/roc.vim', {'commit': 'a4b2edc029b349f05221249a6ab922d2787d2962'}
+Plug 'adelarsq/neofsharp.vim', {'commit': 'f28bb9665fa859be8543b9828b477dd932743827'}
 Plug 'aklt/plantuml-syntax', {'commit': '405186847a44c16dd039bb644541b4c8fbdab095'}
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
 Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c4f'}
@@ -278,6 +279,7 @@ _G.lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 local vanilla_servers = {
   'dhall_lsp_server',
   'elmls',
+  'fsautocomplete',
   'gleam',
   'intelephense',
   'nickel_ls',
