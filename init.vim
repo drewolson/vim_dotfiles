@@ -28,7 +28,6 @@ Plug 'junegunn/fzf', {'tag': '0.28.0', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'commit': 'a865dec7ca7616dbbd69315ad1417b84d0c411f8'}
 Plug 'leafgarland/typescript-vim', {'commit': '67e81e4292186889a1a519e1bf3a600d671237eb'}
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
-Plug 'monkoose/fzf-hoogle.vim', {'commit': '16c08d1534aea2cd1cea1a1e20783bd22f634c77', 'for': ['haskell']}
 Plug 'nanotech/jellybeans.vim', {'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa'}
 Plug 'neovim/nvim-lspconfig', {'commit': '32a5543fe3a7f108c1488c265052572abbf6f588'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
@@ -245,6 +244,14 @@ function _G.lsp_on_attach(client, bufnr)
 
   if not in_array(client.name, no_format) then
     vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
+  end
+
+  local no_hightlight = {
+    'fsautocomplete',
+  }
+
+  if in_array(client.name, no_hightlight) then
+    client.server_capabilities.semanticTokensProvider = nil
   end
 
   local cmp = require 'cmp'
