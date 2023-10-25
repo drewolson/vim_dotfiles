@@ -396,6 +396,9 @@ _G.nvim_lsp['elixirls'].setup {
 }
 
 require('lean').setup {
-  mappings = true
+  mappings = true,
+  lsp = {
+    on_attach = _G.lsp_on_attach,
+  }
 }
 EOF
