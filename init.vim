@@ -292,7 +292,6 @@ local vanilla_servers = {
   'gleam',
   'intelephense',
   'nickel_ls',
-  'ocamllsp',
   'racket_langserver',
   'rust_analyzer',
   'tsserver',
@@ -321,6 +320,15 @@ _G.nvim_lsp['gopls'].setup {
         '-tags=wireinject,tools',
       }
     }
+  }
+}
+
+_G.nvim_lsp['ocamllsp'].setup {
+  cmd = { 'opam', 'exe', '--', 'ocamllsp' },
+  on_attach = _G.lsp_on_attach,
+  capabilities = _G.lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150,
   }
 }
 
