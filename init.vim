@@ -20,8 +20,8 @@ Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad05
 " Plug 'github/copilot.vim', {'commit': '1358e8e45ecedc53daf971924a0541ddf6224faf'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': '8e5d86f7b85234d3d1b4207dceebc43a768ed5d4'}
-Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '0e6b2ed705ddcff9738ec4ea838141654f12eeef'}
-Plug 'hrsh7th/nvim-cmp', {'commit': '777450fd0ae289463a14481673e26246b5e38bf2'}
+Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '44b16d11215dce86f253ce0c30949813c0a90765'}
+Plug 'hrsh7th/nvim-cmp', {'commit': '0b751f6beef40fd47375eaf53d3057e0bfa317e4'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '9ac8044206d32bea4dba34e77b6a3b7b87f65df6'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '99557c451ff6ed3bbb9b9f6215ad57e919740635'}
 Plug 'jparise/vim-graphql', {'commit': '9a9fe186a73fce636398ee7f851466ef60c9fde5'}
@@ -30,7 +30,7 @@ Plug 'junegunn/goyo.vim', {'commit': 'a865dec7ca7616dbbd69315ad1417b84d0c411f8'}
 Plug 'leafgarland/typescript-vim', {'commit': '67e81e4292186889a1a519e1bf3a600d671237eb'}
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
 Plug 'nanotech/jellybeans.vim', {'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa'}
-Plug 'neovim/nvim-lspconfig', {'commit': '32a5543fe3a7f108c1488c265052572abbf6f588'}
+Plug 'neovim/nvim-lspconfig', {'commit': 'daaf00a77805e113acf8ccc02dd8c3403d691683'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'nickel-lang/vim-nickel', {'commit': 'b9c3d1fcc26f1d44cbe8c0b6c64beeac0b8c7760'}
 Plug 'nvim-lua/plenary.nvim', {'commit': '50012918b2fc8357b87cff2a7f7f0446e47da174'}
@@ -217,6 +217,15 @@ configs.gleam = {
   }
 }
 
+configs.roc = {
+  default_config = {
+    cmd = { 'roc_ls' };
+    filetypes = {'roc'};
+    root_dir = nvim_lsp.util.root_pattern('.git');
+    settings = {};
+  }
+}
+
 function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -250,6 +259,7 @@ function _G.lsp_on_attach(client, bufnr)
 
   local no_hightlight = {
     'fsautocomplete',
+    'roc',
   }
 
   if in_array(client.name, no_hightlight) then
@@ -293,6 +303,7 @@ local vanilla_servers = {
   'intelephense',
   'nickel_ls',
   'racket_langserver',
+  'roc',
   'rust_analyzer',
   'tsserver',
   'unison',
