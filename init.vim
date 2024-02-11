@@ -219,7 +219,7 @@ configs.gleam = {
 
 configs.roc = {
   default_config = {
-    cmd = { 'roc_ls' };
+    cmd = { 'roc_lang_server' };
     filetypes = {'roc'};
     root_dir = nvim_lsp.util.root_pattern('.git');
     settings = {};
@@ -364,18 +364,6 @@ _G.nvim_lsp['pylsp'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { 'poetry', 'run', 'pyls' },
-  settings = {
-    pyls = {
-      enable = true,
-      plugins = {
-        pyls_mypy = {
-          enabled = true,
-          live_mode = false
-        }
-      }
-    }
-  }
 }
 
 _G.nvim_lsp['hls'].setup {
