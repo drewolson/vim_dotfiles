@@ -36,7 +36,7 @@ Plug 'nickel-lang/vim-nickel', {'commit': 'b9c3d1fcc26f1d44cbe8c0b6c64beeac0b8c7
 Plug 'nvim-lua/plenary.nvim', {'commit': '50012918b2fc8357b87cff2a7f7f0446e47da174'}
 Plug 'ocaml/vim-ocaml', {'commit': '2ebddd0ef575193e2aac31172f8f3a5f543f530f'}
 Plug 'pangloss/vim-javascript', {'commit': 'c470ce1399a544fe587eab950f571c83cccfbbdc'}
-Plug 'preservim/vimux', {'commit': '89604a4464c3069dbe31f7bc8dd16a5fbc88a303'} | Plug 'vim-test/vim-test', {'commit': 'ab7feab8cb139e5b4955cb4c6ddf52e968cb24be'}
+Plug 'preservim/vimux', {'commit': 'f7c41607d9246ec4b6cc28587cce84d75d106e3e'} | Plug 'vim-test/vim-test', {'commit': '46d2067586b788e2194e812bbfdbb2061b93a5ee'}
 Plug 'purescript-contrib/purescript-vim', {'commit': 'd493b57406d2742f6f6c6545de5a3492f2e5b888'}
 Plug 'rodjek/vim-puppet', {'commit': '980147f64d708652aad1e67d8b39c17b2dd07702'}
 Plug 'rust-lang/rust.vim', {'commit': '4aa69b84c8a58fcec6b6dad6fe244b916b1cf830'}
@@ -45,7 +45,7 @@ Plug 'tomtom/tcomment_vim', {'commit': '5c5c31121ec607011c1e382163c0bce207ac2966
 Plug 'tpope/vim-fugitive', {'commit': 'cd67d087df560a2cbf02cf74fbb937797d4ae797'}
 Plug 'tpope/vim-ragtag', {'commit': 'b8966c4f6503a8baaec39e17bd0bf38b2aadc9b2'}
 Plug 'tpope/vim-rails', {'commit': 'a4595b48a83824e36c1ebe48b574aa8624632695', 'for': ['ruby', 'rails']}
-Plug 'unisonweb/unison', { 'tag': 'release/M5b', 'rtp': 'editor-support/vim' }
+Plug 'unisonweb/unison', { 'tag': 'release/0.5.16', 'rtp': 'editor-support/vim' }
 Plug 'vim-erlang/vim-erlang-runtime', {'commit': 'f62fa7eb5c17e8fbf93d7dcc5ff593dc534fd44b'}
 Plug 'vim-ruby/vim-ruby', {'commit': 'ee99a4cdb6931a5409b17c8f0f397a5c5dd6a035'}
 Plug 'vim-scripts/indentpython.vim', {'commit': '6aaddfde21fe9e7acbe448b92b3cbb67f2fe1fc1'}
@@ -381,6 +381,9 @@ _G.nvim_lsp['hls'].setup {
           }
         },
         hlint = {
+          globalOn = false
+        },
+        stan = {
           globalOn = false
         }
       }
