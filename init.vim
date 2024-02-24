@@ -340,7 +340,7 @@ _G.nvim_lsp['ocamllsp'].setup {
   capabilities = _G.lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
-  }
+  },
 }
 
 _G.nvim_lsp['purescriptls'].setup {
@@ -364,6 +364,7 @@ _G.nvim_lsp['pylsp'].setup {
   flags = {
     debounce_text_changes = 150,
   },
+  cmd = { 'pipenv', 'run', 'pylsp' },
 }
 
 _G.nvim_lsp['hls'].setup {
