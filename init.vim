@@ -364,7 +364,7 @@ _G.nvim_lsp['pylsp'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { vim.env.HOME .. '/bin/pylsp' }
+  cmd = { vim.env.HOME .. '/code/dotfiles/scripts/pylsp.sh' }
 }
 
 _G.nvim_lsp['hls'].setup {
