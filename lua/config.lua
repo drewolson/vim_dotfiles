@@ -4,7 +4,7 @@ local configs = require('lspconfig.configs')
 
 configs.roc = {
   default_config = {
-    cmd = { 'roc_lang_server' };
+    cmd = { 'roc_language_server' };
     filetypes = {'roc'};
     root_dir = nvim_lsp.util.root_pattern('.git');
     settings = {};
