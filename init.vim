@@ -19,8 +19,8 @@ Plug 'edwinb/idris2-vim', {'commit': '964cebee493c85f75796e4f4e6bbb4ac54e2da9e'}
 Plug 'elixir-editors/vim-elixir', {'commit': '1ad996e64dadf0d2a65c8a079d55a0ad057c08b4'}
 Plug 'gleam-lang/gleam.vim', {'commit': '847a5ef57c2faef2774242c87f711d1131b89fe6'}
 Plug 'godlygeek/tabular', {'commit': '339091ac4dd1f17e225fe7d57b48aff55f99b23a'} | Plug 'plasticboy/vim-markdown', {'commit': '8e5d86f7b85234d3d1b4207dceebc43a768ed5d4'}
-Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '44b16d11215dce86f253ce0c30949813c0a90765'}
-Plug 'hrsh7th/nvim-cmp', {'commit': '0b751f6beef40fd47375eaf53d3057e0bfa317e4'}
+Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '5af77f54de1b16c34b23cba810150689a3a90312'}
+Plug 'hrsh7th/nvim-cmp', {'commit': 'ce16de5665c766f39c271705b17fff06f7bcb84f'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '9ac8044206d32bea4dba34e77b6a3b7b87f65df6'}
 Plug 'jlanzarotta/bufexplorer', {'commit': '99557c451ff6ed3bbb9b9f6215ad57e919740635'}
 Plug 'jparise/vim-graphql', {'commit': '9a9fe186a73fce636398ee7f851466ef60c9fde5'}
@@ -39,7 +39,7 @@ Plug 'preservim/vimux', {'commit': 'f7c41607d9246ec4b6cc28587cce84d75d106e3e'} |
 Plug 'purescript-contrib/purescript-vim', {'commit': 'd493b57406d2742f6f6c6545de5a3492f2e5b888'}
 Plug 'rodjek/vim-puppet', {'commit': '980147f64d708652aad1e67d8b39c17b2dd07702'}
 Plug 'rust-lang/rust.vim', {'commit': '4aa69b84c8a58fcec6b6dad6fe244b916b1cf830'}
-Plug 'santiagovrancovich/nerdtree', {'commit': '1b8b61c12a0b91b6f354afe151634600b49b4cca'}
+Plug 'preservim/nerdtree', {'commit': 'f3a4d8eaa8ac10305e3d53851c976756ea9dc8e8'}
 Plug 'tomtom/tcomment_vim', {'commit': '5c5c31121ec607011c1e382163c0bce207ac2966'}
 Plug 'tpope/vim-fugitive', {'commit': 'cd67d087df560a2cbf02cf74fbb937797d4ae797'}
 Plug 'tpope/vim-ragtag', {'commit': 'b8966c4f6503a8baaec39e17bd0bf38b2aadc9b2'}
