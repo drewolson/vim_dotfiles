@@ -4,7 +4,7 @@ syntax on
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ChrisWellsWood/roc.vim', {'commit': 'a4b2edc029b349f05221249a6ab922d2787d2962'}
-Plug 'Julian/lean.nvim', {'commit': 'a32d035d6f5c57b83335813bcc84fb498b4e2b0f'}
+Plug 'Julian/lean.nvim', {'commit': '2828898ad6f6ac6c1c9f404d72bd3d56546b0c72'}
 Plug 'adelarsq/neofsharp.vim', {'commit': 'f28bb9665fa859be8543b9828b477dd932743827'}
 Plug 'aklt/plantuml-syntax', {'commit': '405186847a44c16dd039bb644541b4c8fbdab095'}
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
