@@ -202,22 +202,3 @@ require('lean').setup {
     on_attach = _G.lsp_on_attach,
   }
 }
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {
-    "elixir",
-    "gleam",
-    "go",
-    "haskell",
-    "markdown",
-    "markdown_inline",
-    "ocaml",
-    "roc",
-    "rust",
-    "unison",
-  },
-
-  sync_install = false,
-
-  auto_install = false,
-}
