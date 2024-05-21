@@ -79,6 +79,9 @@ function _G.lsp_on_attach(client, bufnr)
     completion = {
       autocomplete = false,
     },
+    window = {
+      completion = cmp.config.window.bordered(),
+    },
   }
 end
 
@@ -204,19 +207,6 @@ require('lean').setup {
 }
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    "elixir",
-    "gleam",
-    "go",
-    "haskell",
-    "markdown",
-    "markdown_inline",
-    "ocaml",
-    "roc",
-    "rust",
-    "unison",
-  },
-
   sync_install = false,
 
   auto_install = true,
