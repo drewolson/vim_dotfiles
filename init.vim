@@ -81,8 +81,6 @@ set updatetime=300
 set wildignore+=*.pyc,*.o,*.class
 set wrap
 
-colorscheme catppuccin-mocha
-
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
 autocmd FileType dune setlocal tabstop=2 shiftwidth=2 softtabstop=2
