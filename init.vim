@@ -33,6 +33,7 @@ Plug 'neovim/nvim-lspconfig', {'commit': 'ee450e6a9364fc740236166dd57aaca1ec7cdb
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'nickel-lang/vim-nickel', {'commit': 'b9c3d1fcc26f1d44cbe8c0b6c64beeac0b8c7760'}
 Plug 'nvim-lua/plenary.nvim', {'commit': '50012918b2fc8357b87cff2a7f7f0446e47da174'}
+Plug 'nvim-treesitter/nvim-treesitter', {'commit': 'ccfa76d4cb53224cb0ecefb12f79ecdbbf1fd62d', 'do': ':TSUpdate'}
 Plug 'ocaml/vim-ocaml', {'commit': '2ebddd0ef575193e2aac31172f8f3a5f543f530f'}
 Plug 'pangloss/vim-javascript', {'commit': 'c470ce1399a544fe587eab950f571c83cccfbbdc'}
 Plug 'preservim/nerdtree', {'commit': 'f3a4d8eaa8ac10305e3d53851c976756ea9dc8e8'}
