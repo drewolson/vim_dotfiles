@@ -203,7 +203,7 @@ require('lean').setup {
   }
 }
 
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   ensure_installed = {
     "elixir",
     "gleam",
@@ -219,5 +219,9 @@ require'nvim-treesitter.configs'.setup {
 
   sync_install = false,
 
-  auto_install = false,
+  auto_install = true,
+
+  highlight = {
+    enable = true,
+  },
 }

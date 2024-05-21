@@ -11,6 +11,7 @@ Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b
 Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c4f'}
 Plug 'andys8/vim-elm-syntax', {'commit': '846a5929bff5795256fbca96707e451dbc755e36'}
 Plug 'benknoble/vim-racket', {'commit': 'c21569c65fe690c7ad6e88313df8a642fc6531ec'}
+Plug 'catppuccin/nvim', {'commit': 'd97387aea8264f484bb5d5e74f2182a06c83e0d8', 'as': 'catppuccin'}
 Plug 'cespare/vim-toml', {'commit': '717bd87ef928293e0cc6cfc12ebf2e007cb25311'}
 Plug 'dense-analysis/ale', {'commit': '31dc6a61a07839ea906f6f0b80be713fb8cad1c7'}
 Plug 'derekelkins/agda-vim', {'commit': '4a0f475aaef756702222bdd5b01e25f814f5691f', 'for': ['agda']}
@@ -28,7 +29,6 @@ Plug 'junegunn/fzf', {'tag': '0.28.0', 'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/goyo.vim', {'commit': 'a865dec7ca7616dbbd69315ad1417b84d0c411f8'}
 Plug 'leafgarland/typescript-vim', {'commit': '67e81e4292186889a1a519e1bf3a600d671237eb'}
 Plug 'maxmellon/vim-jsx-pretty', {'commit': '6989f1663cc03d7da72b5ef1c03f87e6ddb70b41'}
-Plug 'nanotech/jellybeans.vim', {'commit': 'ef83bf4dc8b3eacffc97bf5c96ab2581b415c9fa'}
 Plug 'neovim/nvim-lspconfig', {'commit': 'ee450e6a9364fc740236166dd57aaca1ec7cdb48'}
 Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4b8e15e'}
 Plug 'nickel-lang/vim-nickel', {'commit': 'b9c3d1fcc26f1d44cbe8c0b6c64beeac0b8c7760'}
@@ -81,7 +81,7 @@ set updatetime=300
 set wildignore+=*.pyc,*.o,*.class
 set wrap
 
-colorscheme jellybeans
+colorscheme catppuccin-mocha
 
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
@@ -169,21 +169,9 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> Y y$
 
-highlight DiagnosticError ctermfg=Red guifg=Red
-highlight DiagnosticWarn ctermfg=Yellow guifg=Yellow
-highlight DiagnosticInfo ctermfg=LightBlue guifg=LightBlue
-highlight DiagnosticHint ctermfg=White guifg=White
-
-highlight DiagnosticFloatingError ctermfg=White guifg=White
-highlight DiagnosticFloatingWarn ctermfg=White guifg=White
-highlight DiagnosticFloatingInfo ctermfg=White guifg=White
-highlight DiagnosticFloatingHint ctermfg=White guifg=White
-
-highlight ExtraWhitespace ctermbg=red guibg=red
-
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red guibg=red
 
 set laststatus=2
 
