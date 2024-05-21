@@ -81,6 +81,7 @@ function _G.lsp_on_attach(client, bufnr)
     },
     window = {
       completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
     },
   }
 end
