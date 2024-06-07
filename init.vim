@@ -93,8 +93,6 @@ let g:vim_markdown_new_list_item_indent = 2
 
 call tcomment#type#Define('unison', '-- %s')
 
-let g:rubycomplete_buffer_loading = 1
-
 let g:go_highlight_trailing_whitespace_error = 0
 
 let g:python3_host_prog  = '~/.asdf/shims/python3'
@@ -113,8 +111,6 @@ let g:test#python#runner = 'pytest'
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
 
-let g:hoogle_path = 'stack exec -- hoogle'
-
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
@@ -123,10 +119,6 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters_explicit = 1
-
-let purescript_indent_case = 2
-let purescript_indent_where = 0
-let purescript_indent_do = 2
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
@@ -142,9 +134,6 @@ map <silent> <LocalLeader>fb :Buffers<CR>
 map <silent> <LocalLeader>ft :Tags<CR>
 map <silent> <LocalLeader>nh :nohls<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
-
-map <silent> <LocalLeader>ci <Plug>CoqInterrupt
-map <silent> <LocalLeader>cb <Plug>CoqStart
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
