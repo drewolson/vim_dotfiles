@@ -31,6 +31,7 @@ Plug 'nvim-lua/plenary.nvim', {'commit': '50012918b2fc8357b87cff2a7f7f0446e47da1
 Plug 'nvim-treesitter/nvim-treesitter', {'commit': '3a74b5831058d0daf8952a5b8c556c61b30a3f46', 'do': ':TSUpdate'}
 Plug 'preservim/nerdtree', {'commit': 'fbb71fcd90602e3ec77f40b864b5f9b437c496c5'}
 Plug 'preservim/vimux', {'commit': 'f7c41607d9246ec4b6cc28587cce84d75d106e3e'} | Plug 'vim-test/vim-test', {'commit': '46d2067586b788e2194e812bbfdbb2061b93a5ee'}
+Plug 'purescript-contrib/purescript-vim', {'commit': '82348352e6568fcc0385bd7c99a8ead3a479feea'}
 Plug 'tomtom/tcomment_vim', {'commit': '5c5c31121ec607011c1e382163c0bce207ac2966'}
 Plug 'tpope/vim-fugitive', {'commit': 'cd67d087df560a2cbf02cf74fbb937797d4ae797'}
 Plug 'unisonweb/unison', { 'tag': 'release/0.5.21', 'rtp': 'editor-support/vim' }
