@@ -4,7 +4,7 @@ syntax on
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ChrisWellsWood/roc.vim', {'commit': 'a4b2edc029b349f05221249a6ab922d2787d2962'}
-Plug 'Julian/lean.nvim', {'commit': '0a90b97169482935c6d9c8c4fb6c0c7b37043559'}
+Plug 'Julian/lean.nvim', {'commit': '8dc3838f16c52a6e35d1fb65fd5eb29eb2aa39a8'}
 Plug 'adelarsq/neofsharp.vim', {'commit': 'b8f7532bc7311a8e896ffd5d83790887163fac05'}
 Plug 'aklt/plantuml-syntax', {'commit': '44054d6d2cbcf01a064858faa3364cd30d38057d'}
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
@@ -34,6 +34,7 @@ Plug 'preservim/vimux', {'commit': 'f7c41607d9246ec4b6cc28587cce84d75d106e3e'} |
 Plug 'purescript-contrib/purescript-vim', {'commit': '82348352e6568fcc0385bd7c99a8ead3a479feea'}
 Plug 'tomtom/tcomment_vim', {'commit': '5c5c31121ec607011c1e382163c0bce207ac2966'}
 Plug 'tpope/vim-fugitive', {'commit': 'cd67d087df560a2cbf02cf74fbb937797d4ae797'}
+Plug 'unisonweb/unison', {'tag': 'release/0.5.25', 'rtp': 'editor-support/vim'}
 
 call plug#end()
 
