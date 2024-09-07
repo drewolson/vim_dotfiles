@@ -30,7 +30,7 @@ Plug 'neovimhaskell/haskell-vim', {'commit': 'f35d02204b4813d1dbe8b0e98cc39701a4
 Plug 'nvim-lua/plenary.nvim', {'commit': '50012918b2fc8357b87cff2a7f7f0446e47da174'}
 Plug 'nvim-treesitter/nvim-treesitter', {'commit': '3a74b5831058d0daf8952a5b8c556c61b30a3f46', 'do': ':TSUpdate'}
 Plug 'preservim/nerdtree', {'commit': 'fbb71fcd90602e3ec77f40b864b5f9b437c496c5'}
-Plug 'preservim/vimux', {'commit': 'f7c41607d9246ec4b6cc28587cce84d75d106e3e'} | Plug 'vim-test/vim-test', {'commit': '75b64f23c923d34b56e47846a026210feb57146a'}
+Plug 'preservim/vimux', {'commit': 'f7c41607d9246ec4b6cc28587cce84d75d106e3e'} | Plug 'vim-test/vim-test', {'commit': '2c9cef3f7605fc1b272b23765c5872607c1b6183'}
 Plug 'purescript-contrib/purescript-vim', {'commit': '82348352e6568fcc0385bd7c99a8ead3a479feea'}
 Plug 'tomtom/tcomment_vim', {'commit': '5c5c31121ec607011c1e382163c0bce207ac2966'}
 Plug 'tpope/vim-fugitive', {'commit': 'cd67d087df560a2cbf02cf74fbb937797d4ae797'}
@@ -93,6 +93,7 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_new_list_item_indent = 2
 
 call tcomment#type#Define('unison', '-- %s')
+call tcomment#type#Define('gleam', '// %s')
 
 let g:go_highlight_trailing_whitespace_error = 0
 
