@@ -217,6 +217,8 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
+vim.treesitter.language.register("racket", "pie")
+
 require("catppuccin").setup({
   flavour = "frappe",
   transparent_background = true,
