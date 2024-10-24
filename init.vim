@@ -109,7 +109,7 @@ let g:fzf_tags_command = 'ctags -R --exclude=".git" --exclude="node_modules" --e
 let g:test#strategy = 'vimux'
 let g:test#preserve_screen = 0
 let g:test#python#runner = 'pytest'
-let g:test#python#pytest#executable = 'uv run pytest'
+let g:test#python#pytest#executable = 'pytest'
 
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
