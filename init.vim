@@ -34,7 +34,7 @@ Plug 'preservim/vimux', {'commit': 'f7c41607d9246ec4b6cc28587cce84d75d106e3e'} |
 Plug 'purescript-contrib/purescript-vim', {'commit': '82348352e6568fcc0385bd7c99a8ead3a479feea'}
 Plug 'tomtom/tcomment_vim', {'commit': '5c5c31121ec607011c1e382163c0bce207ac2966'}
 Plug 'tpope/vim-fugitive', {'commit': 'cd67d087df560a2cbf02cf74fbb937797d4ae797'}
-Plug 'unisonweb/unison', {'tag': 'release/0.5.25', 'rtp': 'editor-support/vim'}
+Plug 'unisonweb/unison', {'tag': 'release/0.5.27', 'rtp': 'editor-support/vim'}
 
 call plug#end()
 
@@ -109,6 +109,7 @@ let g:fzf_tags_command = 'ctags -R --exclude=".git" --exclude="node_modules" --e
 let g:test#strategy = 'vimux'
 let g:test#preserve_screen = 0
 let g:test#python#runner = 'pytest'
+let g:test#python#pytest#executable = 'uv run pytest'
 
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
