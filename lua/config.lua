@@ -98,7 +98,7 @@ local vanilla_servers = {
   'racket_langserver',
   'roc',
   'rust_analyzer',
-  'tsserver',
+  'ts_ls',
   'unison',
   'zls',
 }
