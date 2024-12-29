@@ -8,10 +8,10 @@ local configs = require('lspconfig.configs')
 
 configs.roc = {
   default_config = {
-    cmd = { 'roc_language_server' };
-    filetypes = {'roc'};
-    root_dir = nvim_lsp.util.root_pattern('.git');
-    settings = {};
+    cmd = { 'roc_language_server' },
+    filetypes = { 'roc' },
+    root_dir = nvim_lsp.util.root_pattern('.git'),
+    settings = {},
   }
 }
 
@@ -28,7 +28,7 @@ function _G.lsp_on_attach(client, bufnr)
     return false
   end
 
-  local opts = { noremap=true, silent=true }
+  local opts = { noremap = true, silent = true }
 
   buf_set_keymap('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -123,6 +123,27 @@ _G.nvim_lsp['gopls'].setup {
     gopls = {
       buildFlags = {
         '-tags=wireinject,tools',
+      }
+    }
+  }
+}
+
+_G.nvim_lsp['lua_ls'].setup {
+  on_attach = _G.lsp_on_attach,
+  capabilities = _G.lsp_capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  settings = {
+    Lua = {
+      workspace = {
+        checkThirdParty = false,
+        telemetry = { enable = false },
+        library = {
+          vim.env.VIMRUNTIME,
+          vim.env.VIMRUNTIME .. "/lua",
+          "${3rd}/love2d/library",
+        }
       }
     }
   }
