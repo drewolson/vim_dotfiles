@@ -17,9 +17,8 @@ configs.roc = {
 
 function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
   local function in_array(needle, haystack)
-    for k, v in pairs(haystack) do
+    for _, v in pairs(haystack) do
       if v == needle then
         return true
       end
@@ -46,14 +45,7 @@ function _G.lsp_on_attach(client, bufnr)
     vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
   end
 
-  local no_hightlight = {
-    'fsautocomplete',
-    'roc',
-  }
-
-  if in_array(client.name, no_hightlight) then
-    client.server_capabilities.semanticTokensProvider = nil
-  end
+  client.server_capabilities.semanticTokensProvider = nil
 
   local cmp = require 'cmp'
 
