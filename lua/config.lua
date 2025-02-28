@@ -38,7 +38,6 @@ function _G.lsp_on_attach(client, bufnr)
 
   local no_format = {
     'unison',
-    'racket_langserver',
   }
 
   if not in_array(client.name, no_format) then

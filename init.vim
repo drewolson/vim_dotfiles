@@ -9,7 +9,7 @@ Plug 'adelarsq/neofsharp.vim', {'commit': 'b8f7532bc7311a8e896ffd5d83790887163fa
 Plug 'aklt/plantuml-syntax', {'commit': '44054d6d2cbcf01a064858faa3364cd30d38057d'}
 Plug 'andy-morris/alex.vim', {'commit': 'bd95024624b297e212e57582a1ece21ac5dab6b8'}
 Plug 'andy-morris/happy.vim', {'commit': '0f2f4719572c0236ff00e2bc8489bbcab8ac8c4f'}
-Plug 'benknoble/vim-racket', {'commit': 'c21569c65fe690c7ad6e88313df8a642fc6531ec'}
+Plug 'benknoble/vim-racket', {'commit': '0ca759ec409a8d3dd85e49c0b8eb429cc88a4964'}
 Plug 'catppuccin/nvim', {'commit': 'faf15ab0201b564b6368ffa47b56feefc92ce3f4', 'as': 'catppuccin'}
 Plug 'cespare/vim-toml', {'commit': '717bd87ef928293e0cc6cfc12ebf2e007cb25311'}
 Plug 'dense-analysis/ale', {'commit': '31dc6a61a07839ea906f6f0b80be713fb8cad1c7'}
@@ -74,7 +74,6 @@ autocmd FileType go setlocal noexpandtab
 autocmd FileType tex setlocal textwidth=80 spell
 autocmd Filetype elixir :command! A ElixirAlternateFile()
 autocmd BufNewFile,BufRead *.p8 setlocal ft=lua tabstop=1 shiftwidth=1 softtabstop=1
-autocmd BufNewFile,BufRead *.pie setlocal ft=racket
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
