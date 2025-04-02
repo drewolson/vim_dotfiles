@@ -1,6 +1,4 @@
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = "single",
-})
+vim.o.winborder = "single"
 
 _G.nvim_lsp = require('lspconfig')
 
