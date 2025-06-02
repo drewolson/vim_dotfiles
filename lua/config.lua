@@ -1,21 +1,27 @@
 local treesitter_langs = {
   'gleam',
+  'go',
+  'haskell',
+  'javascript',
+  'lua',
   'markdown',
   'ocaml',
+  'python',
   'toml',
+  'typescript',
+  'yaml',
 }
 
-require 'nvim-treesitter'.install(treesitter_langs)
+require('nvim-treesitter').install(treesitter_langs)
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = treesitter_langs,
   callback = function()
-    -- syntax highlighting, provided by Neovim
     vim.treesitter.start()
   end,
 })
 
-vim.o.winborder = "single"
+vim.o.winborder = 'single'
 
 _G.nvim_lsp = require('lspconfig')
 
@@ -143,15 +149,15 @@ _G.nvim_lsp['lua_ls'].setup {
   settings = {
     Lua = {
       runtime = {
-        version = "LuaJIT"
+        version = 'LuaJIT'
       },
       workspace = {
         checkThirdParty = false,
         telemetry = { enable = false },
         library = {
           vim.env.VIMRUNTIME,
-          vim.env.VIMRUNTIME .. "/lua",
-          "${3rd}/love2d/library",
+          vim.env.VIMRUNTIME .. '/lua',
+          '${3rd}/love2d/library',
         }
       }
     }
@@ -237,23 +243,11 @@ require('lean').setup {
   }
 }
 
--- require('nvim-treesitter.configs').setup {
---   sync_install = false,
---
---   auto_install = true,
---
---   highlight = {
---     enable = true,
---   },
--- }
---
--- vim.treesitter.language.register("racket", "pie")
-
-require("catppuccin").setup({
-  flavour = "frappe",
+require('catppuccin').setup({
+  flavour = 'frappe',
   transparent_background = true,
   term_colors = true,
   no_italic = true,
 })
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme('catppuccin')
