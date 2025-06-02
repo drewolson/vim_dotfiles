@@ -18,7 +18,7 @@ Plug 'hrsh7th/nvim-cmp', {'commit': '1e1900b0769324a9675ef85b38f99cca29e203b3'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9'}
 Plug 'junegunn/fzf', {'tag': 'v0.60.3'} | Plug 'junegunn/fzf.vim', {'commit': '556f45e79ae5e3970054fee4c4373472604a1b4e'}
 Plug 'neovim/nvim-lspconfig', {'tag': 'v1.7.0'}
-Plug 'nvim-treesitter/nvim-treesitter', {'commit': '38959800c2439c890e3238af559f0dc3be45e393', 'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'commit': '27b0bd487c4a1c72c9b53d0ca6f67f0ac6956b0a', 'do': ':TSUpdate'}
 Plug 'preservim/nerdtree', {'tag': '7.1.3'}
 Plug 'preservim/vimux', {'commit': '7db6b2f79d432ee3820668b1d4625311dbe1d0ad'} | Plug 'vim-test/vim-test', {'commit': '0f50a546aef59efe5f1301de8fa9819ecb9fd482'}
 Plug 'tomtom/tcomment_vim', {'commit': '48ab639a461d9b8344f7fee06cb69b4374863b13'}

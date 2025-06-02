@@ -1,3 +1,20 @@
+local treesitter_langs = {
+  'gleam',
+  'markdown',
+  'ocaml',
+  'toml',
+}
+
+require 'nvim-treesitter'.install(treesitter_langs)
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = treesitter_langs,
+  callback = function()
+    -- syntax highlighting, provided by Neovim
+    vim.treesitter.start()
+  end,
+})
+
 vim.o.winborder = "single"
 
 _G.nvim_lsp = require('lspconfig')
@@ -220,17 +237,17 @@ require('lean').setup {
   }
 }
 
-require('nvim-treesitter.configs').setup {
-  sync_install = false,
-
-  auto_install = true,
-
-  highlight = {
-    enable = true,
-  },
-}
-
-vim.treesitter.language.register("racket", "pie")
+-- require('nvim-treesitter.configs').setup {
+--   sync_install = false,
+--
+--   auto_install = true,
+--
+--   highlight = {
+--     enable = true,
+--   },
+-- }
+--
+-- vim.treesitter.language.register("racket", "pie")
 
 require("catppuccin").setup({
   flavour = "frappe",
