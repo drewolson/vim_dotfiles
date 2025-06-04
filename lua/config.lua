@@ -7,6 +7,7 @@ local treesitter_langs = {
   'markdown',
   'ocaml',
   'python',
+  'racket',
   'toml',
   'typescript',
   'yaml',
