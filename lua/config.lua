@@ -195,7 +195,7 @@ _G.nvim_lsp['pylsp'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { 'pylsp' }
+  cmd = { 'uv', 'run', 'pylsp' }
 }
 
 _G.nvim_lsp['hls'].setup {

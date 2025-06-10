@@ -90,7 +90,7 @@ let $FZF_DEFAULT_OPTS = '--reverse'
 let g:test#strategy = 'vimux'
 let g:test#preserve_screen = 0
 let g:test#python#runner = 'pytest'
-let g:test#python#pytest#executable = 'pytest'
+let g:test#python#pytest#executable = 'uv run -m pytest'
 
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '40'
