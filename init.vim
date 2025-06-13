@@ -93,7 +93,7 @@ let g:test#python#runner = 'pytest'
 let g:test#python#pytest#executable = 'uv run -m pytest'
 
 let g:VimuxOrientation = 'h'
-let g:VimuxHeight = '40'
+let g:VimuxHeight = '50'
 
 nnoremap <silent> <leader>rf :wa<CR>:TestNearest<CR>
 nnoremap <silent> <leader>rb :wa<CR>:TestFile<CR>
