@@ -6,17 +6,17 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'nvim-lua/plenary.nvim', {'commit': '857c5ac632080dba10aae49dba902ce3abf91b35'} | Plug 'Julian/lean.nvim', {'commit': '166b941f72ce399df8063c113514e4ecbfb316e6'}
 Plug 'aklt/plantuml-syntax', {'commit': '44054d6d2cbcf01a064858faa3364cd30d38057d'}
 Plug 'benknoble/vim-racket', {'commit': '0ca759ec409a8d3dd85e49c0b8eb429cc88a4964'}
-Plug 'catppuccin/nvim', {'commit': '5b5e3aef9ad7af84f463d17b5479f06b87d5c429', 'as': 'catppuccin'}
+Plug 'catppuccin/nvim', {'commit': 'fa42eb5e26819ef58884257d5ae95dd0552b9a66', 'as': 'catppuccin'}
 Plug 'drewolson/vim-elixir-alternative-files', {'commit': '9c984c852edacccde1071900c698a405dfdae83b'}
 Plug 'elixir-editors/vim-elixir', {'commit': '1ec9aab0e0de9c737af97e46ead5d65485ae2f9a'}
 Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '99290b3ec1322070bcfb9e846450a46f6efa50f0'}
-Plug 'hrsh7th/nvim-cmp', {'commit': '1e1900b0769324a9675ef85b38f99cca29e203b3'}
+Plug 'hrsh7th/nvim-cmp', {'commit': 'b5311ab3ed9c846b585c0c15b7559be131ec4be9'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9'}
-Plug 'junegunn/fzf', {'tag': 'v0.60.3'} | Plug 'junegunn/fzf.vim', {'commit': '556f45e79ae5e3970054fee4c4373472604a1b4e'}
-Plug 'neovim/nvim-lspconfig', {'tag': 'v1.7.0'}
-Plug 'nvim-treesitter/nvim-treesitter', {'commit': '27b0bd487c4a1c72c9b53d0ca6f67f0ac6956b0a', 'do': ':TSUpdate'}
+Plug 'junegunn/fzf', {'tag': 'v0.62.0'} | Plug 'junegunn/fzf.vim', {'commit': '98dcd77a189a8a87052c20d1be8082aea60101b7'}
+Plug 'neovim/nvim-lspconfig', {'tag': 'v2.3.0'}
+Plug 'nvim-treesitter/nvim-treesitter', {'commit': 'c29969e8efbea20b65dcc398d3fc403d5e51d006', 'do': ':TSUpdate'}
 Plug 'preservim/nerdtree', {'tag': '7.1.3'}
-Plug 'preservim/vimux', {'commit': '7db6b2f79d432ee3820668b1d4625311dbe1d0ad'} | Plug 'vim-test/vim-test', {'commit': '0f50a546aef59efe5f1301de8fa9819ecb9fd482'}
+Plug 'preservim/vimux', {'commit': '7db6b2f79d432ee3820668b1d4625311dbe1d0ad'} | Plug 'vim-test/vim-test', {'commit': '62a13a84671829ecd5db1438aaec4903c964ff2e'}
 Plug 'tomtom/tcomment_vim', {'commit': '48ab639a461d9b8344f7fee06cb69b4374863b13'}
 Plug 'tpope/vim-fugitive', {'commit': '4a745ea72fa93bb15dd077109afbb3d1809383f2'}
 
