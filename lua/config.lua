@@ -8,6 +8,7 @@ local treesitter_langs = {
   'ocaml',
   'python',
   'racket',
+  'roc',
   'toml',
   'typescript',
   'yaml',
@@ -25,17 +26,6 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.o.winborder = 'single'
 
 _G.nvim_lsp = require('lspconfig')
-
-local configs = require('lspconfig.configs')
-
-configs.roc = {
-  default_config = {
-    cmd = { 'roc_language_server' },
-    filetypes = { 'roc' },
-    root_dir = nvim_lsp.util.root_pattern('.git'),
-    settings = {},
-  }
-}
 
 function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -109,7 +99,7 @@ local vanilla_servers = {
   'intelephense',
   'nickel_ls',
   'racket_langserver',
-  'roc',
+  'roc_ls',
   'rust_analyzer',
   'ts_ls',
   'unison',
