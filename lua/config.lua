@@ -6,11 +6,14 @@ local treesitter_langs = {
   'lua',
   'markdown',
   'ocaml',
+  'puppet',
   'python',
   'racket',
   'roc',
+  'systemd',
   'toml',
   'typescript',
+  'vimscript',
   'yaml',
 }
 

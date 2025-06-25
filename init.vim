@@ -52,7 +52,7 @@ set wrap
 autocmd BufNewFile,BufRead *.md,*.markdown setlocal textwidth=80 spell
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80 spell
 autocmd FileType dune setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType php,python,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType php,python,roc,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType gitcommit setlocal spell
 autocmd FileType go setlocal noexpandtab
 autocmd FileType tex setlocal textwidth=80 spell
