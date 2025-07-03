@@ -267,3 +267,18 @@ require('telescope').setup({
     }
   }
 })
+
+require('neo-tree').setup({
+  window = {
+    mappings = {
+      ["o"] = "toggle_node",
+      ["oc"] = "noop",
+      ["od"] = "noop",
+      ["og"] = "noop",
+      ["om"] = "noop",
+      ["on"] = "noop",
+      ["os"] = "noop",
+      ["ot"] = "noop",
+    }
+  }
+})
