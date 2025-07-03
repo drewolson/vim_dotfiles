@@ -3,7 +3,8 @@ syntax on
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'nvim-lua/plenary.nvim', {'commit': '857c5ac632080dba10aae49dba902ce3abf91b35'} | Plug 'Julian/lean.nvim', {'commit': '166b941f72ce399df8063c113514e4ecbfb316e6'}
+Plug 'Julian/lean.nvim', {'commit': '166b941f72ce399df8063c113514e4ecbfb316e6'}
+Plug 'MunifTanjim/nui.nvim', {'commit': 'de740991c12411b663994b2860f1a4fd0937c130'}
 Plug 'aklt/plantuml-syntax', {'commit': '44054d6d2cbcf01a064858faa3364cd30d38057d'}
 Plug 'benknoble/vim-racket', {'commit': '0ca759ec409a8d3dd85e49c0b8eb429cc88a4964'}
 Plug 'catppuccin/nvim', {'commit': 'fa42eb5e26819ef58884257d5ae95dd0552b9a66', 'as': 'catppuccin'}
@@ -12,13 +13,17 @@ Plug 'elixir-editors/vim-elixir', {'commit': '1ec9aab0e0de9c737af97e46ead5d65485
 Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '99290b3ec1322070bcfb9e846450a46f6efa50f0'}
 Plug 'hrsh7th/nvim-cmp', {'commit': 'b5311ab3ed9c846b585c0c15b7559be131ec4be9'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9'}
-Plug 'junegunn/fzf', {'tag': 'v0.62.0'} | Plug 'junegunn/fzf.vim', {'commit': '98dcd77a189a8a87052c20d1be8082aea60101b7'}
+Plug 'junegunn/fzf', {'tag': 'v0.62.0'}
+Plug 'junegunn/fzf.vim', {'commit': '98dcd77a189a8a87052c20d1be8082aea60101b7'}
 Plug 'neovim/nvim-lspconfig', {'tag': 'v2.3.0'}
+Plug 'nvim-lua/plenary.nvim', {'commit': '857c5ac632080dba10aae49dba902ce3abf91b35'}
+Plug 'nvim-neo-tree/neo-tree.nvim', {'commit': 'cea666ef965884414b1b71f6b39a537f9238bdb2'}
+Plug 'nvim-tree/nvim-web-devicons', {'commit': '19d6211c78169e78bab372b585b6fb17ad974e82'}
 Plug 'nvim-treesitter/nvim-treesitter', {'commit': '98459ffcf7dfbeea83081166a2d732a8083a91c2', 'do': ':TSUpdate'}
-Plug 'preservim/nerdtree', {'tag': '7.1.3'}
-Plug 'preservim/vimux', {'commit': '7db6b2f79d432ee3820668b1d4625311dbe1d0ad'} | Plug 'vim-test/vim-test', {'commit': '62a13a84671829ecd5db1438aaec4903c964ff2e'}
+Plug 'preservim/vimux', {'commit': '7db6b2f79d432ee3820668b1d4625311dbe1d0ad'}
 Plug 'tomtom/tcomment_vim', {'commit': '48ab639a461d9b8344f7fee06cb69b4374863b13'}
 Plug 'tpope/vim-fugitive', {'commit': '4a745ea72fa93bb15dd077109afbb3d1809383f2'}
+Plug 'vim-test/vim-test', {'commit': '62a13a84671829ecd5db1438aaec4903c964ff2e'}
 
 call plug#end()
 
@@ -82,8 +87,6 @@ let g:go_highlight_trailing_whitespace_error = 0
 let g:python3_host_prog  = '~/.asdf/shims/python3'
 let g:python_host_prog  = '/usr/bin/python2'
 
-let NERDTreeIgnore=['\.pyc$', '\.o$', '\.class$', '\.ibc$', '\.idr\~$', '^__pycache__$']
-
 let $FZF_DEFAULT_COMMAND = 'rg --files'
 let $FZF_DEFAULT_OPTS = '--reverse'
 
@@ -101,8 +104,8 @@ nnoremap <silent> <leader>ra :wa<CR>:TestSuite<CR>
 nnoremap <silent> <leader>rl :wa<CR>:TestLast<CR>
 
 imap <C-L> <SPACE>=><SPACE>
-map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+map <silent> <LocalLeader>nt :Neotree toggle<CR>
+map <silent> <LocalLeader>nf :Neotree reveal<CR>
 map <silent> <LocalLeader>ff :Files<CR>
 map <silent> <LocalLeader>fg :GFiles<CR>
 map <silent> <LocalLeader>fb :Buffers<CR>
