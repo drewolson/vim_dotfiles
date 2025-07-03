@@ -247,3 +247,23 @@ require('catppuccin').setup({
 vim.cmd.colorscheme('catppuccin')
 
 require('nvim-web-devicons').setup({})
+
+require('telescope').setup({
+  defaults = {
+    sorting_strategy = "ascending",
+    layout_strategy = "vertical",
+    layout_config = {
+      prompt_position = "top"
+    },
+    mappings = {
+      i = {
+        ["<C-n>"] = require("telescope.actions").move_selection_next,
+        ["<C-p>"] = require("telescope.actions").move_selection_previous,
+      },
+      n = {
+        ["<C-n>"] = require("telescope.actions").move_selection_next,
+        ["<C-p>"] = require("telescope.actions").move_selection_previous,
+      }
+    }
+  }
+})

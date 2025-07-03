@@ -13,11 +13,10 @@ Plug 'elixir-editors/vim-elixir', {'commit': '1ec9aab0e0de9c737af97e46ead5d65485
 Plug 'hrsh7th/cmp-nvim-lsp', {'commit': '99290b3ec1322070bcfb9e846450a46f6efa50f0'}
 Plug 'hrsh7th/nvim-cmp', {'commit': 'b5311ab3ed9c846b585c0c15b7559be131ec4be9'}
 Plug 'hrsh7th/vim-vsnip', {'commit': '02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9'}
-Plug 'junegunn/fzf', {'tag': 'v0.62.0'}
-Plug 'junegunn/fzf.vim', {'commit': '98dcd77a189a8a87052c20d1be8082aea60101b7'}
 Plug 'neovim/nvim-lspconfig', {'tag': 'v2.3.0'}
 Plug 'nvim-lua/plenary.nvim', {'commit': '857c5ac632080dba10aae49dba902ce3abf91b35'}
 Plug 'nvim-neo-tree/neo-tree.nvim', {'commit': 'cea666ef965884414b1b71f6b39a537f9238bdb2'}
+Plug 'nvim-telescope/telescope.nvim', {'commit': 'b4da76be54691e854d3e0e02c36b0245f945c2c7'}
 Plug 'nvim-tree/nvim-web-devicons', {'commit': '19d6211c78169e78bab372b585b6fb17ad974e82'}
 Plug 'nvim-treesitter/nvim-treesitter', {'commit': '98459ffcf7dfbeea83081166a2d732a8083a91c2', 'do': ':TSUpdate'}
 Plug 'preservim/vimux', {'commit': '7db6b2f79d432ee3820668b1d4625311dbe1d0ad'}
@@ -106,10 +105,11 @@ nnoremap <silent> <leader>rl :wa<CR>:TestLast<CR>
 imap <C-L> <SPACE>=><SPACE>
 map <silent> <LocalLeader>nt :Neotree toggle<CR>
 map <silent> <LocalLeader>nf :Neotree reveal<CR>
-map <silent> <LocalLeader>ff :Files<CR>
-map <silent> <LocalLeader>fg :GFiles<CR>
-map <silent> <LocalLeader>fb :Buffers<CR>
-map <silent> <LocalLeader>ft :Tags<CR>
+
+map <silent> <LocalLeader>ff <cmd>Telescope find_files<CR>
+map <silent> <LocalLeader>fg <cmd>Telescope live_grep<CR>
+map <silent> <LocalLeader>fb <cmd>Telescope buffers<CR>
+
 map <silent> <LocalLeader>nh :nohls<CR>
 map <silent> <LocalLeader>cc :TComment<CR>
 
