@@ -45,7 +45,6 @@ require("lazy").setup({
   },
   {
     'neovim/nvim-lspconfig',
-    tag = 'v2.3.0'
   },
   {
     'nvim-lua/plenary.nvim',
