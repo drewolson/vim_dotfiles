@@ -17,44 +17,34 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   {
     'Julian/lean.nvim',
-    commit = '166b941f72ce399df8063c113514e4ecbfb316e6'
   },
   {
     'MunifTanjim/nui.nvim',
-    commit = 'de740991c12411b663994b2860f1a4fd0937c130'
   },
   {
     'aklt/plantuml-syntax',
-    commit = '44054d6d2cbcf01a064858faa3364cd30d38057d'
   },
   {
     'benknoble/vim-racket',
-    commit = '0ca759ec409a8d3dd85e49c0b8eb429cc88a4964'
   },
   {
     'catppuccin/nvim',
     name = 'catppuccin',
-    commit = 'fa42eb5e26819ef58884257d5ae95dd0552b9a66'
   },
   {
     'drewolson/vim-elixir-alternative-files',
-    commit = '9c984c852edacccde1071900c698a405dfdae83b'
   },
   {
     'elixir-editors/vim-elixir',
-    commit = '1ec9aab0e0de9c737af97e46ead5d65485ae2f9a'
   },
   {
     'hrsh7th/cmp-nvim-lsp',
-    commit = '99290b3ec1322070bcfb9e846450a46f6efa50f0'
   },
   {
     'hrsh7th/nvim-cmp',
-    commit = 'b5311ab3ed9c846b585c0c15b7559be131ec4be9'
   },
   {
     'hrsh7th/vim-vsnip',
-    commit = '02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9'
   },
   {
     'neovim/nvim-lspconfig',
@@ -62,41 +52,32 @@ require("lazy").setup({
   },
   {
     'nvim-lua/plenary.nvim',
-    commit = '857c5ac632080dba10aae49dba902ce3abf91b35'
   },
   {
     'nvim-neo-tree/neo-tree.nvim',
-    commit = 'cea666ef965884414b1b71f6b39a537f9238bdb2'
   },
   {
     'nvim-telescope/telescope.nvim',
-    commit = 'b4da76be54691e854d3e0e02c36b0245f945c2c7'
   },
   {
     'nvim-tree/nvim-web-devicons',
-    commit = '19d6211c78169e78bab372b585b6fb17ad974e82'
   },
   {
     'nvim-treesitter/nvim-treesitter',
-    commit = '98459ffcf7dfbeea83081166a2d732a8083a91c2',
     lazy = false,
     build = ':TSUpdate'
   },
   {
     'preservim/vimux',
-    commit = '7db6b2f79d432ee3820668b1d4625311dbe1d0ad'
   },
   {
     'tomtom/tcomment_vim',
-    commit = '48ab639a461d9b8344f7fee06cb69b4374863b13'
   },
   {
     'tpope/vim-fugitive',
-    commit = '4a745ea72fa93bb15dd077109afbb3d1809383f2'
   },
   {
     'vim-test/vim-test',
-    commit = '62a13a84671829ecd5db1438aaec4903c964ff2e'
   },
 })
 
