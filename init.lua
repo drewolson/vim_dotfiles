@@ -60,6 +60,7 @@ require("lazy").setup({
   },
   {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
     lazy = false,
     build = ':TSUpdate'
   },
@@ -207,15 +208,7 @@ local treesitter_langs = {
   'yaml',
 }
 
-require('nvim-treesitter').setup {
-  ensure_installed = treesitter_langs,
-  sync_install = false,
-  auto_install = true,
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-}
+require('nvim-treesitter').install(treesitter_langs)
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = treesitter_langs,
