@@ -16,9 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 -- setup plugins
 require("lazy").setup({
   {
-    'Julian/lean.nvim',
-  },
-  {
     'MunifTanjim/nui.nvim',
   },
   {
@@ -160,15 +157,16 @@ vim.g.no_html_toolbar = 'yes'
 vim.g.vim_markdown_frontmatter = 1
 vim.g.vim_markdown_new_list_item_indent = 2
 vim.g.go_highlight_trailing_whitespace_error = 0
-vim.g.python3_host_prog = '~/.asdf/shims/python3'
-vim.g.python_host_prog = '/usr/bin/python2'
-vim.g.test_strategy = 'vimux'
-vim.g.test_preserve_screen = 0
-vim.g.test_python_runner = 'pytest'
-vim.g.test_python_pytest_executable = 'uv run -m pytest'
 vim.g.VimuxOrientation = 'h'
 vim.g.VimuxHeight = '50'
 vim.o.winborder = 'single'
+
+vim.cmd([[
+  let g:test#strategy = 'vimux'
+  let g:test#preserve_screen = 0
+  let g:test#python#runner = 'pytest'
+  let g:test#python#pytest#executable = 'uv run -m pytest'
+]])
 
 -- tcomment
 vim.cmd("call tcomment#type#Define('gleam', '// %s')")
@@ -427,13 +425,6 @@ _G.nvim_lsp['elixirls'].setup {
     elixirLS = {
       dialyzerEnabled = false
     }
-  }
-}
-
-require('lean').setup {
-  mappings = true,
-  lsp = {
-    on_attach = _G.lsp_on_attach,
   }
 }
 
