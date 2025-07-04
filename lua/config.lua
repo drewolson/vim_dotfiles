@@ -279,6 +279,7 @@ require('neo-tree').setup({
       ["on"] = "noop",
       ["os"] = "noop",
       ["ot"] = "noop",
+      ["I"] = "toggle_hidden",
     }
   }
 })
