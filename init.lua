@@ -183,7 +183,7 @@ vim.keymap.set('n', '<LocalLeader>ff', '<cmd>Telescope find_files<CR>', { silent
 vim.keymap.set('n', '<LocalLeader>fg', '<cmd>Telescope live_grep<CR>', { silent = true })
 vim.keymap.set('n', '<LocalLeader>fb', '<cmd>Telescope buffers<CR>', { silent = true })
 vim.keymap.set('n', '<LocalLeader>nh', ':nohls<CR>', { silent = true })
-vim.keymap.set('n', '<LocalLeader>cc', ':TComment<CR>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<LocalLeader>cc', ':TComment<CR>', { silent = true })
 vim.keymap.set('n', 'k', 'gk', { silent = true })
 vim.keymap.set('n', 'j', 'gj', { silent = true })
 vim.keymap.set('n', 'Y', 'y$')
