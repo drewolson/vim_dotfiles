@@ -109,6 +109,7 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.updatetime = 300
 vim.opt.wildignore:append('*.pyc,*.o,*.class')
+vim.opt.wildmode = "longest:full,full"
 vim.opt.wrap = true
 vim.opt.laststatus = 2
 vim.opt.undofile = true
