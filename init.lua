@@ -191,6 +191,7 @@ vim.keymap.set('n', 'Y', 'y$')
 
 -- treesitter
 local treesitter_langs = {
+  'elm',
   'gleam',
   'go',
   'haskell',
@@ -291,7 +292,6 @@ local vanilla_servers = {
   'fsautocomplete',
   'gleam',
   'intelephense',
-  'nickel_ls',
   'racket_langserver',
   'roc_ls',
   'rust_analyzer',
