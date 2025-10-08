@@ -66,6 +66,7 @@ require("lazy").setup({
   },
   {
     'preservim/vimux',
+    commit = 'eee9fee0d84ca89f370817f5a5c6315a1ef44e5a',
   },
   {
     'tomtom/tcomment_vim',
@@ -301,16 +302,18 @@ local vanilla_servers = {
 }
 
 for _, lsp in ipairs(vanilla_servers) do
-  _G.nvim_lsp[lsp].setup {
+  vim.lsp.enable(lsp)
+  vim.lsp.config(lsp, {
     on_attach = _G.lsp_on_attach,
     capabilities = _G.lsp_capabilities,
     flags = {
       debounce_text_changes = 150,
     }
-  }
+  })
 end
 
-_G.nvim_lsp['gopls'].setup {
+vim.lsp.enable('gopls')
+vim.lsp.config('gopls', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
   flags = {
@@ -323,9 +326,10 @@ _G.nvim_lsp['gopls'].setup {
       }
     }
   }
-}
+})
 
-_G.nvim_lsp['lua_ls'].setup {
+vim.lsp.enable('lua_ls')
+vim.lsp.config('lua_ls', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
   flags = {
@@ -347,18 +351,20 @@ _G.nvim_lsp['lua_ls'].setup {
       }
     }
   }
-}
+})
 
-_G.nvim_lsp['ocamllsp'].setup {
+vim.lsp.enable('ocamllsp')
+vim.lsp.config('ocamllsp', {
   cmd = { 'opam', 'exe', '--', 'ocamllsp' },
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
   },
-}
+})
 
-_G.nvim_lsp['purescriptls'].setup {
+vim.lsp.enable('purescriptls')
+vim.lsp.config('purescriptls', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
   flags = {
@@ -371,18 +377,20 @@ _G.nvim_lsp['purescriptls'].setup {
       formatter = 'purs-tidy'
     }
   }
-}
+})
 
-_G.nvim_lsp['pylsp'].setup {
+vim.lsp.enable('pylsp')
+vim.lsp.config('pylsp', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
   flags = {
     debounce_text_changes = 150,
   },
   cmd = { 'uv', 'run', 'pylsp' }
-}
+})
 
-_G.nvim_lsp['hls'].setup {
+vim.lsp.enable('hls')
+vim.lsp.config('hls', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
   flags = {
@@ -405,21 +413,7 @@ _G.nvim_lsp['hls'].setup {
       }
     }
   }
-}
-
-_G.nvim_lsp['elixirls'].setup {
-  on_attach = _G.lsp_on_attach,
-  capabilities = _G.lsp_capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  cmd = { vim.env.HOME .. '/code/elixir-ls/language_server.sh' },
-  settings = {
-    elixirLS = {
-      dialyzerEnabled = false
-    }
-  }
-}
+})
 
 -- colorscheme
 require('catppuccin').setup({
