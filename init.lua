@@ -221,8 +221,6 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- lsp
-_G.nvim_lsp = require('lspconfig')
-
 function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function in_array(needle, haystack)
@@ -288,7 +286,6 @@ end
 _G.lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local vanilla_servers = {
-  'dhall_lsp_server',
   'elmls',
   'fsautocomplete',
   'gleam',
@@ -302,7 +299,6 @@ local vanilla_servers = {
 }
 
 for _, lsp in ipairs(vanilla_servers) do
-  vim.lsp.enable(lsp)
   vim.lsp.config(lsp, {
     on_attach = _G.lsp_on_attach,
     capabilities = _G.lsp_capabilities,
@@ -310,9 +306,10 @@ for _, lsp in ipairs(vanilla_servers) do
       debounce_text_changes = 150,
     }
   })
+
+  vim.lsp.enable(lsp)
 end
 
-vim.lsp.enable('gopls')
 vim.lsp.config('gopls', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
@@ -327,8 +324,8 @@ vim.lsp.config('gopls', {
     }
   }
 })
+vim.lsp.enable('gopls')
 
-vim.lsp.enable('lua_ls')
 vim.lsp.config('lua_ls', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
@@ -352,8 +349,8 @@ vim.lsp.config('lua_ls', {
     }
   }
 })
+vim.lsp.enable('lua_ls')
 
-vim.lsp.enable('ocamllsp')
 vim.lsp.config('ocamllsp', {
   cmd = { 'opam', 'exe', '--', 'ocamllsp' },
   on_attach = _G.lsp_on_attach,
@@ -362,24 +359,8 @@ vim.lsp.config('ocamllsp', {
     debounce_text_changes = 150,
   },
 })
+vim.lsp.enable('ocamllsp')
 
-vim.lsp.enable('purescriptls')
-vim.lsp.config('purescriptls', {
-  on_attach = _G.lsp_on_attach,
-  capabilities = _G.lsp_capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  settings = {
-    purescript = {
-      addSpagoSources = true,
-      addNpmPath = true,
-      formatter = 'purs-tidy'
-    }
-  }
-})
-
-vim.lsp.enable('pylsp')
 vim.lsp.config('pylsp', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
@@ -388,8 +369,8 @@ vim.lsp.config('pylsp', {
   },
   cmd = { 'uv', 'run', 'pylsp' }
 })
+vim.lsp.enable('pylsp')
 
-vim.lsp.enable('hls')
 vim.lsp.config('hls', {
   on_attach = _G.lsp_on_attach,
   capabilities = _G.lsp_capabilities,
@@ -414,6 +395,7 @@ vim.lsp.config('hls', {
     }
   }
 })
+vim.lsp.enable('hls')
 
 -- colorscheme
 require('catppuccin').setup({
