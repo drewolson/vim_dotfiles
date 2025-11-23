@@ -193,6 +193,7 @@ vim.keymap.set('n', 'Y', 'y$')
 -- treesitter
 local treesitter_langs = {
   'elm',
+  'fsharp',
   'gleam',
   'go',
   'haskell',
