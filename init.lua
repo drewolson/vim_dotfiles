@@ -138,7 +138,16 @@ autocmd({ 'BufNewFile', 'BufRead' }, { pattern = { '*.md', '*.markdown' }, comma
 autocmd({ 'BufNewFile', 'BufRead' }, { pattern = '*.txt', command = 'setlocal textwidth=80 spell' })
 autocmd('FileType', { pattern = 'dune', command = 'setlocal tabstop=2 shiftwidth=2 softtabstop=2' })
 autocmd('FileType',
-  { pattern = { 'php', 'python', 'roc', 'rust' }, command = 'setlocal tabstop=4 shiftwidth=4 softtabstop=4' })
+  {
+    pattern = {
+      'fsharp',
+      'php',
+      'python',
+      'roc',
+      'rust',
+    },
+    command = 'setlocal tabstop=4 shiftwidth=4 softtabstop=4'
+  })
 autocmd('FileType', { pattern = 'gitcommit', command = 'setlocal spell' })
 autocmd('FileType', { pattern = 'go', command = 'setlocal noexpandtab' })
 autocmd('FileType', { pattern = 'tex', command = 'setlocal textwidth=80 spell' })
@@ -295,6 +304,7 @@ local vanilla_servers = {
   'roc_ls',
   'rust_analyzer',
   'ts_ls',
+  'ty',
   'unison',
   'zls',
 }
@@ -361,16 +371,6 @@ vim.lsp.config('ocamllsp', {
   },
 })
 vim.lsp.enable('ocamllsp')
-
-vim.lsp.config('pylsp', {
-  on_attach = _G.lsp_on_attach,
-  capabilities = _G.lsp_capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
-  cmd = { 'uv', 'run', 'pylsp' }
-})
-vim.lsp.enable('pylsp')
 
 vim.lsp.config('hls', {
   on_attach = _G.lsp_on_attach,
