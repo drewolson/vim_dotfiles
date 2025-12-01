@@ -302,6 +302,7 @@ local vanilla_servers = {
   'intelephense',
   'racket_langserver',
   'roc_ls',
+  'ruff',
   'rust_analyzer',
   'ts_ls',
   'ty',
