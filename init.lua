@@ -22,9 +22,6 @@ require("lazy").setup({
     'aklt/plantuml-syntax',
   },
   {
-    'benknoble/vim-racket',
-  },
-  {
     'catppuccin/nvim',
     name = 'catppuccin',
   },
