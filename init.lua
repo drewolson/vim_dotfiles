@@ -1,4 +1,3 @@
--- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 ---@diagnostic disable-next-line: undefined-field
 if not vim.loop.fs_stat(lazypath) then
@@ -13,7 +12,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- setup plugins
 require("lazy").setup({
   {
     'MunifTanjim/nui.nvim',
@@ -75,7 +73,6 @@ require("lazy").setup({
     'vim-test/vim-test',
   },
   {
-    -- Unison
     "unisonweb/unison",
     branch = "trunk",
     config = function(plugin)
@@ -98,7 +95,6 @@ require("lazy").setup({
   }
 })
 
--- settings
 vim.opt.background = 'dark'
 vim.opt.backspace = 'indent,eol,start'
 vim.opt.backupcopy = 'yes'
@@ -136,7 +132,6 @@ vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath('config') .. '/undodir'
 vim.opt.undoreload = 10000
 
--- statusline
 vim.opt.statusline = table.concat({
   '%<',
   '%2*[%n%H%M%R%W]%*', -- buffer number, and flags
@@ -149,7 +144,6 @@ vim.opt.statusline = table.concat({
 })
 
 
--- autocmds
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -176,10 +170,8 @@ autocmd({ 'BufNewFile', 'BufRead' },
 autocmd('InsertEnter', { pattern = '*', command = 'match ExtraWhitespace /\\s\\+\\%#\\@<!$/' })
 autocmd({ 'BufRead', 'InsertLeave' }, { pattern = '*', command = 'match ExtraWhitespace /\\s\\+$/' })
 
--- highlight
 vim.api.nvim_set_hl(0, 'ExtraWhitespace', { ctermbg = 'red' })
 
--- variables
 vim.g.html_use_css = 1
 vim.g.html_number_lines = 0
 vim.g.html_no_pre = 1
@@ -198,10 +190,8 @@ vim.cmd([[
   let g:test#python#pytest#executable = 'uv run -m pytest'
 ]])
 
--- tcomment
 vim.cmd("call tcomment#type#Define('gleam', '// %s')")
 
--- keymaps
 vim.keymap.set('n', '<leader>rf', ':wa<CR>:TestNearest<CR>', { silent = true })
 vim.keymap.set('n', '<leader>rb', ':wa<CR>:TestFile<CR>', { silent = true })
 vim.keymap.set('n', '<leader>ra', ':wa<CR>:TestSuite<CR>', { silent = true })
@@ -218,7 +208,6 @@ vim.keymap.set('n', 'k', 'gk', { silent = true })
 vim.keymap.set('n', 'j', 'gj', { silent = true })
 vim.keymap.set('n', 'Y', 'y$')
 
--- treesitter
 local treesitter_langs = {
   'elm',
   'fsharp',
@@ -250,7 +239,6 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
--- lsp
 function _G.lsp_on_attach(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function in_array(needle, haystack)
@@ -419,7 +407,6 @@ vim.lsp.config('hls', {
 })
 vim.lsp.enable('hls')
 
--- colorscheme
 require('catppuccin').setup({
   flavour = 'frappe',
   transparent_background = true,
@@ -431,7 +418,6 @@ vim.cmd.colorscheme('catppuccin')
 
 require('nvim-web-devicons').setup({})
 
--- telescope
 require('telescope').setup({
   defaults = {
     sorting_strategy = "ascending",
@@ -452,7 +438,6 @@ require('telescope').setup({
   }
 })
 
--- neo-tree
 require('neo-tree').setup({
   window = {
     mappings = {
