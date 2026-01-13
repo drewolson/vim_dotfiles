@@ -185,9 +185,14 @@ vim.o.winborder = 'single'
 
 vim.cmd([[
   let g:test#strategy = 'vimux'
+
   let g:test#preserve_screen = 0
+
   let g:test#python#runner = 'pytest'
   let g:test#python#pytest#executable = 'uv run -m pytest'
+
+  let test#custom_runners = {'Gleam': ['Unitest']}
+  let g:test#gleam#runner = 'unitest'
 ]])
 
 vim.cmd("call tcomment#type#Define('gleam', '// %s')")
