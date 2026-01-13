@@ -230,11 +230,9 @@ local treesitter_langs = {
   'python',
   'racket',
   'roc',
-  'systemd',
   'toml',
   'typescript',
   'unison',
-  'vimscript',
   'yaml',
 }
 
