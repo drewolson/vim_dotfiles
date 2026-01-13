@@ -39,6 +39,9 @@ require("lazy").setup({
     'hrsh7th/vim-vsnip',
   },
   {
+    'klen/nvim-config-local'
+  },
+  {
     'neovim/nvim-lspconfig',
   },
   {
