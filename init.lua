@@ -63,8 +63,8 @@ require("lazy").setup({
     build = ':TSUpdate'
   },
   {
-    'preservim/vimux',
-    commit = 'eee9fee0d84ca89f370817f5a5c6315a1ef44e5a',
+    'drewolson/vimux',
+    branch = 'silence-warning',
   },
   {
     'tomtom/tcomment_vim',
@@ -184,6 +184,8 @@ vim.g.vim_markdown_new_list_item_indent = 2
 vim.g.go_highlight_trailing_whitespace_error = 0
 vim.g.VimuxOrientation = 'h'
 vim.g.VimuxHeight = '50'
+vim.g.VimuxHeight = '50'
+vim.g.VimuxEchoNoRunner = false
 vim.o.winborder = 'single'
 
 vim.cmd([[

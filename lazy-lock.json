@@ -20,5 +20,5 @@
   "vim-fugitive": { "branch": "master", "commit": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4" },
   "vim-test": { "branch": "master", "commit": "aaaff58ab897211b9c9bd9967c1340a6fd15d42d" },
   "vim-vsnip": { "branch": "master", "commit": "9bcfabea653abdcdac584283b5097c3f8760abaa" },
-  "vimux": { "branch": "master", "commit": "eee9fee0d84ca89f370817f5a5c6315a1ef44e5a" }
+  "vimux": { "branch": "silence-warning", "commit": "331ae03297dc0da0923d2f6a2d94f340ac8659fc" }
 }
