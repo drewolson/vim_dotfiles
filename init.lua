@@ -63,8 +63,7 @@ require("lazy").setup({
     build = ':TSUpdate'
   },
   {
-    'drewolson/vimux',
-    branch = 'silence-warning',
+    'preservim/vimux',
   },
   {
     'tomtom/tcomment_vim',
